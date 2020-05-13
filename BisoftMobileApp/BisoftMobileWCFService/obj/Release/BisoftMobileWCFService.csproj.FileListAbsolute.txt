@@ -1,0 +1,12 @@
+C:\Users\jonas\source\repos\BisoftMobileApp\BisoftMobileWCFService\bin\BisoftMobileWCFService.dll.config
+C:\Users\jonas\source\repos\BisoftMobileApp\BisoftMobileWCFService\bin\BisoftMobileWCFService.dll
+C:\Users\jonas\source\repos\BisoftMobileApp\BisoftMobileWCFService\bin\BisoftMobileWCFService.pdb
+C:\Users\jonas\source\repos\BisoftMobileApp\BisoftMobileWCFService\bin\EntityFramework.dll
+C:\Users\jonas\source\repos\BisoftMobileApp\BisoftMobileWCFService\bin\EntityFramework.SqlServer.dll
+C:\Users\jonas\source\repos\BisoftMobileApp\BisoftMobileWCFService\bin\EntityFramework.xml
+C:\Users\jonas\source\repos\BisoftMobileApp\BisoftMobileWCFService\bin\EntityFramework.SqlServer.xml
+C:\Users\jonas\source\repos\BisoftMobileApp\BisoftMobileWCFService\obj\Release\BisoftMobileWCFService.csproj.CoreCompileInputs.cache
+C:\Users\jonas\source\repos\BisoftMobileApp\BisoftMobileWCFService\obj\Release\BisoftMobileWCFService.csproj.CopyComplete
+C:\Users\jonas\source\repos\BisoftMobileApp\BisoftMobileWCFService\obj\Release\BisoftMobileWCFService.dll
+C:\Users\jonas\source\repos\BisoftMobileApp\BisoftMobileWCFService\obj\Release\BisoftMobileWCFService.pdb
+C:\Users\jonas\source\repos\BisoftMobileApp\BisoftMobileWCFService\obj\Release\BisoftMobileWCFService.csprojAssemblyReference.cache

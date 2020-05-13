@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="BisoftMobileApp.Views.InternalControl.PerfomeControl.ContentViews.AnswerCV">
+  <ContentView.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Label Text="Svar"
+                   FontSize="Small"
+                   FontAttributes="Bold"/>
+
+            <StackLayout Orientation="Horizontal"
+                     HorizontalOptions="Center"
+                         Grid.Row="1"
+                     Spacing="0">
+                <StackLayout Orientation="Vertical"
+                             Margin="5"
+                         Spacing="0">
+                    <Label Text="Ja"
+                       FontSize="Small"
+                       TextColor="Green"
+                       HorizontalOptions="Center"/>
+                    <CheckBox IsChecked="{Binding IsOk, Mode=TwoWay}"
+                               IsEnabled="{Binding IsClickabled}"
+                                          Color="Green"
+                                           ScaleX="1.4"
+                                          ScaleY="1.4"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Vertical"
+                        Margin="5"
+                         Spacing="0">
+                    <Label Text="Nej"
+                       FontSize="Small"
+                       TextColor="Red"
+                       HorizontalOptions="Center"/>
+                    <CheckBox IsChecked="{Binding IsNotOk, Mode=TwoWay}"
+                               IsEnabled="{Binding IsClickabled}"
+                                          Color="Red"
+                                           ScaleX="1.4"
+                                          ScaleY="1.4"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Vertical"
+                         Spacing="0"
+                         Margin="5">
+                    <Label Text="EA"
+                       TextColor="Blue"
+                       FontSize="Small"
+                       HorizontalOptions="Center"/>
+                    <CheckBox IsChecked="{Binding IsEA, Mode=TwoWay}"
+                               IsEnabled="{Binding IsClickabled}"
+                                          Color="Blue"
+                                           ScaleX="1.4"
+                                          ScaleY="1.4"/>
+                </StackLayout>
+            </StackLayout>
+        </Grid>
+        
+    </ContentView.Content>
+</ContentView>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+       xmlns:data="clr-namespace:BisoftMobileApp.ViewModels.AppShellVMS"
+       xmlns:uccontrol="clr-namespace:BisoftMobileApp.Views.InternalControl"
+       xmlns:uccarmaintenance="clr-namespace:BisoftMobileApp.Views.CarPreSalesMaintenance"
+       xmlns:ucbisoftstart="clr-namespace:BisoftMobileApp.Views.BisoftStart"
+             x:Class="BisoftMobileApp.AppShell">
+
+    <Shell.BindingContext>
+        <data:AppShellVM/>
+    </Shell.BindingContext>
+    <FlyoutItem Title="Program"
+                BindableLayout.ItemsSource="{Binding }"
+                FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent Title="Start"
+                          Icon="cat.png">
+            <ucbisoftstart:BisoftStartPage/>
+        </ShellContent>
+        
+        <ShellContent Title="Kontrollera"
+                          Icon="cat.png">
+            <uccontrol:InternalControlTabbedPage/>
+        </ShellContent>
+       
+        <ShellContent Title="Underhåll">
+            <uccarmaintenance:CarPreSalesMaintenancePage/>
+        </ShellContent>
+
+
+    </FlyoutItem>
+</Shell>

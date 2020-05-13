@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="BisoftMobileApp.Views.InternalControl.PerfomeControl.ContentViews.ControlHeaderCV">
+    <ContentView.Content>
+        <Grid ColumnSpacing="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Margin="1"
+                      Grid.Column="0">
+                <BoxView BackgroundColor="White"/>
+                <StackLayout Margin="4">
+                    <Label Text="Skapad"
+                           FontAttributes="Bold"
+                           FontSize="Small"/>
+                    <DatePicker Date="{Binding PerformedDate, Mode=TwoWay}"
+                                IsEnabled="{Binding IsEditable}"
+                                Format="yyyy-MM-dd"/>
+                </StackLayout>
+            </Grid>
+
+
+            <Grid Margin="0,1,1,1"
+                      Grid.Column="1">
+                <BoxView BackgroundColor="White"/>
+                <StackLayout Orientation="Vertical"
+                                 Margin="4"
+                                 HorizontalOptions="Fill">
+                   
+                    <Grid>
+                        <Label Text="Skapad av"
+                               FontAttributes="Bold"
+                               FontSize="Small"
+                               HorizontalOptions="Start"/>
+                        <Button Text="Sök"
+                                Margin="-4"
+                                HorizontalOptions="End"
+                                VerticalOptions="Start"
+                                IsVisible="{Binding IsVisible}"
+                                HeightRequest="35"
+                                Command="{Binding SearchEmployeeCommand}"
+                                WidthRequest="80"/>
+                    </Grid>
+                    <Label Text="{Binding SelectedEmployee.Name}"
+                           TextColor="Black"
+                           Margin="0,5,0,0"
+                           FontSize="Medium"/>
+                </StackLayout>
+            </Grid>
+
+            <Grid Margin="0,1,1,1"
+                      Grid.Column="2">
+                <BoxView BackgroundColor="{Binding SelectedVehicleBrandBackground}"/>
+                <StackLayout Orientation="Vertical"
+                                 Margin="4"
+                                  IsVisible="{Binding VehicleIsVisible}">
+                    <Label Text="Varumärke"
+                           FontAttributes="Bold"
+                           FontSize="Small"/>
+                    <Picker ItemsSource="{Binding AllVehicleBrands}"
+                             IsEnabled="{Binding IsEditable}"
+                                SelectedItem="{Binding SelectedVehicleBrand, Mode=TwoWay}"
+                                ItemDisplayBinding="{Binding Name}"
+                                Title="Välj varumärke"/>
+                </StackLayout>
+            </Grid>
+
+
+            <Grid Margin="0,1,1,1"
+                      Grid.Column="3">
+                <BoxView BackgroundColor="{Binding RegNrBackground}"/>
+                <StackLayout Orientation="Vertical"
+                                 IsVisible="{Binding VehicleIsVisible}"
+                                 Margin="4">
+                    <Label Text="Regnr"
+                           FontAttributes="Bold"
+                           FontSize="Small"/>
+                    <Entry Text="{Binding RegNr, Mode=TwoWay}"
+                            IsEnabled="{Binding IsEditable}"/>
+                </StackLayout>
+            </Grid>
+
+
+            <Grid Margin="0,1,1,1"
+                      Grid.Column="4">
+                <BoxView BackgroundColor="{Binding AONrBackground}"/>
+                <StackLayout Margin="4"
+                                 IsVisible="{Binding VehicleIsVisible}"
+                                 Orientation="Vertical">
+                    <Label Text="Aonr"
+                           FontAttributes="Bold"
+                           FontSize="Small"/>
+                    <Entry Text="{Binding AONr, Mode=TwoWay}"
+                            IsEnabled="{Binding IsEditable}"/>
+                </StackLayout>
+            </Grid>
+
+
+
+        </Grid>
+    </ContentView.Content>
+</ContentView>

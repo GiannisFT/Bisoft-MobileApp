@@ -1,0 +1,1166 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{00D6740B-7E0D-43A0-8454-1B1B508CD34D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BisoftMobileWCFService</RootNamespace>
+    <AssemblyName>BisoftMobileWCFService</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BisoftDb.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>BisoftDb.Context.cs</LastGenOutput>
+      <DependentUpon>BisoftDb.edmx</DependentUpon>
+    </Content>
+    <Content Include="BisoftDb.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BisoftDb.edmx</DependentUpon>
+      <LastGenOutput>BisoftDb.cs</LastGenOutput>
+    </Content>
+    <Content Include="Service1.svc" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ACAction.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ACOilType.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ACReport.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ACReportGa.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ACReportGasLog.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BisoftDb.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BisoftDb.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BisoftDb.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BisoftDb.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BisoftDb.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="BisoftProgramUpdate.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BisoftWeekEmail.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CarPreSale.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CarPreSaleFlowGroup.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CarPreSaleLog.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CarPreSaleLogDocument.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CarPreSaleModuleFlow.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CarPreSaleModuleFlowRow.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CarPreSalesMaintenanceBeg.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CarPreSalesMaintenanceForm.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CarPreSalesMaintenanceLager.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CarPreSalesModule.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CarPreSalesModuleDocument.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CarPreSalesModuleOffice.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CarPreSalesModuleOfficeResponsible.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CarPreSalesModuleOfficeType.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CarPreSalesProtocol.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CBRprovider.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CBRProviderOffice.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\CarPreSaleFlowGroupData.cs" />
+    <Compile Include="Classes\CarPreSales\CarPreSalesMaintenaceBegData.cs" />
+    <Compile Include="Classes\CarPreSalesMaintenaceStandardData.cs" />
+    <Compile Include="Classes\CarPreSales\CarPreSalesLogData.cs" />
+    <Compile Include="Classes\CarPreSales\CarPreSalesMaintenanceData.cs" />
+    <Compile Include="Classes\CarPreSales\CarPreSalesMaintenaceLagerData.cs" />
+    <Compile Include="Classes\EmployeeData.cs" />
+    <Compile Include="Classes\ICErrorCodeData.cs" />
+    <Compile Include="Classes\ICErrorCodeGroupData.cs" />
+    <Compile Include="Classes\ICErrorCodeMainGroupData.cs" />
+    <Compile Include="Classes\ICOLogRowFileCls.cs" />
+    <Compile Include="Classes\InternalControl\InternalControlOfficeData.cs" />
+    <Compile Include="Classes\InternalControlOfficeLogData.cs" />
+    <Compile Include="Classes\InternalControlOfficeLogRowData.cs" />
+    <Compile Include="Classes\InternalControlOfficeRowData.cs" />
+    <Compile Include="Classes\InternalControl\InternalControlBrandGoalData.cs" />
+    <Compile Include="Classes\InternalControl\InternalControlOfficeResultsData.cs" />
+    <Compile Include="Classes\OfficeData.cs" />
+    <Compile Include="Classes\QRAttachedFileData.cs" />
+    <Compile Include="Classes\QualityReportData.cs" />
+    <Compile Include="Classes\VehicleBrandData.cs" />
+    <Compile Include="Classes\WCFReturnResultCls.cs" />
+    <Compile Include="Company.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CompanyCleanSetting.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CompanyEmployeeGroup.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CompanyEmployeeGroupRow.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CompanyImage.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CompanyRegion.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CompanyVehicleBrand.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CQReportTaskRow.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CRAnalysisFault.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CRAnalysisHeader.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CRAttatchedFile.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CRFinalDecisionHeader.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CRFollowUpHeader.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CRHeader.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CRLog.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CRLogMeasureReport.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CRLogType.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CRMeasureReport.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CRModule.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CRModuleEmailNotification.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CRModuleEmailNotificationReceiver.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CRModulesOffice.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CRPositiveDepartmentTask.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CRPositiveGroup.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CRPositiveGroupQuestion.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CRResponsible.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CRStatu.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CRStatusEmailNotification.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CRStatusOffice.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerCompany.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerPositiveGrade.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerPositiveReportRow.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerReport.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerReportImprovment.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerReportPositive.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DBEmailCheck.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmailContact.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmailSent.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmailSettingsOffice.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employee.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeAssSkillsErSetting.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeAssSkillsIBSetting.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeAssSkillsIRSetting.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeAssSkillsKASetting.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeAssSkillsKKSetting.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeAssSkillsTASetting.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeAssSkillsUASetting.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeDocType.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeEducation.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeGroup.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeGroupRow.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeManualPartDoc.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeePosition.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeePositionCompany.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeWorkExperience.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EnviromentalReport.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ERActionPlan.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ERActionPlanERAnalysisHeader.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ERActionPlanERHeader.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ERAnalysisHeader.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ERFinalDecisionHeader.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ERHeader.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ERImprovment.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ERImprovmentERAnalysisHeader.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ERImprovmentERHeader.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ERImprovmentResponsible.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ERLog.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ERLogType.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ERModule.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ERModuleOffice.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EROwnMeasure.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ERReportMeasure.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ERResponsible.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorLog.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ERStatu.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ERStatusEmailNotification.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ERStatusOffice.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FollowUp.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FollowUpDiagram.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FollowUpEmployeePermission.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FollowUpGroup.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FollowUpGroupRow.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FollowUpLargeDiagramGroup.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FollowUpLargeDiagramGroupRow.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FollowUpOfficeLargeDiagram.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FollowUpRow.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FollowUpViewGroup.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FollowUpViewGroupRow.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HelpClasses\EmailSender.cs" />
+    <Compile Include="HelpClasses\TimeDateFunctions.cs" />
+    <Compile Include="ICErrorCode.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ICErrorCodeGroup.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ICErrorCodeMainGroup.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IncidentReport.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IncidentReportDocument.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IncidentReportFinalDecision.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IncidentReportIncident.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IncidentReportInjuryType.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IncidentReportLocation.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IncidentReportLog.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IncidentReportOutsider.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IncidentReportStatu.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IncidentReportType.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IncidentReportVictum.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IncidentReportWorkTask.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InternalControlOffice.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InternalControlOfficeGroup.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InternalControlOfficeLog.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InternalControlOfficeLogRow.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InternalControlOfficeLogRowCode.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InternalControlOfficeLogRowFile.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InternalControlOfficeRow.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InternalControlOfficeSubGroup.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InternalControlOfficeVehicleBrandGoal.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InternalControlTemplate.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InternalControlTemplateGroup.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InternalControlTemplateRow.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InternalControlTemplateSubGroup.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Manual.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ManualAdminOfficeConnection.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ManualDocument.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ManualDocumentCategory.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ManualDocumentPDFCompany.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ManualDocumentTemplateCompany.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ManualOfficeFastLink.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ManualPart.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ManualPartDocument.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ManualPartDocumentEmployee.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ManualPartDocumentFollowUp.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ManualPartDocumentLog.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ManualPartDocumentLogAttachedFile.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ManualPartDocumentLogAttachedLog.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ManualPartDocumentLogEmployee.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ManualPartDocumentLogFollowUp.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ManualPartDocumentLogImprovement.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ManualPartDocumentPlan.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ManualPartDocumentPlanAttachedFile.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ManualPartDocumentPlanEmployee.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ManualPartDocumentPlanFollowUp.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ManualPartSuggestion.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ManualPartSuggestionDocument.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ManualPartTemplate.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ManualPartTemplateDocument.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ManualPartVersion.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ManualRadDocument.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ManualSuggestion.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ManualTemplate.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ManualTemplateResponsible.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Module.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModuleCompany.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModuleEmployee.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModuleOffice.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModulePart.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModulePartCompany.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModulePartEmployee.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModulePartOffice.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Office.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OfficeDepartment.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OfficeDepartmentTask.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OfficeDepartmentTaskGroup.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OfficeDepartmentTaskGroupRow.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OfficeDepartmentTaskGroupVersion.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OfficeDepartmentTaskVersion.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OfficeDepartmentVersion.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OfficeGroup.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OfficeInternalRevPlaningSetting.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OfficeKeyCabinet.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OfficeManagementReviewSetting.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OfficeManualDocument.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OfficeParking.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OfficeSafetyEmployee.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OfficeVehicleBrandResponsible.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OfficeWebLink.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramVersion.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Property.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PropertyControlDocument.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PropertyControlLog.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PropertyGroup.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PropertyGroupRow.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PropertyInspectionDocument.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PropertyInspectionLog.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PropertyLog.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PropertyLogType.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PropertyMaintenanceDocument.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PropertyMaintenanceLog.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PropertyManualPartDocument.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PropertyProduct.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PropertyProductType.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PropertySettingsOffice.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PropertyStatu.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QRActionPlan.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QRActionPlanQRAnalysisHeader.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QRActionPlanQRHeader.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QRAnalysisHeader.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QRAttachedFile.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QRCausedBy.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QRFinalDecisionHeader.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QRHeader.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QRImportTaskExternalSystem.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QRImprovementCRHeader.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QRImprovment.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QRImprovmentDocument.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QRImprovmentResponsible.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QRImprovmentTask.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QRLog.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QRLogType.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QRModule.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QRModuleEmailNotification.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QRModuleEmailNotificationReceiver.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QRModuleOffice.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QROfficeGoal.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QROwnMeasure.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QRReportMeasure.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QRResponsible.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QRStatu.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QRStatusEmailNotification.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QRStatusOffice.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QualityReport.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RiskAnalysisCompany.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RiskAnalysisCompanyRow.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RiskAnalysisEffect.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RiskAnalysisGroup.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RiskAnalysisOffice.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RiskAnalysisOfficeLog.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RiskAnalysisOfficeLogImprovement.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RiskAnalysisOfficeLogRow.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RiskAnalysisProbability.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RiskAnalysisSubGroup.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RiskAnalysisSubGroupRow.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Service1.svc.cs">
+      <DependentUpon>Service1.svc</DependentUpon>
+    </Compile>
+    <Compile Include="IService1.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Support.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SwedArea.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SwedAreaRole.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SwedAssessmentSkillsER.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SwedAssessmentSkillsIB.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SwedAssessmentSkillsIR.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SwedAssessmentSkillsKA.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SwedAssessmentSkillsKK.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SwedAssessmentSkillsTA.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SwedAssessmentSkillsUA.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SwedDocumentReview.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SwedERSamplingCar.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SwedJointInfoEducation.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SwedJointInfoEducationParticipant.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SwedManagementReview381.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SwedManagementReview381Employees.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SwedOfficeArea.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SwedOfficeAreaEmployee.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SwedPowerOfAttorneyER.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SwedRevisionGroup.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SwedRevisionItem.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ToolBorrowed.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ToolCalibration20MeterDistance.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ToolCalibrationACWaeco.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ToolCalibrationBreaktesterOptimo.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ToolCalibrationCircumference.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ToolCalibrationDocument.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ToolCalibrationDocumentReport.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ToolCalibrationDocumentReportVersion.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ToolCalibrationForm.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ToolCalibrationFourGasMeterHexanPro.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ToolCalibrationFourGasMeterPropanPro.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ToolCalibrationLeakFinder.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ToolCalibrationLightControlPro.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ToolCalibrationLog.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ToolCalibrationMethod.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ToolCalibrationPressureTester.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ToolCalibrationType.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ToolCalibrator.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ToolCostOffice.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ToolDepartment.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ToolDepartmentPlace.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ToolDepartmentPlaceLocation.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ToolDocument.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ToolGroup.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ToolGroupInventory.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ToolGroupInventoryLog.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ToolGroupInventoryLogRow.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ToolGroupRow.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ToolLog.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ToolLogType.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ToolMaintenanceDocument.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ToolMaintenanceLog.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ToolMaintenanceRutine.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ToolMaintenanceRutineCompany.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ToolMaintenanceRutineDeviant.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ToolMaintenanceRutineOffice.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ToolMaintenanceType.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ToolManualPartDocument.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ToolManufacturer.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ToolProduct.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ToolProductPriceOffice.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ToolProductType.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ToolReplacing.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ToolSettingsOffice.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ToolStatu.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ToolVWPricesCompany.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ToolWebLink.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ToolWebLinkCompany.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleBrand.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleCompany.cs">
+      <DependentUpon>BisoftDb.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="BisoftDb.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BisoftDb.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="BisoftDb.edmx.diagram">
+      <DependentUpon>BisoftDb.edmx</DependentUpon>
+    </Content>
+    <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>65016</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:65016/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

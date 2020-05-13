@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:cv="clr-namespace:BisoftMobileApp.Views.InternalControl.PerfomeControl.ContentViews"
+             x:Class="BisoftMobileApp.Views.InternalControl.PerfomeControl.ContentViews.ReportRowCV">
+  <ContentView.Content>
+        <Grid RowSpacing="0"
+              ColumnSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid RowSpacing="0"
+                                  ColumnSpacing="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="200"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="0"
+                                      Margin="0,0,1,1">
+                    <BoxView BackgroundColor="White"/>
+                    <cv:QuestionGV Margin="5"/>
+                </Grid>
+
+                <Grid Grid.Column="1"
+                                      Margin="0,0,1,1">
+                    <BoxView BackgroundColor="White"/>
+                    <cv:AnswerCV Margin="5"/>
+                </Grid>
+
+            </Grid>
+
+            <Grid Grid.Row="1"
+                                  Margin="1,0,1,1">
+                <BoxView BackgroundColor="White"/>
+                <cv:CommentCV Margin="5"/>
+            </Grid>
+
+            <Grid Grid.Row="2"
+                                   RowSpacing="0"
+                                  ColumnSpacing="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="300"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="0"
+                                  Margin="1,0,1,1">
+                    <BoxView BackgroundColor="LightYellow"/>
+                    <cv:ErrorCodesCV Margin="5"/>
+                </Grid>
+
+                <Grid Grid.Column="1"
+                                  Margin="0,0,1,1">
+                    <BoxView BackgroundColor="White"/>
+                    <cv:ImgesCV Margin="5"/>
+                </Grid>
+            </Grid>
+
+
+
+        </Grid>
+    </ContentView.Content>
+</ContentView>

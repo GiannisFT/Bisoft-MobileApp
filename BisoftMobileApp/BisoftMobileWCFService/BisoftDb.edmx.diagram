@@ -1,0 +1,1037 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5b1cad7332274afd99b37712eb433fad" Name="Diagram1">
+        <EntityTypeShape EntityType="KvalPortDbModel.ACAction" Width="1.5" PointX="23.25" PointY="446.125" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ACOilType" Width="1.5" PointX="12.25" PointY="598.25" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ACReport" Width="1.5" PointX="21.25" PointY="505" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ACReportGa" Width="1.5" PointX="12.25" PointY="418.5" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ACReportGasLog" Width="1.5" PointX="25.5" PointY="463.125" />
+        <EntityTypeShape EntityType="KvalPortDbModel.BisoftProgramUpdate" Width="1.5" PointX="17.5" PointY="505" />
+        <EntityTypeShape EntityType="KvalPortDbModel.BisoftWeekEmail" Width="1.5" PointX="12.25" PointY="591" />
+        <EntityTypeShape EntityType="KvalPortDbModel.CarPreSale" Width="1.5" PointX="14.5" PointY="463.625" />
+        <EntityTypeShape EntityType="KvalPortDbModel.CarPreSaleFlowGroup" Width="1.5" PointX="17.5" PointY="486.5" />
+        <EntityTypeShape EntityType="KvalPortDbModel.CarPreSaleLog" Width="1.5" PointX="16.75" PointY="492.625" />
+        <EntityTypeShape EntityType="KvalPortDbModel.CarPreSaleLogDocument" Width="1.5" PointX="19" PointY="539.5" />
+        <EntityTypeShape EntityType="KvalPortDbModel.CarPreSaleModuleFlow" Width="1.5" PointX="12.25" PointY="647.5" />
+        <EntityTypeShape EntityType="KvalPortDbModel.CarPreSaleModuleFlowRow" Width="1.5" PointX="19.75" PointY="563.25" />
+        <EntityTypeShape EntityType="KvalPortDbModel.CarPreSalesMaintenanceBeg" Width="1.5" PointX="14.5" PointY="535" />
+        <EntityTypeShape EntityType="KvalPortDbModel.CarPreSalesMaintenanceForm" Width="1.5" PointX="15.25" PointY="515.375" />
+        <EntityTypeShape EntityType="KvalPortDbModel.CarPreSalesMaintenanceLager" Width="1.5" PointX="14.5" PointY="539.125" />
+        <EntityTypeShape EntityType="KvalPortDbModel.CarPreSalesModule" Width="1.5" PointX="19.75" PointY="493.375" />
+        <EntityTypeShape EntityType="KvalPortDbModel.CarPreSalesModuleDocument" Width="1.5" PointX="22" PointY="442.5" />
+        <EntityTypeShape EntityType="KvalPortDbModel.CarPreSalesModuleOffice" Width="1.5" PointX="17.5" PointY="479.125" />
+        <EntityTypeShape EntityType="KvalPortDbModel.CarPreSalesModuleOfficeResponsible" Width="1.5" PointX="19.75" PointY="501.25" />
+        <EntityTypeShape EntityType="KvalPortDbModel.CarPreSalesModuleOfficeType" Width="1.5" PointX="15.25" PointY="509.5" />
+        <EntityTypeShape EntityType="KvalPortDbModel.CarPreSalesProtocol" Width="1.5" PointX="15.25" PointY="433.75" />
+        <EntityTypeShape EntityType="KvalPortDbModel.CBRProviderOffice" Width="1.5" PointX="12.25" PointY="456.125" />
+        <EntityTypeShape EntityType="KvalPortDbModel.CBRprovider" Width="1.5" PointX="10" PointY="474.5" />
+        <EntityTypeShape EntityType="KvalPortDbModel.Company" Width="1.5" PointX="0.75" PointY="449" />
+        <EntityTypeShape EntityType="KvalPortDbModel.CompanyCleanSetting" Width="1.5" PointX="3" PointY="579.25" />
+        <EntityTypeShape EntityType="KvalPortDbModel.CompanyEmployeeGroup" Width="1.5" PointX="3" PointY="415.75" />
+        <EntityTypeShape EntityType="KvalPortDbModel.CompanyEmployeeGroupRow" Width="1.5" PointX="17.5" PointY="473.625" />
+        <EntityTypeShape EntityType="KvalPortDbModel.CompanyImage" Width="1.5" PointX="3" PointY="434.875" />
+        <EntityTypeShape EntityType="KvalPortDbModel.CompanyRegion" Width="1.5" PointX="25.5" PointY="497" />
+        <EntityTypeShape EntityType="KvalPortDbModel.CompanyVehicleBrand" Width="1.5" PointX="3" PointY="456.375" />
+        <EntityTypeShape EntityType="KvalPortDbModel.CQReportTaskRow" Width="1.5" PointX="41.25" PointY="500.625" />
+        <EntityTypeShape EntityType="KvalPortDbModel.CRAnalysisFault" Width="1.5" PointX="27.5" PointY="524.75" />
+        <EntityTypeShape EntityType="KvalPortDbModel.CRAnalysisHeader" Width="1.5" PointX="5.25" PointY="447.75" />
+        <EntityTypeShape EntityType="KvalPortDbModel.CRAttatchedFile" Width="1.5" PointX="32" PointY="537.25" />
+        <EntityTypeShape EntityType="KvalPortDbModel.CRFinalDecisionHeader" Width="1.5" PointX="3" PointY="584.875" />
+        <EntityTypeShape EntityType="KvalPortDbModel.CRFollowUpHeader" Width="1.5" PointX="3" PointY="620.375" />
+        <EntityTypeShape EntityType="KvalPortDbModel.CRHeader" Width="1.5" PointX="3" PointY="422.375" />
+        <EntityTypeShape EntityType="KvalPortDbModel.CRLogMeasureReport" Width="1.5" PointX="18.25" PointY="455.75" />
+        <EntityTypeShape EntityType="KvalPortDbModel.CRLog" Width="1.5" PointX="36" PointY="502.75" />
+        <EntityTypeShape EntityType="KvalPortDbModel.CRLogType" Width="1.5" PointX="33.75" PointY="527.625" />
+        <EntityTypeShape EntityType="KvalPortDbModel.CRMeasureReport" Width="1.5" PointX="23.5" PointY="456.75" />
+        <EntityTypeShape EntityType="KvalPortDbModel.CRModuleEmailNotificationReceiver" Width="1.5" PointX="25.5" PointY="472.375" />
+        <EntityTypeShape EntityType="KvalPortDbModel.CRModuleEmailNotification" Width="1.5" PointX="23.25" PointY="464" />
+        <EntityTypeShape EntityType="KvalPortDbModel.CRModule" Width="1.5" PointX="10" PointY="438.375" />
+        <EntityTypeShape EntityType="KvalPortDbModel.CRModulesOffice" Width="1.5" PointX="12.25" PointY="447.75" />
+        <EntityTypeShape EntityType="KvalPortDbModel.CRPositiveDepartmentTask" Width="1.5" PointX="16.75" PointY="529.5" />
+        <EntityTypeShape EntityType="KvalPortDbModel.CRPositiveGroup" Width="1.5" PointX="12.25" PointY="617.125" />
+        <EntityTypeShape EntityType="KvalPortDbModel.CRPositiveGroupQuestion" Width="1.5" PointX="14.5" PointY="623.75" />
+        <EntityTypeShape EntityType="KvalPortDbModel.CRResponsible" Width="1.5" PointX="12.25" PointY="463.125" />
+        <EntityTypeShape EntityType="KvalPortDbModel.CRStatu" Width="1.5" PointX="27.5" PointY="527.125" />
+        <EntityTypeShape EntityType="KvalPortDbModel.CRStatusEmailNotification" Width="1.5" PointX="17.5" PointY="448.125" />
+        <EntityTypeShape EntityType="KvalPortDbModel.CRStatusOffice" Width="1.5" PointX="23.25" PointY="448.75" />
+        <EntityTypeShape EntityType="KvalPortDbModel.CustomerCompany" Width="1.5" PointX="3" PointY="551.625" />
+        <EntityTypeShape EntityType="KvalPortDbModel.CustomerPositiveGrade" Width="1.5" PointX="12.25" PointY="606.875" />
+        <EntityTypeShape EntityType="KvalPortDbModel.CustomerPositiveReportRow" Width="1.5" PointX="16.75" PointY="575.5" />
+        <EntityTypeShape EntityType="KvalPortDbModel.CustomerReportImprovment" Width="1.5" PointX="18.25" PointY="459.875" />
+        <EntityTypeShape EntityType="KvalPortDbModel.CustomerReportPositive" Width="1.5" PointX="14.5" PointY="527.625" />
+        <EntityTypeShape EntityType="KvalPortDbModel.CustomerReport" Width="1.5" PointX="29.75" PointY="513.5" />
+        <EntityTypeShape EntityType="KvalPortDbModel.DBEmailCheck" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="KvalPortDbModel.EmailContact" Width="1.5" PointX="12.25" PointY="422.625" />
+        <EntityTypeShape EntityType="KvalPortDbModel.EmailSent" Width="1.5" PointX="14.5" PointY="480.875" />
+        <EntityTypeShape EntityType="KvalPortDbModel.EmailSettingsOffice" Width="1.5" PointX="12.25" PointY="414.875" />
+        <EntityTypeShape EntityType="KvalPortDbModel.EmployeeAssSkillsErSetting" Width="1.5" PointX="14.5" PointY="734.875" />
+        <EntityTypeShape EntityType="KvalPortDbModel.EmployeeAssSkillsIBSetting" Width="1.5" PointX="14.5" PointY="524.625" />
+        <EntityTypeShape EntityType="KvalPortDbModel.EmployeeAssSkillsIRSetting" Width="1.5" PointX="14.5" PointY="666.75" />
+        <EntityTypeShape EntityType="KvalPortDbModel.EmployeeAssSkillsKASetting" Width="1.5" PointX="14.5" PointY="663.75" />
+        <EntityTypeShape EntityType="KvalPortDbModel.EmployeeAssSkillsKKSetting" Width="1.5" PointX="14.5" PointY="512.125" />
+        <EntityTypeShape EntityType="KvalPortDbModel.EmployeeAssSkillsTASetting" Width="1.5" PointX="14.5" PointY="722.625" />
+        <EntityTypeShape EntityType="KvalPortDbModel.EmployeeAssSkillsUASetting" Width="1.5" PointX="14.5" PointY="725.5" />
+        <EntityTypeShape EntityType="KvalPortDbModel.EmployeeDocType" Width="1.5" PointX="12.25" PointY="484.625" />
+        <EntityTypeShape EntityType="KvalPortDbModel.EmployeeEducation" Width="1.5" PointX="14.5" PointY="660.875" />
+        <EntityTypeShape EntityType="KvalPortDbModel.EmployeeGroup" Width="1.5" PointX="12.25" PointY="554.5" />
+        <EntityTypeShape EntityType="KvalPortDbModel.EmployeeGroupRow" Width="1.5" PointX="14.5" PointY="521" />
+        <EntityTypeShape EntityType="KvalPortDbModel.EmployeeManualPartDoc" Width="1.5" PointX="14.5" PointY="505" />
+        <EntityTypeShape EntityType="KvalPortDbModel.EmployeePositionCompany" Width="1.5" PointX="3" PointY="569.375" />
+        <EntityTypeShape EntityType="KvalPortDbModel.EmployeePosition" Width="1.5" PointX="14.5" PointY="732.375" />
+        <EntityTypeShape EntityType="KvalPortDbModel.Employee" Width="1.5" PointX="12.25" PointY="487.375" />
+        <EntityTypeShape EntityType="KvalPortDbModel.EmployeeWorkExperience" Width="1.5" PointX="14.5" PointY="719.5" />
+        <EntityTypeShape EntityType="KvalPortDbModel.EnviromentalReport" Width="1.5" PointX="26.75" PointY="513.25" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ERActionPlan" Width="1.5" PointX="14.5" PointY="486.875" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ERActionPlanERAnalysisHeader" Width="1.5" PointX="16.75" PointY="452.5" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ERActionPlanERHeader" Width="1.5" PointX="16.75" PointY="550.75" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ERAnalysisHeader" Width="1.5" PointX="3" PointY="419.125" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ERFinalDecisionHeader" Width="1.5" PointX="3" PointY="582" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ERHeader" Width="1.5" PointX="3" PointY="613.875" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ERImprovmentERAnalysisHeader" Width="1.5" PointX="36" PointY="451.75" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ERImprovmentERHeader" Width="1.5" PointX="36" PointY="547.5" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ERImprovmentResponsible" Width="1.5" PointX="31.5" PointY="474.125" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ERImprovment" Width="1.5" PointX="33.75" PointY="480.5" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ERLog" Width="1.5" PointX="34" PointY="508.75" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ERLogType" Width="1.5" PointX="31.75" PointY="524.625" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ERModuleOffice" Width="1.5" PointX="20.25" PointY="451.75" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ERModule" Width="1.5" PointX="18" PointY="437.5" />
+        <EntityTypeShape EntityType="KvalPortDbModel.EROwnMeasure" Width="1.5" PointX="20.25" PointY="463.75" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ERReportMeasure" Width="1.5" PointX="34" PointY="489.5" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ERResponsible" Width="1.5" PointX="23.5" PointY="477.25" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ErrorLog" Width="1.5" PointX="2.75" PointY="3.75" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ERStatu" Width="1.5" PointX="12.25" PointY="443.25" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ERStatusEmailNotification" Width="1.5" PointX="14.5" PointY="449.125" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ERStatusOffice" Width="1.5" PointX="15.25" PointY="459.75" />
+        <EntityTypeShape EntityType="KvalPortDbModel.FollowUp" Width="1.5" PointX="17.5" PointY="510.625" />
+        <EntityTypeShape EntityType="KvalPortDbModel.FollowUpDiagram" Width="1.5" PointX="15.25" PointY="543.125" />
+        <EntityTypeShape EntityType="KvalPortDbModel.FollowUpEmployeePermission" Width="1.5" PointX="30.75" PointY="504.375" />
+        <EntityTypeShape EntityType="KvalPortDbModel.FollowUpGroup" Width="1.5" PointX="12.25" PointY="588.375" />
+        <EntityTypeShape EntityType="KvalPortDbModel.FollowUpGroupRow" Width="1.5" PointX="4.75" PointY="3.75" />
+        <EntityTypeShape EntityType="KvalPortDbModel.FollowUpLargeDiagramGroup" Width="1.5" PointX="12.25" PointY="644.75" />
+        <EntityTypeShape EntityType="KvalPortDbModel.FollowUpLargeDiagramGroupRow" Width="1.5" PointX="19.75" PointY="577.75" />
+        <EntityTypeShape EntityType="KvalPortDbModel.FollowUpOfficeLargeDiagram" Width="1.5" PointX="25.75" PointY="469.375" />
+        <EntityTypeShape EntityType="KvalPortDbModel.FollowUpRow" Width="1.5" PointX="33.75" PointY="495.875" />
+        <EntityTypeShape EntityType="KvalPortDbModel.FollowUpViewGroup" Width="1.5" PointX="12.25" PointY="623.5" />
+        <EntityTypeShape EntityType="KvalPortDbModel.FollowUpViewGroupRow" Width="1.5" PointX="19.75" PointY="567.125" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ICErrorCode" Width="1.5" PointX="7.5" PointY="444.625" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ICErrorCodeGroup" Width="1.5" PointX="5.25" PointY="444.625" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ICErrorCodeMainGroup" Width="1.5" PointX="3" PointY="444.625" />
+        <EntityTypeShape EntityType="KvalPortDbModel.IncidentReport" Width="1.5" PointX="21.5" PointY="515.375" />
+        <EntityTypeShape EntityType="KvalPortDbModel.IncidentReportDocument" Width="1.5" PointX="23.75" PointY="523.875" />
+        <EntityTypeShape EntityType="KvalPortDbModel.IncidentReportFinalDecision" Width="1.5" PointX="3" PointY="412.625" />
+        <EntityTypeShape EntityType="KvalPortDbModel.IncidentReportIncident" Width="1.5" PointX="3" PointY="576.125" />
+        <EntityTypeShape EntityType="KvalPortDbModel.IncidentReportInjuryType" Width="1.5" PointX="3" PointY="604.625" />
+        <EntityTypeShape EntityType="KvalPortDbModel.IncidentReportLocation" Width="1.5" PointX="12.25" PointY="614" />
+        <EntityTypeShape EntityType="KvalPortDbModel.IncidentReportLog" Width="1.5" PointX="35.75" PointY="516.125" />
+        <EntityTypeShape EntityType="KvalPortDbModel.IncidentReportOutsider" Width="1.5" PointX="23.75" PointY="526.5" />
+        <EntityTypeShape EntityType="KvalPortDbModel.IncidentReportStatu" Width="1.5" PointX="19.25" PointY="547.25" />
+        <EntityTypeShape EntityType="KvalPortDbModel.IncidentReportType" Width="1.5" PointX="3" PointY="623.25" />
+        <EntityTypeShape EntityType="KvalPortDbModel.IncidentReportVictum" Width="1.5" PointX="34.75" PointY="513.375" />
+        <EntityTypeShape EntityType="KvalPortDbModel.IncidentReportWorkTask" Width="1.5" PointX="12.25" PointY="635" />
+        <EntityTypeShape EntityType="KvalPortDbModel.InternalControlOffice" Width="1.5" PointX="28.5" PointY="501.625" />
+        <EntityTypeShape EntityType="KvalPortDbModel.InternalControlOfficeGroup" Width="1.5" PointX="12.25" PointY="601.125" />
+        <EntityTypeShape EntityType="KvalPortDbModel.InternalControlOfficeLog" Width="1.5" PointX="31.75" PointY="508.5" />
+        <EntityTypeShape EntityType="KvalPortDbModel.InternalControlOfficeLogRow" Width="1.5" PointX="47.25" PointY="488" />
+        <EntityTypeShape EntityType="KvalPortDbModel.InternalControlOfficeLogRowCode" Width="1.5" PointX="49.5" PointY="467.25" />
+        <EntityTypeShape EntityType="KvalPortDbModel.InternalControlOfficeLogRowFile" Width="1.5" PointX="49.5" PointY="488.875" />
+        <EntityTypeShape EntityType="KvalPortDbModel.InternalControlOfficeRow" Width="1.5" PointX="32" PointY="514.375" />
+        <EntityTypeShape EntityType="KvalPortDbModel.InternalControlOfficeSubGroup" Width="1.5" PointX="32.75" PointY="518.75" />
+        <EntityTypeShape EntityType="KvalPortDbModel.InternalControlOfficeVehicleBrandGoal" Width="1.5" PointX="33.75" PointY="501.875" />
+        <EntityTypeShape EntityType="KvalPortDbModel.InternalControlTemplate" Width="1.5" PointX="5.25" PointY="529.5" />
+        <EntityTypeShape EntityType="KvalPortDbModel.InternalControlTemplateGroup" Width="1.5" PointX="3" PointY="611" />
+        <EntityTypeShape EntityType="KvalPortDbModel.InternalControlTemplateRow" Width="1.5" PointX="9.75" PointY="529.625" />
+        <EntityTypeShape EntityType="KvalPortDbModel.InternalControlTemplateSubGroup" Width="1.5" PointX="7.5" PointY="530" />
+        <EntityTypeShape EntityType="KvalPortDbModel.Manual" Width="1.5" PointX="16.75" PointY="584.625" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ManualAdminOfficeConnection" Width="1.5" PointX="20.5" PointY="477.375" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ManualDocument" Width="1.5" PointX="39" PointY="473.5" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ManualDocumentCategory" Width="1.5" PointX="36.75" PointY="476" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ManualDocumentPDFCompany" Width="1.5" PointX="28.5" PointY="497.625" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ManualDocumentTemplateCompany" Width="1.5" PointX="22.5" PointY="500.75" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ManualOfficeFastLink" Width="1.5" PointX="37" PointY="507" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ManualPart" Width="1.5" PointX="31" PointY="540.5" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ManualPartDocument" Width="1.5" PointX="41.25" PointY="487.375" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ManualPartDocumentEmployee" Width="1.5" PointX="46.5" PointY="511.375" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ManualPartDocumentFollowUp" Width="1.5" PointX="23.75" PointY="510.875" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ManualPartDocumentLog" Width="1.5" PointX="52.5" PointY="498.625" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ManualPartDocumentLogAttachedFile" Width="1.5" PointX="54.75" PointY="504.75" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ManualPartDocumentLogAttachedLog" Width="1.5" PointX="54.75" PointY="502" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ManualPartDocumentLogEmployee" Width="1.5" PointX="54.75" PointY="508.25" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ManualPartDocumentLogFollowUp" Width="1.5" PointX="23.75" PointY="518.875" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ManualPartDocumentLogImprovement" Width="1.5" PointX="39" PointY="493.375" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ManualPartDocumentPlan" Width="1.5" PointX="43.5" PointY="513.375" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ManualPartDocumentPlanAttachedFile" Width="1.5" PointX="45.75" PointY="518.25" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ManualPartDocumentPlanEmployee" Width="1.5" PointX="52.75" PointY="511.375" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ManualPartDocumentPlanFollowUp" Width="1.5" PointX="26.75" PointY="521.875" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ManualPartSuggestion" Width="1.5" PointX="31.5" PointY="467.5" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ManualPartSuggestionDocument" Width="1.5" PointX="33.75" PointY="469.375" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ManualPartTemplate" Width="1.5" PointX="16.75" PointY="607.125" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ManualPartTemplateDocument" Width="1.5" PointX="19" PointY="608.5" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ManualPartVersion" Width="1.5" PointX="35.25" PointY="520.25" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ManualRadDocument" Width="1.5" PointX="28.75" PointY="543.125" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ManualSuggestion" Width="1.5" PointX="19.75" PointY="581.375" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ManualTemplate" Width="1.5" PointX="14.5" PointY="728.5" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ManualTemplateResponsible" Width="1.5" PointX="20.5" PointY="485.25" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ModuleCompany" Width="1.5" PointX="3" PointY="459.25" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ModuleEmployee" Width="1.5" PointX="22.5" PointY="497.25" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ModuleOffice" Width="1.5" PointX="23.25" PointY="453.375" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ModulePartCompany" Width="1.5" PointX="3" PointY="453.125" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ModulePartEmployee" Width="1.5" PointX="26.5" PointY="486.875" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ModulePartOffice" Width="1.5" PointX="21.25" PointY="456.125" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ModulePart" Width="1.5" PointX="0.75" PointY="444.75" />
+        <EntityTypeShape EntityType="KvalPortDbModel.Module" Width="1.5" PointX="1.5" PointY="466.375" />
+        <EntityTypeShape EntityType="KvalPortDbModel.OfficeDepartment" Width="1.5" PointX="23.5" PointY="486.75" />
+        <EntityTypeShape EntityType="KvalPortDbModel.OfficeDepartmentTask" Width="1.5" PointX="28.75" PointY="507.625" />
+        <EntityTypeShape EntityType="KvalPortDbModel.OfficeDepartmentTaskGroup" Width="1.5" PointX="26.5" PointY="476.5" />
+        <EntityTypeShape EntityType="KvalPortDbModel.OfficeDepartmentTaskGroupRow" Width="1.5" PointX="36" PointY="498.375" />
+        <EntityTypeShape EntityType="KvalPortDbModel.OfficeDepartmentTaskGroupVersion" Width="1.5" PointX="30.75" PointY="497.5" />
+        <EntityTypeShape EntityType="KvalPortDbModel.OfficeDepartmentTaskVersion" Width="1.5" PointX="37" PointY="512" />
+        <EntityTypeShape EntityType="KvalPortDbModel.OfficeDepartmentVersion" Width="1.5" PointX="25.75" PointY="504.75" />
+        <EntityTypeShape EntityType="KvalPortDbModel.OfficeGroup" Width="1.5" PointX="7.75" PointY="452.375" />
+        <EntityTypeShape EntityType="KvalPortDbModel.OfficeInternalRevPlaningSetting" Width="1.5" PointX="12.25" PointY="641.625" />
+        <EntityTypeShape EntityType="KvalPortDbModel.OfficeKeyCabinet" Width="1.5" PointX="12.25" PointY="426.5" />
+        <EntityTypeShape EntityType="KvalPortDbModel.OfficeManagementReviewSetting" Width="1.5" PointX="12.25" PointY="603.75" />
+        <EntityTypeShape EntityType="KvalPortDbModel.OfficeManualDocument" Width="1.5" PointX="20.25" PointY="445.375" />
+        <EntityTypeShape EntityType="KvalPortDbModel.OfficeParking" Width="1.5" PointX="12.25" PointY="429.375" />
+        <EntityTypeShape EntityType="KvalPortDbModel.Office" Width="1.5" PointX="10" PointY="441.5" />
+        <EntityTypeShape EntityType="KvalPortDbModel.OfficeSafetyEmployee" Width="1.5" PointX="14.5" PointY="493.375" />
+        <EntityTypeShape EntityType="KvalPortDbModel.OfficeWebLink" Width="1.5" PointX="12.25" PointY="567.375" />
+        <EntityTypeShape EntityType="KvalPortDbModel.OfficeVehicleBrandResponsible" Width="1.5" PointX="22.5" PointY="493.25" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ProgramVersion" Width="1.5" PointX="5.75" PointY="0.75" />
+        <EntityTypeShape EntityType="KvalPortDbModel.Property" Width="1.5" PointX="24" PointY="531.875" />
+        <EntityTypeShape EntityType="KvalPortDbModel.PropertyControlDocument" Width="1.5" PointX="12.25" PointY="595" />
+        <EntityTypeShape EntityType="KvalPortDbModel.PropertyControlLog" Width="1.5" PointX="41.25" PointY="507.25" />
+        <EntityTypeShape EntityType="KvalPortDbModel.PropertyGroup" Width="1.5" PointX="12.25" PointY="626.25" />
+        <EntityTypeShape EntityType="KvalPortDbModel.PropertyGroupRow" Width="1.5" PointX="26.25" PointY="579.125" />
+        <EntityTypeShape EntityType="KvalPortDbModel.PropertyInspectionDocument" Width="1.5" PointX="12.25" PointY="466.25" />
+        <EntityTypeShape EntityType="KvalPortDbModel.PropertyInspectionLog" Width="1.5" PointX="44.25" PointY="503.75" />
+        <EntityTypeShape EntityType="KvalPortDbModel.PropertyLog" Width="1.5" PointX="49.5" PointY="513.875" />
+        <EntityTypeShape EntityType="KvalPortDbModel.PropertyLogType" Width="1.5" PointX="47.25" PointY="522.25" />
+        <EntityTypeShape EntityType="KvalPortDbModel.PropertyMaintenanceDocument" Width="1.5" PointX="12.25" PointY="620.25" />
+        <EntityTypeShape EntityType="KvalPortDbModel.PropertyMaintenanceLog" Width="1.5" PointX="44.25" PointY="509.25" />
+        <EntityTypeShape EntityType="KvalPortDbModel.PropertyManualPartDocument" Width="1.5" PointX="46.5" PointY="515" />
+        <EntityTypeShape EntityType="KvalPortDbModel.PropertyProduct" Width="1.5" PointX="3" PointY="617.25" />
+        <EntityTypeShape EntityType="KvalPortDbModel.PropertyProductType" Width="1.5" PointX="5.25" PointY="617.375" />
+        <EntityTypeShape EntityType="KvalPortDbModel.PropertySettingsOffice" Width="1.5" PointX="12.25" PointY="610.5" />
+        <EntityTypeShape EntityType="KvalPortDbModel.PropertyStatu" Width="1.5" PointX="21.75" PointY="536.375" />
+        <EntityTypeShape EntityType="KvalPortDbModel.QRActionPlan" Width="1.5" PointX="36" PointY="478.875" />
+        <EntityTypeShape EntityType="KvalPortDbModel.QRActionPlanQRAnalysisHeader" Width="1.5" PointX="38.25" PointY="522.75" />
+        <EntityTypeShape EntityType="KvalPortDbModel.QRActionPlanQRHeader" Width="1.5" PointX="38.25" PointY="455.25" />
+        <EntityTypeShape EntityType="KvalPortDbModel.QRAnalysisHeader" Width="1.5" PointX="3" PointY="566.25" />
+        <EntityTypeShape EntityType="KvalPortDbModel.QRAttachedFile" Width="1.5" PointX="41.25" PointY="572.875" />
+        <EntityTypeShape EntityType="KvalPortDbModel.QRCausedBy" Width="1.5" PointX="41.25" PointY="503.75" />
+        <EntityTypeShape EntityType="KvalPortDbModel.QRFinalDecisionHeader" Width="1.5" PointX="3" PointY="409.75" />
+        <EntityTypeShape EntityType="KvalPortDbModel.QRHeader" Width="1.5" PointX="3" PointY="428.625" />
+        <EntityTypeShape EntityType="KvalPortDbModel.QRImportTaskExternalSystem" Width="1.5" PointX="34" PointY="475.875" />
+        <EntityTypeShape EntityType="KvalPortDbModel.QRImprovementCRHeader" Width="1.5" PointX="39" PointY="458.875" />
+        <EntityTypeShape EntityType="KvalPortDbModel.QRImprovmentDocument" Width="1.5" PointX="39" PointY="501.375" />
+        <EntityTypeShape EntityType="KvalPortDbModel.QRImprovmentResponsible" Width="1.5" PointX="25.5" PointY="493.25" />
+        <EntityTypeShape EntityType="KvalPortDbModel.QRImprovment" Width="1.5" PointX="36.75" PointY="485.375" />
+        <EntityTypeShape EntityType="KvalPortDbModel.QRImprovmentTask" Width="1.5" PointX="39" PointY="498" />
+        <EntityTypeShape EntityType="KvalPortDbModel.QRLog" Width="1.5" PointX="41.25" PointY="511.125" />
+        <EntityTypeShape EntityType="KvalPortDbModel.QRLogType" Width="1.5" PointX="39" PointY="520" />
+        <EntityTypeShape EntityType="KvalPortDbModel.QRModuleEmailNotificationReceiver" Width="1.5" PointX="14.5" PointY="422.625" />
+        <EntityTypeShape EntityType="KvalPortDbModel.QRModuleEmailNotification" Width="1.5" PointX="15.25" PointY="456" />
+        <EntityTypeShape EntityType="KvalPortDbModel.QRModuleOffice" Width="1.5" PointX="12.25" PointY="451.75" />
+        <EntityTypeShape EntityType="KvalPortDbModel.QRModule" Width="1.5" PointX="13" PointY="433.375" />
+        <EntityTypeShape EntityType="KvalPortDbModel.QROfficeGoal" Width="1.5" PointX="12.25" PointY="629" />
+        <EntityTypeShape EntityType="KvalPortDbModel.QROwnMeasure" Width="1.5" PointX="17.25" PointY="463.75" />
+        <EntityTypeShape EntityType="KvalPortDbModel.QRReportMeasure" Width="1.5" PointX="41.25" PointY="474.375" />
+        <EntityTypeShape EntityType="KvalPortDbModel.QRResponsible" Width="1.5" PointX="31.75" PointY="488" />
+        <EntityTypeShape EntityType="KvalPortDbModel.QRStatu" Width="1.5" PointX="36.75" PointY="468.5" />
+        <EntityTypeShape EntityType="KvalPortDbModel.QRStatusEmailNotification" Width="1.5" PointX="17.5" PointY="443" />
+        <EntityTypeShape EntityType="KvalPortDbModel.QRStatusOffice" Width="1.5" PointX="21.25" PointY="459.75" />
+        <EntityTypeShape EntityType="KvalPortDbModel.QualityReport" Width="1.5" PointX="39" PointY="480.25" />
+        <EntityTypeShape EntityType="KvalPortDbModel.RiskAnalysisCompany" Width="1.5" PointX="5.25" PointY="523.75" />
+        <EntityTypeShape EntityType="KvalPortDbModel.RiskAnalysisCompanyRow" Width="1.5" PointX="7.5" PointY="523.875" />
+        <EntityTypeShape EntityType="KvalPortDbModel.RiskAnalysisEffect" Width="1.5" PointX="3" PointY="607.75" />
+        <EntityTypeShape EntityType="KvalPortDbModel.RiskAnalysisGroup" Width="1.5" PointX="3" PointY="598.875" />
+        <EntityTypeShape EntityType="KvalPortDbModel.RiskAnalysisOffice" Width="1.5" PointX="31.5" PointY="492.25" />
+        <EntityTypeShape EntityType="KvalPortDbModel.RiskAnalysisOfficeLog" Width="1.5" PointX="33.75" PointY="505.125" />
+        <EntityTypeShape EntityType="KvalPortDbModel.RiskAnalysisOfficeLogImprovement" Width="1.5" PointX="42" PointY="497.5" />
+        <EntityTypeShape EntityType="KvalPortDbModel.RiskAnalysisOfficeLogRow" Width="1.5" PointX="38" PointY="516.375" />
+        <EntityTypeShape EntityType="KvalPortDbModel.RiskAnalysisProbability" Width="1.5" PointX="3" PointY="562.875" />
+        <EntityTypeShape EntityType="KvalPortDbModel.RiskAnalysisSubGroup" Width="1.5" PointX="3" PointY="432" />
+        <EntityTypeShape EntityType="KvalPortDbModel.RiskAnalysisSubGroupRow" Width="1.5" PointX="9.75" PointY="478.125" />
+        <EntityTypeShape EntityType="KvalPortDbModel.Support" Width="1.5" PointX="14.5" PointY="737.875" />
+        <EntityTypeShape EntityType="KvalPortDbModel.SwedArea" Width="1.5" PointX="36.75" PointY="473" />
+        <EntityTypeShape EntityType="KvalPortDbModel.SwedAreaRole" Width="1.5" PointX="27.25" PointY="459.625" />
+        <EntityTypeShape EntityType="KvalPortDbModel.SwedAssessmentSkillsER" Width="1.5" PointX="28.5" PointY="467.875" />
+        <EntityTypeShape EntityType="KvalPortDbModel.SwedAssessmentSkillsIB" Width="1.5" PointX="29.5" PointY="482.875" />
+        <EntityTypeShape EntityType="KvalPortDbModel.SwedAssessmentSkillsIR" Width="1.5" PointX="14.5" PointY="475.375" />
+        <EntityTypeShape EntityType="KvalPortDbModel.SwedAssessmentSkillsKA" Width="1.5" PointX="28.5" PointY="490.875" />
+        <EntityTypeShape EntityType="KvalPortDbModel.SwedAssessmentSkillsKK" Width="1.5" PointX="20.5" PointY="480.5" />
+        <EntityTypeShape EntityType="KvalPortDbModel.SwedAssessmentSkillsTA" Width="1.5" PointX="23.5" PointY="480.875" />
+        <EntityTypeShape EntityType="KvalPortDbModel.SwedAssessmentSkillsUA" Width="1.5" PointX="17.5" PointY="497.25" />
+        <EntityTypeShape EntityType="KvalPortDbModel.SwedDocumentReview" Width="1.5" PointX="44.25" PointY="481.75" />
+        <EntityTypeShape EntityType="KvalPortDbModel.SwedERSamplingCar" Width="1.5" PointX="41.25" PointY="480.75" />
+        <EntityTypeShape EntityType="KvalPortDbModel.SwedJointInfoEducation" Width="1.5" PointX="26.5" PointY="481.625" />
+        <EntityTypeShape EntityType="KvalPortDbModel.SwedJointInfoEducationParticipant" Width="1.5" PointX="30.75" PointY="501.5" />
+        <EntityTypeShape EntityType="KvalPortDbModel.SwedManagementReview381" Width="1.5" PointX="14.5" PointY="496.875" />
+        <EntityTypeShape EntityType="KvalPortDbModel.SwedManagementReview381Employees" Width="1.5" PointX="19.75" PointY="498.375" />
+        <EntityTypeShape EntityType="KvalPortDbModel.SwedOfficeArea" Width="1.5" PointX="20.25" PointY="448.25" />
+        <EntityTypeShape EntityType="KvalPortDbModel.SwedOfficeAreaEmployee" Width="1.5" PointX="29.5" PointY="478.375" />
+        <EntityTypeShape EntityType="KvalPortDbModel.SwedPowerOfAttorneyER" Width="1.5" PointX="23.5" PointY="468" />
+        <EntityTypeShape EntityType="KvalPortDbModel.SwedRevisionGroup" Width="1.5" PointX="0.75" PointY="1" />
+        <EntityTypeShape EntityType="KvalPortDbModel.SwedRevisionItem" Width="1.5" PointX="3" PointY="0.875" />
+        <EntityTypeShape EntityType="KvalPortDbModel.Tool" Width="1.5" PointX="19" PointY="520.75" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ToolBorrowed" Width="1.5" PointX="21.25" PointY="539.625" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ToolCalibration20MeterDistance" Width="1.5" PointX="50.25" PointY="492.25" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ToolCalibrationACWaeco" Width="1.5" PointX="50.25" PointY="503" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ToolCalibrationBreaktesterOptimo" Width="1.5" PointX="47.25" PointY="505.875" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ToolCalibrationCircumference" Width="1.5" PointX="47.25" PointY="497.25" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ToolCalibrationDocument" Width="1.5" PointX="21.25" PointY="550.125" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ToolCalibrationDocumentReport" Width="1.5" PointX="14.5" PointY="628.125" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ToolCalibrationDocumentReportVersion" Width="1.5" PointX="16.75" PointY="557.75" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ToolCalibrationForm" Width="1.5" PointX="16.75" PointY="526.25" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ToolCalibrationFourGasMeterHexanPro" Width="1.5" PointX="50.25" PointY="496.125" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ToolCalibrationFourGasMeterPropanPro" Width="1.5" PointX="44.25" PointY="497.25" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ToolCalibrationLeakFinder" Width="1.5" PointX="47.25" PointY="501.25" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ToolCalibrationLightControlPro" Width="1.5" PointX="47.25" PointY="493" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ToolCalibrationLog" Width="1.5" PointX="52.5" PointY="551.5" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ToolCalibrationMethod" Width="1.5" PointX="12.25" PointY="408.625" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ToolCalibrationPressureTester" Width="1.5" PointX="44.25" PointY="491.375" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ToolCalibrationType" Width="1.5" PointX="3" PointY="560" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ToolCalibrator" Width="1.5" PointX="3" PointY="572.125" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ToolCostOffice" Width="1.5" PointX="12.25" PointY="632" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ToolDepartment" Width="1.5" PointX="12.25" PointY="638.125" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ToolDepartmentPlace" Width="1.5" PointX="14.5" PointY="638.125" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ToolDepartmentPlaceLocation" Width="1.5" PointX="16.75" PointY="638.375" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ToolDocument" Width="1.5" PointX="12.25" PointY="585" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ToolGroup" Width="1.5" PointX="12.25" PointY="411.375" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ToolGroupInventory" Width="1.5" PointX="20.5" PointY="468.125" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ToolGroupInventoryLog" Width="1.5" PointX="22.75" PointY="439.125" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ToolGroupInventoryLogRow" Width="1.5" PointX="24.25" PointY="514.5" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ToolGroupRow" Width="1.5" PointX="21.25" PointY="474" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ToolLog" Width="1.5" PointX="21.25" PointY="488" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ToolLogType" Width="1.5" PointX="19" PointY="440.125" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ToolMaintenanceDocument" Width="1.5" PointX="21.25" PointY="553.125" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ToolMaintenanceLog" Width="1.5" PointX="17.5" PointY="468.25" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ToolMaintenanceRutine" Width="1.5" PointX="14.5" PointY="679.75" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ToolMaintenanceRutineCompany" Width="1.5" PointX="25.5" PointY="500.625" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ToolMaintenanceRutineDeviant" Width="1.5" PointX="21.25" PointY="525.375" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ToolMaintenanceRutineOffice" Width="1.5" PointX="16.75" PointY="564.25" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ToolMaintenanceType" Width="1.5" PointX="3" PointY="406.875" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ToolManualPartDocument" Width="1.5" PointX="21.25" PointY="528.75" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ToolManufacturer" Width="1.5" PointX="3" PointY="425.5" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ToolProduct" Width="1.5" PointX="3" PointY="441.125" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ToolProductPriceOffice" Width="1.5" PointX="12.25" PointY="459.875" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ToolProductType" Width="1.5" PointX="5.25" PointY="441.375" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ToolReplacing" Width="1.5" PointX="21.25" PointY="544.125" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ToolSettingsOffice" Width="1.5" PointX="14.5" PointY="437.125" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ToolStatu" Width="1.5" PointX="16.75" PointY="532.375" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ToolWebLink" Width="1.5" PointX="21.25" PointY="557" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ToolWebLinkCompany" Width="1.5" PointX="3" PointY="601.875" />
+        <EntityTypeShape EntityType="KvalPortDbModel.ToolVWPricesCompany" Width="1.5" PointX="3" PointY="587.875" />
+        <EntityTypeShape EntityType="KvalPortDbModel.VehicleBrand" Width="1.5" PointX="3" PointY="501.375" />
+        <EntityTypeShape EntityType="KvalPortDbModel.VehicleCompany" Width="1.5" PointX="5.25" PointY="500" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ACReportGasLog_ACAction" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ACOilType_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ACReport_ACOilType" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ACReport_ACReportGas" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ACReport_CustomerCompanies" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ACReport_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ACReport_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ACReport_Tool" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ACReport_VehicleCompanies" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ACReportGasLog_ACReport" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ACReportGas_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ACReportGasLog_ACReportGas" />
+        <AssociationConnector Association="KvalPortDbModel.FK_Tool_ACReportGas" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ACReportGasLog_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_BisoftProgramUpdate_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_BisoftProgramUpdate_ModuleParts" />
+        <AssociationConnector Association="KvalPortDbModel.FK_BisoftProgramUpdate_Modules" />
+        <AssociationConnector Association="KvalPortDbModel.FK_BisoftWeekEmail_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CarPreSale_CarPreSaleFlowGroup" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CarPreSale_CarPreSalesMaintenanceForm" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CarPreSale_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CarPreSale_Employees1" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CarPreSale_Employees2" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CarPreSale_Employees3" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CarPreSale_Employees4" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CarPreSale_OfficeKeyCabinet" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CarPreSale_OfficeParking" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CarPreSale_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CarPreSale_VehicleCompanies" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CarPreSaleLog_CarPreSale" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CarPreSalesModule_CarPreSale" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CarPreSaleFlowGroup_CarPreSalesMaintenanceForm" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CarPreSaleFlowGroup_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CarPreSaleFlowGroup_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CarPreSaleLog_CarPreSalesMaintenanceBeg" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CarPreSaleLog_CarPreSalesMaintenanceLager" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CarPreSaleLog_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CarPreSaleLogDocument_CarPreSaleLog" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CarPreSaleModuleFlow_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CarPreSaleModuleFlowRow_CarPreSaleModuleFlow" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CarPreSaleModuleFlowRow_CarPreSalesModuleOffice" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CarPreSalesModule_CarPreSalesModuleOffice" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CarPreSalesModule_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CarPreSalesModuleDocument_CarPreSalesModule" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CarPreSalesModuleOffice_CarPreSalesModuleOfficeType" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CarPreSalesModuleOffice_CarPreSalesProtocol" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CarPreSalesModuleOffice_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CarPreSalesModuleOffice_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CarPreSalesModuleOfficeResponsible_CarPreSalesModuleOffice" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CarPreSalesModuleOfficeResponsible_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CBRProviderOffice_CBRproviders" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CBRProviderOffice_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_Company_Office" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CompanyCleanSettings_Companies" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CompanyEmployeeGroup_Companies" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CompanyImages_Companies" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CompanyRegion_Companies" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CompanyVehicleBrand_Companies" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CRAnalysisHeader_Company" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CRFinalDecisionHeader_Company" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CRFollowUpHeader_Companies" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CRHeader_Company" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CustomerCompany_Companies" />
+        <AssociationConnector Association="KvalPortDbModel.FK_EmployeePositionCompany_Companies" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ERAnalysisHeaders_Companies" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ERFinalDecisionHeaders_Companies" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ERHeaders_Companies" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ICErrorCodeMainGroup_Companies" />
+        <AssociationConnector Association="KvalPortDbModel.FK_IncidentReportFinalDecision_Companies" />
+        <AssociationConnector Association="KvalPortDbModel.FK_IncidentReportIncident_Companies" />
+        <AssociationConnector Association="KvalPortDbModel.FK_IncidentReportInjuryType_Companies" />
+        <AssociationConnector Association="KvalPortDbModel.FK_IncidentReportType_Companies" />
+        <AssociationConnector Association="KvalPortDbModel.FK_InternalControlTemplate_Companies" />
+        <AssociationConnector Association="KvalPortDbModel.FK_InternalControlTemplateGroup_Companies" />
+        <AssociationConnector Association="KvalPortDbModel.FK_Manual_Companies" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualDocumentPDFCompany_Companies" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualDocumentTemplateCompany_Companies" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualTemplateResponsible_Companies" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ModuleCompany_Company1" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ModulePartCompany_Company" />
+        <AssociationConnector Association="KvalPortDbModel.FK_PropertyProduct_Companies" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QRAnalysisHeaders_Companies" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QRFinalDecisionHeaders_Companies" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QRHeaders_Companies" />
+        <AssociationConnector Association="KvalPortDbModel.FK_RiskAnalysisCompany_Companies" />
+        <AssociationConnector Association="KvalPortDbModel.FK_RiskAnalysisEffect_Companies" />
+        <AssociationConnector Association="KvalPortDbModel.FK_RiskAnalysisGroup_Companies" />
+        <AssociationConnector Association="KvalPortDbModel.FK_RiskAnalysisProbability_Companies" />
+        <AssociationConnector Association="KvalPortDbModel.FK_RiskAnalysisSubGroup_Companies" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolCalibrationType_Companies" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolCalibrator_Companies" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolMaintenanceRutineCompany_Companies" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolMaintenanceType_Companies" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolManufacturer_Companies" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolProduct_Companies" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolWebLinkCompany_Companies" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolVWPricesCompany_Companies" />
+        <AssociationConnector Association="KvalPortDbModel.FK_VehicleCompany_Companies" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CompanyEmployeeGroupRow_CompanyEmployeeGroup" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CompanyEmployeeGroupRow_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CompanyRegion_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_Offices_CompanyRegion" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CompanyVehicleBrand_VehicleBrand" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CQReportTaskRows_CustomerReports" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CQReportTaskRows_OfficeDepartmentTask" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CQReportTaskRows_QualityReport" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CustomerReports_CRAnalysisFaults" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CRAnalysisHeaders_QRHeaders" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CustomerReport_CRAnalysisHeader" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CRAttatchedFile_CustomerReports" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CustomerReports_CRFinalDecisionHeader" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CustomerReports_CRFollowUpHeader" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CustomerReport_CRHeader" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QRImprovementCRHeaders_CRHeaders" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CRLogMeasureReport_CRStatus" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CRLogMeasureReport_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CRMeasureReport_CRLogMeasureReport" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CRLog_CustomerReport" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CRLog_Employee" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CRLogs_CRLogTypes" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CRMeasureReport_CRControlStatus" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CRMeasureReport_CRStatus" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CRMeasureReport_CustomerReport" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CRMeasureReports_CRModules" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CRModuleEmailNotificationReceiver_CRModuleEmailNotifications" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CRModuleEmailNotificationReceiver_EmailContacts" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CRModuleEmailNotificationReceiver_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CRModuleEmailNotifications_CRModules" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CRModuleEmailNotifications_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CRModulesOffice_CRModules" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CRModulesOffice_CRStatus" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CRModulesOffice_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CRPositiveDepartmentTasks_CustomerReportPositive" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CRPositiveDepartmentTasks_OfficeDepartmentTask" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CRPositiveGroup_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CRPositiveGroupQuestion_CRPositiveGroup" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CustomerReportPositive_CRPositiveGroup" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CustomerPositiveReportRow_CRPositiveGroupQuestion" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CRResponsible_Employee" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CRResponsible_Office" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CustomerReport_CRResponsible" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CRStatusEmailNotifications_CRStatus" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CRStatusOffice_CRControlStatus" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CRStatusOffice_CRStatus" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CustomerReportPositive_CRStatus" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CustomerReports_CRStatus" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CRStatusEmailNotifications_CRStatusEmailNotifications" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CRStatusEmailNotifications_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CRStatusEmailNotifications_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CRStatusOffice_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CustomerReportPositive_CustomerCompanies" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CustomerReports_CustomerCompany" />
+        <AssociationConnector Association="KvalPortDbModel.FK_VehicleCompany_VehicleCompany" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CustomerPositiveGrade_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CustomerPositiveReportRow_CustomerPositiveGrade" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CustomerReportPositive_CustomerPositiveGrade" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CustomerPositiveReportRow_CustomerReportPositive" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CustomerReportImprovments_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CustomerReportImprovments_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CustomerReportPositive_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CustomerReportPositive_OfficeDepartmentTaskGroup" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CustomerReportPositive_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CustomerReportPositive_VehicleCompanies" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CustomerReports_CustomerReportPositive" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CustomerReport_CausedBy" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CustomerReport_CreatedBy" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CustomerReport_Office" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CustomerReports_CustomerReports" />
+        <AssociationConnector Association="KvalPortDbModel.FK_CustomerReports_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QualityReport_CustomerReports" />
+        <AssociationConnector Association="KvalPortDbModel.FK_EmailContacts_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ERStatusEmailNotifications_EmailContacts" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QRModuleEmailNotificationReceiver_EmailContacts" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QRStatusEmailNotifications_EmailContacts" />
+        <AssociationConnector Association="KvalPortDbModel.FK_EmailSent_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_EmailSent_Modules" />
+        <AssociationConnector Association="KvalPortDbModel.FK_EmailSent_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_EmailSettingsOffice_Office" />
+        <AssociationConnector Association="KvalPortDbModel.FK_EmployeeAssSkillsErSettings_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_EmployeeAssSkillsIBSettings_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_EmployeeAssSkillsIRSettings_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_EmployeeAssSkillsKASettings_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_EmployeeAssSkillsKKSettings_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_EmployeeAssSkillsTASettings_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_EmployeeAssSkillsUASettings_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_EmployeeManualPartDoc_EmployeeDocType" />
+        <AssociationConnector Association="KvalPortDbModel.FK_EmployeeEducation_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_EmployeeGroup_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_EmployeeGroupRow_EmployeeGroup" />
+        <AssociationConnector Association="KvalPortDbModel.FK_EmployeeGroupRow_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_EmployeeManualPartDoc_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_EmployeeManualPartDoc_ManualPart" />
+        <AssociationConnector Association="KvalPortDbModel.FK_Employees_EmployeePositionCompany" />
+        <AssociationConnector Association="KvalPortDbModel.FK_Employee_EmployeePosition" />
+        <AssociationConnector Association="KvalPortDbModel.FK_EmployeeWorkExperience_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_EnviromentalReport_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_EnviromentalReport_Employees1" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ERActionPlan_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ERImprovmentResponsibles_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ERImprovments_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ERLogs_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ERResponsibles_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ERStatusEmailNotifications_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_FollowUp_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_FollowUpEmployeePermission_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_FollowUpRow_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_IncidentReport_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_IncidentReport_Employees1" />
+        <AssociationConnector Association="KvalPortDbModel.FK_IncidentReport_Employees2" />
+        <AssociationConnector Association="KvalPortDbModel.FK_IncidentReportLog_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_IncidentReportVictum_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_InternalControlOffice_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_InternalControlOfficeLog_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_InternalControlOfficeLog_Employees1" />
+        <AssociationConnector Association="KvalPortDbModel.FK_Manual_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualAdminOfficeConnection_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualDocumentPDFCompany_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualDocumentTemplateCompany_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualPart_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualPartDocument_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualPartDocumentEmployee_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualPartDocumentLog_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualPartDocumentLog_Employees1" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualPartDocumentLogEmployee_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualPartDocumentPlan_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualPartDocumentPlanEmployee_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualPartSuggestion_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualPartSuggestion_Employees1" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualPartTemplate_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualPartVersion_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualSuggestion_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualSuggestion_Employees1" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualTemplate_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualTemplateResponsible_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ModuleEmployee_Employee" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ModulePartEmployee_Employee" />
+        <AssociationConnector Association="KvalPortDbModel.FK_Office_Employee" />
+        <AssociationConnector Association="KvalPortDbModel.FK_OfficeDepartments_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_OfficeDepartments_Employees1" />
+        <AssociationConnector Association="KvalPortDbModel.FK_OfficeDepartmentTask_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_OfficeDepartmentTaskGroup_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_OfficeDepartmentTaskGroupVersion_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_OfficeDepartmentTaskVersion_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_OfficeDepartmentVersion_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_Offices_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_OfficeSafetyEmployee_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_OfficeVehicleBrandResponsible_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_Property_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_Property_Employees1" />
+        <AssociationConnector Association="KvalPortDbModel.FK_Property_Employees2" />
+        <AssociationConnector Association="KvalPortDbModel.FK_Property_Employees3" />
+        <AssociationConnector Association="KvalPortDbModel.FK_PropertyControlLog_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_PropertyInspectionLog_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_PropertyInspectionLog_Employees1" />
+        <AssociationConnector Association="KvalPortDbModel.FK_PropertyLog_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_PropertyMaintenanceLog_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QRActionPlan_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QRCausedBy_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QRImprovmentResponsibles_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QRImprovments_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QRImprovments_Employees1" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QRImprovments_Employees2" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QRImprovments_Employees3" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QRLogs_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QRModuleEmailNotificationReceiver_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QRResponsibles_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QRStatusEmailNotifications_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QualityReport_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QualityReport_Employees1" />
+        <AssociationConnector Association="KvalPortDbModel.FK_RiskAnalysisOffice_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_RiskAnalysisOfficeLog_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_Support_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_SwedAssessmentSkillsER_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_SwedAssessmentSkillsER_Employees1" />
+        <AssociationConnector Association="KvalPortDbModel.FK_SwedAssessmentSkillsIB_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_SwedAssessmentSkillsIB_Employees1" />
+        <AssociationConnector Association="KvalPortDbModel.FK_SwedAssessmentSkillsIR_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_SwedAssessmentSkillsIR_Employees1" />
+        <AssociationConnector Association="KvalPortDbModel.FK_SwedAssessmentSkillsKA_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_SwedAssessmentSkillsKA_Employees1" />
+        <AssociationConnector Association="KvalPortDbModel.FK_SwedAssessmentSkillsKK_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_SwedAssessmentSkillsKK_Employees1" />
+        <AssociationConnector Association="KvalPortDbModel.FK_SwedAssessmentSkillsTA_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_SwedAssessmentSkillsTA_Employees1" />
+        <AssociationConnector Association="KvalPortDbModel.FK_SwedAssessmentSkillsUA_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_SwedAssessmentSkillsUA_Employees1" />
+        <AssociationConnector Association="KvalPortDbModel.FK_SwedDocumentReview_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_SwedERSamplingCar_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_SwedJointInfoEducation_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_SwedJointInfoEducation_Employees1" />
+        <AssociationConnector Association="KvalPortDbModel.FK_SwedJointInfoEducationParticipant_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_SwedManagementReview381_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_SwedManagementReview381Employees_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_SwedOfficeAreaEmployee_Employee" />
+        <AssociationConnector Association="KvalPortDbModel.FK_SwedPowerOfAttorneyER_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_SwedPowerOfAttorneyER_Employees1" />
+        <AssociationConnector Association="KvalPortDbModel.FK_Tool_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_Tool_Employees1" />
+        <AssociationConnector Association="KvalPortDbModel.FK_Tool_Employees2" />
+        <AssociationConnector Association="KvalPortDbModel.FK_Tool_Employees3" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolBorrowed_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolCalibration20MeterDistance_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolCalibrationACWaeco_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolCalibrationBreaktesterOptimo_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolCalibrationCircumference_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolCalibrationDocumentReport_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolCalibrationDocumentReport_Employees1" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolCalibrationDocumentReportVersion_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolCalibrationDocumentReportVersion_Employees1" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolCalibrationFourGasMeterHexanPro_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolCalibrationFourGasMeterPropanPro_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolCalibrationLeakFinder_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolCalibrationLightControlPro_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolCalibrationLog_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolCalibrationLog_Employees1" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolCalibrationLog_Employees2" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolCalibrationPressureTester_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolGroupInventory_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolGroupInventoryLogRow_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolLog_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolMaintenanceLog_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolMaintenanceRutine_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolMaintenanceRutineCompany_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolMaintenanceRutineOffice_Employees" />
+        <AssociationConnector Association="KvalPortDbModel.FK_EnviromentalReport_ERAnalysisHeaders" />
+        <AssociationConnector Association="KvalPortDbModel.FK_EnviromentalReport_ERFinalDecisionHeaders" />
+        <AssociationConnector Association="KvalPortDbModel.FK_EnviromentalReport_ERHeaders" />
+        <AssociationConnector Association="KvalPortDbModel.FK_EnviromentalReport_ERResponsibles" />
+        <AssociationConnector Association="KvalPortDbModel.FK_EnviromentalReport_ERStatus" />
+        <AssociationConnector Association="KvalPortDbModel.FK_EnviromentalReport_OfficeDepartments" />
+        <AssociationConnector Association="KvalPortDbModel.FK_EnviromentalReport_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ERLogs_EnviromentalReport" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ERReportMeasures_EnviromentalReport" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ERActionPlan_ERImprovmentResponsibles" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ERActionPlan_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ERActionPlanERAnalysisHeaders_ERActionPlan" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ERActionPlanERHeaders_ERActionPlan" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ERImprovments_ERActionPlan" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ERActionPlanERAnalysisHeaders_ERAnalysisHeaders" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ERActionPlanERHeaders_ERHeaders" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ERImprovmentERAnalysisHeaders_ERAnalysisHeaders" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ERImprovmentERHeaders_ERHeaders" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ERImprovmentERAnalysisHeaders_ERImprovments" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ERImprovmentERHeaders_ERImprovments" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ERImprovmentResponsibles_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ERImprovments_ERImprovmentResponsibles" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ERImprovments_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ERLogs_ERLogTypes" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ERModuleOffice_ERModules" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ERModuleOffice_ERStatus" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ERModuleOffice_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ERReportMeasures_ERModules" />
+        <AssociationConnector Association="KvalPortDbModel.FK_EROwnMeasures_ERStatus" />
+        <AssociationConnector Association="KvalPortDbModel.FK_EROwnMeasures_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ERReportMeasures_EROwnMeasures" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ERReportMeasures_ERStatus" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ERReportMeasures_ERStatus1" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ERResponsibles_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ERStatusEmailNotifications_ERStatus" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ERStatusOffice_ERStatus" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ERStatusOffice_ERStatus1" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ERStatusEmailNotifications_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ERStatusOffice_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_FollowUp_FollowUpDiagram" />
+        <AssociationConnector Association="KvalPortDbModel.FK_FollowUp_FollowUpGroup" />
+        <AssociationConnector Association="KvalPortDbModel.FK_FollowUp_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_FollowUpEmployeePermission_FollowUp" />
+        <AssociationConnector Association="KvalPortDbModel.FK_FollowUpLargeDiagramGroupRow_FollowUp" />
+        <AssociationConnector Association="KvalPortDbModel.FK_FollowUpOfficeLargeDiagram_FollowUp" />
+        <AssociationConnector Association="KvalPortDbModel.FK_FollowUpRow_FollowUp" />
+        <AssociationConnector Association="KvalPortDbModel.FK_FollowUpViewGroupRow_FollowUp" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualPartDocumentFollowUp_FollowUp" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualPartDocumentLogFollowUp_FollowUp" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualPartDocumentPlanFollowUp_FollowUp" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QRImprovments_FollowUp" />
+        <AssociationConnector Association="KvalPortDbModel.FK_FollowUpGroup_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_FollowUpLargeDiagramGroup_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_FollowUpLargeDiagramGroupRow_FollowUpLargeDiagramGroup" />
+        <AssociationConnector Association="KvalPortDbModel.FK_FollowUpOfficeLargeDiagram_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_FollowUpViewGroup_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_FollowUpViewGroupRow_FollowUpViewGroup" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ICErrorCode_ICErrorCodeGroup" />
+        <AssociationConnector Association="KvalPortDbModel.FK_InternalControlOfficeLogRowCode_ICErrorCode" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ICErrorCodeGroup_ICErrorCodeMainGroup" />
+        <AssociationConnector Association="KvalPortDbModel.FK_IncidentReport_IncidentReportFinalDecision" />
+        <AssociationConnector Association="KvalPortDbModel.FK_IncidentReport_IncidentReportIncident" />
+        <AssociationConnector Association="KvalPortDbModel.FK_IncidentReport_IncidentReportInjuryType" />
+        <AssociationConnector Association="KvalPortDbModel.FK_IncidentReport_IncidentReportLocation" />
+        <AssociationConnector Association="KvalPortDbModel.FK_IncidentReport_IncidentReportStatus" />
+        <AssociationConnector Association="KvalPortDbModel.FK_IncidentReport_IncidentReportType" />
+        <AssociationConnector Association="KvalPortDbModel.FK_IncidentReport_IncidentReportWorkTask" />
+        <AssociationConnector Association="KvalPortDbModel.FK_IncidentReport_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_IncidentReportDocument_IncidentReport" />
+        <AssociationConnector Association="KvalPortDbModel.FK_IncidentReportLog_IncidentReport" />
+        <AssociationConnector Association="KvalPortDbModel.FK_IncidentReportOutsider_IncidentReport" />
+        <AssociationConnector Association="KvalPortDbModel.FK_IncidentReportVictum_IncidentReport" />
+        <AssociationConnector Association="KvalPortDbModel.FK_IncidentReportLocation_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_IncidentReportWorkTask_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_InternalControlOffice_InternalControlTemplate" />
+        <AssociationConnector Association="KvalPortDbModel.FK_InternalControlOffice_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_InternalControlOfficeLog_InternalControlOffice" />
+        <AssociationConnector Association="KvalPortDbModel.FK_InternalControlOfficeRow_InternalControlOffice" />
+        <AssociationConnector Association="KvalPortDbModel.FK_InternalControlOfficeSubGroup_InternalControlOffice" />
+        <AssociationConnector Association="KvalPortDbModel.FK_InternalControlOfficeVehicleBrandGoal_InternalControlOffice" />
+        <AssociationConnector Association="KvalPortDbModel.FK_InternalControlOfficeGroup_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_InternalControlOfficeLog_VehicleBrand" />
+        <AssociationConnector Association="KvalPortDbModel.FK_InternalControlOfficeLogRow_InternalControlOfficeLog" />
+        <AssociationConnector Association="KvalPortDbModel.FK_InternalControlOfficeLogRow_InternalControlOfficeRow" />
+        <AssociationConnector Association="KvalPortDbModel.FK_InternalControlOfficeLogRow_QualityReport" />
+        <AssociationConnector Association="KvalPortDbModel.FK_InternalControlOfficeLogRowCode_InternalControlOfficeLogRow" />
+        <AssociationConnector Association="KvalPortDbModel.FK_InternalControlOfficeLogRowFile_InternalControlOfficeLogRow" />
+        <AssociationConnector Association="KvalPortDbModel.FK_InternalControlOfficeRow_InternalControlOfficeSubGroup" />
+        <AssociationConnector Association="KvalPortDbModel.FK_InternalControlOfficeRow_InternalControlTemplateRow" />
+        <AssociationConnector Association="KvalPortDbModel.FK_InternalControlOfficeRow_OfficeDepartmentTask" />
+        <AssociationConnector Association="KvalPortDbModel.FK_InternalControlOfficeSubGroup_InternalControlTemplateSubGroup" />
+        <AssociationConnector Association="KvalPortDbModel.FK_InternalControlOfficeVehicleBrandGoal_VehicleBrand" />
+        <AssociationConnector Association="KvalPortDbModel.FK_InternalControlTemplate_InternalControlTemplateGroup" />
+        <AssociationConnector Association="KvalPortDbModel.FK_InternalControlTemplateRow_InternalControlTemplate" />
+        <AssociationConnector Association="KvalPortDbModel.FK_InternalControlTemplateSubGroup_InternalControlTemplate" />
+        <AssociationConnector Association="KvalPortDbModel.FK_InternalControlTemplateRow_InternalControlTemplateSubGroup" />
+        <AssociationConnector Association="KvalPortDbModel.FK_Manual_ManualTemplate" />
+        <AssociationConnector Association="KvalPortDbModel.FK_Manual_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualOfficeFastLinks_Manual" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualPart_Manual" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualAdminOfficeConnection_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualDocument_ManualDocumentCategories" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualDocument_SwedArea" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualPartDocument_ManualDocument" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualPartSuggestionDocument_ManualDocument" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualPartTemplateDocument_ManualDocument" />
+        <AssociationConnector Association="KvalPortDbModel.FK_OfficeManualDocument_ManualDocument" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualPartDocument_ManualDocumentPDFCompany" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualPartDocument_ManualDocumentTemplateCompany" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualOfficeFastLinks_ManualPart" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualOfficeFastLinks_ManualPartDocument" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualOfficeFastLinks_OfficeDepartments" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualOfficeFastLinks_OfficeDepartmentTask" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualOfficeFastLinks_OfficeDepartmentTaskGroup" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualOfficeFastLinks_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualPart_ManualPart" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualPart_ManualPart1" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualPart_ManualPartTemplate" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualPart_ManualRadDocument" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualPart_OfficeDepartments" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualPart_OfficeDepartmentTask" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualPart_OfficeDepartmentTaskGroup" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualPartDocument_ManualPart" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualPartVersion_ManualPart" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualPartDocument_OfficeDepartments" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualPartDocument_OfficeDepartmentTask" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualPartDocument_OfficeDepartmentTaskGroup" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualPartDocument_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualPartDocumentEmployee_ManualPartDocument" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualPartDocumentFollowUp_ManualPartDocument" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualPartDocumentLog_ManualPartDocument" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualPartDocumentPlan_ManualPartDocument" />
+        <AssociationConnector Association="KvalPortDbModel.FK_Offices_ManualPartDocument" />
+        <AssociationConnector Association="KvalPortDbModel.FK_PropertyManualPartDocument_ManualPartDocument" />
+        <AssociationConnector Association="KvalPortDbModel.FK_Tool_ManualPartDocument" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolManualPartDocument_ManualPartDocument" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualPartDocumentLog_ManualRadDocument" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualPartDocumentLogAttachedFile_ManualPartDocumentLog" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualPartDocumentLogAttachedLog_ManualPartDocumentLog" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualPartDocumentLogAttachedLog_ManualPartDocumentLog1" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualPartDocumentLogEmployee_ManualPartDocumentLog" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualPartDocumentLogFollowUp_ManualPartDocumentLog" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualPartDocumentLogImprovement_ManualPartDocumentLog" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualPartDocumentLogImprovement_QRImprovments" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualPartDocumentPlan_ManualRadDocument" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualPartDocumentPlanAttachedFile_ManualPartDocumentPlan" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualPartDocumentPlanEmployee_ManualPartDocumentPlan" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualPartDocumentPlanFollowUp_ManualPartDocumentPlan" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualPartSuggestion_ManualPartSuggestion" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualPartSuggestion_ManualPartTemplate" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualPartSuggestion_ManualSuggestion" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualPartSuggestion_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualPartSuggestionDocument_ManualPartSuggestion" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualPartTemplate_ManualPartTemplate" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualPartTemplate_ManualTemplate" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualPartTemplateDocument_ManualPartTemplate" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualSuggestion_ManualTemplate" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ManualSuggestion_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ModuleCompany_Module" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ModuleEmployee_Module" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ModuleEmployee_Office" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ModuleOffice_Module" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ModuleOffice_Office" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ModulePartCompany_ModulePart" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ModulePartEmployee_ModulePart" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ModulePartEmployee_Office" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ModulePartOffice_ModulePart" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ModulePartOffice_Office" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ModulePart_Module" />
+        <AssociationConnector Association="KvalPortDbModel.FK_OfficeDepartment_Office" />
+        <AssociationConnector Association="KvalPortDbModel.FK_OfficeDepartmentTask_OfficeDepartments" />
+        <AssociationConnector Association="KvalPortDbModel.FK_OfficeDepartmentVersion_OfficeDepartments" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QRResponsibles_OfficeDepartments" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QRStatusEmailNotifications_OfficeDepartments" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QualityReport_OfficeDepartments" />
+        <AssociationConnector Association="KvalPortDbModel.FK_OfficeDepartmentTaskGroupRow_OfficeDepartmentTask" />
+        <AssociationConnector Association="KvalPortDbModel.FK_OfficeDepartmentTaskVersion_OfficeDepartmentTask" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QRImportTaskExternalSystem_OfficeDepartmentTask" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QRImprovmentTasks_OfficeDepartmentTask" />
+        <AssociationConnector Association="KvalPortDbModel.FK_OfficeDepartmentTaskGroup_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_OfficeDepartmentTaskGroupRow_OfficeDepartmentTaskGroup" />
+        <AssociationConnector Association="KvalPortDbModel.FK_OfficeDepartmentTaskGroupVersion_OfficeDepartmentTaskGroup" />
+        <AssociationConnector Association="KvalPortDbModel.FK_Offices_OfficeGroup" />
+        <AssociationConnector Association="KvalPortDbModel.FK_OfficeInternalRevPlaningSettings_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_OfficeKeyCabinet_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_OfficeManagementReviewSettings_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_OfficeManualDocument_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_OfficeParking_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_OfficeSafetyEmployee_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_OfficeWebLinks_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_OfficeVehicleBrandResponsible_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_Property_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_PropertyControlDocument_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_PropertyGroup_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_PropertyInspectionDocument_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_PropertyMaintenanceDocument_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_PropertySettingsOffice_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QRActionPlan_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QRImportTaskExternalSystem_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QRImprovmentResponsibles_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QRImprovments_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QRModuleEmailNotifications_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QRModuleOffice_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QROfficeGoal_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QROwnMeasures_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QRResponsibles_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QRStatusEmailNotifications_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QRStatusOffice_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QualityReport_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_RiskAnalysisOffice_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_SwedAssessmentSkillsER_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_SwedAssessmentSkillsIB_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_SwedAssessmentSkillsIR_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_SwedAssessmentSkillsKA_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_SwedAssessmentSkillsKK_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_SwedAssessmentSkillsTA_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_SwedAssessmentSkillsUA_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_SwedDocumentReview_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_SwedERSamplingCar_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_SwedJointInfoEducation_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_SwedManagementReview381_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_SwedOfficeArea_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_SwedPowerOfAttorneyER_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_Tool_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_Tool_Offices1" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolBorrowed_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolCalibrationMethods_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolCostOffice_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolDepartment_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolDocument_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolGroup_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolGroupInventory_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolLog_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolMaintenanceRutineOffice_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolProductPriceOffice_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolSettingsOffice_Offices" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolSettingsOffice_Offices1" />
+        <AssociationConnector Association="KvalPortDbModel.FK_OfficeVehicleBrandResponsible_VehicleBrand" />
+        <AssociationConnector Association="KvalPortDbModel.FK_Property_PropertyControlDocument" />
+        <AssociationConnector Association="KvalPortDbModel.FK_Property_PropertyInspectionDocument" />
+        <AssociationConnector Association="KvalPortDbModel.FK_Property_PropertyMaintenanceDocument" />
+        <AssociationConnector Association="KvalPortDbModel.FK_Property_PropertyProduct" />
+        <AssociationConnector Association="KvalPortDbModel.FK_Property_PropertyProductType" />
+        <AssociationConnector Association="KvalPortDbModel.FK_Property_PropertyStatus" />
+        <AssociationConnector Association="KvalPortDbModel.FK_Property_ToolDepartment" />
+        <AssociationConnector Association="KvalPortDbModel.FK_Property_ToolDepartmentPlace" />
+        <AssociationConnector Association="KvalPortDbModel.FK_Property_ToolDepartmentPlaceLocation" />
+        <AssociationConnector Association="KvalPortDbModel.FK_Property_ToolManufacturer" />
+        <AssociationConnector Association="KvalPortDbModel.FK_PropertyGroupRow_Property" />
+        <AssociationConnector Association="KvalPortDbModel.FK_PropertyLog_Property" />
+        <AssociationConnector Association="KvalPortDbModel.FK_PropertyManualPartDocument_Property" />
+        <AssociationConnector Association="KvalPortDbModel.FK_PropertyControlLog_QualityReport" />
+        <AssociationConnector Association="KvalPortDbModel.FK_PropertyLog_PropertyControlLog" />
+        <AssociationConnector Association="KvalPortDbModel.FK_PropertyGroupRow_PropertyGroup" />
+        <AssociationConnector Association="KvalPortDbModel.FK_PropertyInspectionLog_QualityReport" />
+        <AssociationConnector Association="KvalPortDbModel.FK_PropertyLog_PropertyInspectionLog" />
+        <AssociationConnector Association="KvalPortDbModel.FK_PropertyLog_PropertyLogType" />
+        <AssociationConnector Association="KvalPortDbModel.FK_PropertyLog_PropertyMaintenanceLog" />
+        <AssociationConnector Association="KvalPortDbModel.FK_PropertyMaintenanceLog_QualityReport" />
+        <AssociationConnector Association="KvalPortDbModel.FK_PropertyProductType_PropertyProduct" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QRActionPlan_QRResponsibles" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QRActionPlanQRAnalysisHeaders_QRActionPlan" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QRActionPlanQRHeaders_QRActionPlan" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QRImprovments_QRActionPlan" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QRActionPlanQRAnalysisHeaders_QRAnalysisHeaders" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QRActionPlanQRHeaders_QRHeaders" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QualityReport_QRAnalysisHeaders" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QRAttachedFile_QualityReport" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QRCausedBy_QualityReport" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QualityReport_QRFinalDecisionHeaders" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QualityReport_QRHeaders" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QRImprovementCRHeaders_QRImprovments" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QRImprovmentDocument_QRImprovments" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QRImprovments_QRImprovmentResponsibles" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QRImprovmentTasks_QRImprovments" />
+        <AssociationConnector Association="KvalPortDbModel.FK_RiskAnalysisOfficeLogImprovement_QRImprovments" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QRLogs_QRLogTypes" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QRLogs_QualityReport" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QRModuleEmailNotificationReceiver_QRModuleEmailNotifications" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QRModuleEmailNotifications_QRModules" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QRModuleOffice_QRModules" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QRModuleOffice_QRStatus" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QRReportMeasures_QRModules" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QROwnMeasures_QRStatus" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QRReportMeasures_QROwnMeasures" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QRReportMeasures_QRStatus" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QRReportMeasures_QRStatus1" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QRReportMeasures_QualityReport" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QualityReport_QRResponsibles" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QRStatusEmailNotifications_QRStatus" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QRStatusOffice_QRStatus" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QRStatusOffice_QRStatus1" />
+        <AssociationConnector Association="KvalPortDbModel.FK_QualityReport_QRStatus" />
+        <AssociationConnector Association="KvalPortDbModel.FK_SwedDocumentReview_QualityReport" />
+        <AssociationConnector Association="KvalPortDbModel.FK_SwedERSamplingCar_QualityReport" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolCalibration20MeterDistance_QualityReport" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolCalibrationACWaeco_QualityReport" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolCalibrationBreaktesterOptimo_QualityReport" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolCalibrationCircumference_QualityReport" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolCalibrationFourGasMeterHexanPro_QualityReport" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolCalibrationFourGasMeterPropanPro_QualityReport" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolCalibrationLeakFinder_QualityReport" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolCalibrationLightControlPro_QualityReport" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolCalibrationLog_QualityReport" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolCalibrationPressureTester_QualityReport" />
+        <AssociationConnector Association="KvalPortDbModel.FK_RiskAnalysisCompany_RiskAnalysisGroup" />
+        <AssociationConnector Association="KvalPortDbModel.FK_RiskAnalysisCompanyRow_RiskAnalysisCompany" />
+        <AssociationConnector Association="KvalPortDbModel.FK_RiskAnalysisOffice_RiskAnalysisCompany" />
+        <AssociationConnector Association="KvalPortDbModel.FK_RiskAnalysisOfficeLogRow_RiskAnalysisCompanyRow" />
+        <AssociationConnector Association="KvalPortDbModel.FK_RiskAnalysisSubGroupRow_RiskAnalysisCompanyRow" />
+        <AssociationConnector Association="KvalPortDbModel.FK_RiskAnalysisOfficeLog_RiskAnalysisOffice" />
+        <AssociationConnector Association="KvalPortDbModel.FK_RiskAnalysisOfficeLogImprovement_RiskAnalysisOfficeLog" />
+        <AssociationConnector Association="KvalPortDbModel.FK_RiskAnalysisOfficeLogRow_RiskAnalysisOfficeLog" />
+        <AssociationConnector Association="KvalPortDbModel.FK_RiskAnalysisSubGroupRow_RiskAnalysisSubGroup" />
+        <AssociationConnector Association="KvalPortDbModel.FK_SwedAreaRole_SwedArea" />
+        <AssociationConnector Association="KvalPortDbModel.FK_SwedOfficeArea_SwedArea" />
+        <AssociationConnector Association="KvalPortDbModel.FK_SwedOfficeAreaEmployee_SwedAreaRole" />
+        <AssociationConnector Association="KvalPortDbModel.FK_SwedJointInfoEducationParticipant_SwedJointInfoEducation" />
+        <AssociationConnector Association="KvalPortDbModel.FK_SwedManagementReview381Employees_SwedManagementReview381" />
+        <AssociationConnector Association="KvalPortDbModel.FK_SwedOfficeAreaEmployee_SwedOfficeArea" />
+        <AssociationConnector Association="KvalPortDbModel.FK_SwedRevisionItem_SwedRevisionGroups" />
+        <AssociationConnector Association="KvalPortDbModel.FK_Tool_Tool" />
+        <AssociationConnector Association="KvalPortDbModel.FK_Tool_ToolCalibrationForm" />
+        <AssociationConnector Association="KvalPortDbModel.FK_Tool_ToolCalibrator" />
+        <AssociationConnector Association="KvalPortDbModel.FK_Tool_ToolCalibrator1" />
+        <AssociationConnector Association="KvalPortDbModel.FK_Tool_ToolDepartment" />
+        <AssociationConnector Association="KvalPortDbModel.FK_Tool_ToolDepartmentPlace" />
+        <AssociationConnector Association="KvalPortDbModel.FK_Tool_ToolDepartmentPlaceLocation" />
+        <AssociationConnector Association="KvalPortDbModel.FK_Tool_ToolMaintenanceRutine" />
+        <AssociationConnector Association="KvalPortDbModel.FK_Tool_ToolMaintenanceRutineCompany" />
+        <AssociationConnector Association="KvalPortDbModel.FK_Tool_ToolMaintenanceRutineOffice" />
+        <AssociationConnector Association="KvalPortDbModel.FK_Tool_ToolManufacturer" />
+        <AssociationConnector Association="KvalPortDbModel.FK_Tool_ToolProduct" />
+        <AssociationConnector Association="KvalPortDbModel.FK_Tool_ToolProductType" />
+        <AssociationConnector Association="KvalPortDbModel.FK_Tool_ToolStatus" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolBorrowed_Tool" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolCalibrationDocument_Tool" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolGroupInventoryLogRow_Tool" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolGroupRow_Tool" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolLog_Tool" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolMaintenanceDocument_Tool" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolMaintenanceRutineDeviant_Tool" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolManualPartDocument_Tool" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolReplacing_Tool" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolWebLink_Tool" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolBorrowed_ToolDepartment" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolBorrowed_ToolDepartmentPlace" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolCalibrationLog_ToolCalibration20MeterDistance" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolCalibrationLog_ToolCalibrationACWaeco" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolCalibrationLog_ToolCalibrationBreaktesterOptimo" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolCalibrationLog_ToolCalibrationCircumference" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolCalibrationDocument_ToolDocument" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolCalibrationDocumentReportVersion_ToolCalibrationDocumentReport" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolCalibrationLog_ToolCalibrationDocumentReport" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolCalibrationLog_ToolCalibrationFourGasMeterHexanPro" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolCalibrationLog_ToolCalibrationFourGasMeterPropanPro" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolCalibrationLog_ToolCalibrationLeakFinder" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolCalibrationLog_ToolCalibrationLightControlPro" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolCalibrationLog_ToolCalibrationPressureTester" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolCalibrationLog_ToolCalibrationType" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolLog_ToolCalibrationLog" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolDepartmentPlace_ToolDepartment" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolDepartmentPlaceLocation_ToolDepartmentPlace" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolMaintenanceDocument_ToolDocument" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolGroupInventory_ToolGroup" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolGroupRow_ToolGroup" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolSettingsOffice_ToolGroup" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolGroupInventory_ToolGroupInventoryLog" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolGroupInventoryLog_ToolGroupInventory" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolGroupInventoryLogRow_ToolGroupInventoryLog" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolLog_ToolLogType" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolLog_ToolMaintenanceLog" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolMaintenanceLog_ToolMaintenanceType" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolMaintenanceRutineOffice_ToolMaintenanceRutine" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolMaintenanceRutineDeviant_ToolMaintenanceRutineCompany" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolMaintenanceRutineDeviant_ToolMaintenanceRutineOffice" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolProductPriceOffice_ToolProduct" />
+        <AssociationConnector Association="KvalPortDbModel.FK_ToolProductType_ToolProduct" />
+        <AssociationConnector Association="KvalPortDbModel.FK_VehicleCompanies_VehicleBrand" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

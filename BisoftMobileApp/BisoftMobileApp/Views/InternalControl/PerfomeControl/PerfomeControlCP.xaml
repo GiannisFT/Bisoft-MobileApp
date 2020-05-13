@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+              xmlns:cv="clr-namespace:BisoftMobileApp.Views.InternalControl.PerfomeControl.ContentViews"
+             BackgroundColor="LightGray"
+             Title="{Binding ControlName}"
+             x:Class="BisoftMobileApp.Views.InternalControl.PerfomeControl.PerfomeControlCP">
+    <ContentPage.Content>
+        <Grid>
+            <Grid ColumnSpacing="0"
+              RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <cv:ControlHeaderCV/>
+
+
+                <Grid Grid.Row="1"
+                  Margin="1,0,1,1">
+
+                    <CollectionView ItemsSource="{Binding AllRows}"
+                                VerticalScrollBarVisibility="Default"
+                                HorizontalScrollBarVisibility="Never"
+                                Visual="Material">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid Margin="5">
+                                    <BoxView BackgroundColor="LightGray"
+                                         CornerRadius="2"/>
+                                    <cv:ReportRowOldCV Margin="0,1,0,0" />
+                                </Grid>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </Grid>
+
+                <Grid Grid.Row="2"
+                  Margin="2,1,2,2">
+                    <BoxView BackgroundColor="White"
+                             CornerRadius="2"/>
+                    <Grid>
+
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <StackLayout Orientation="Horizontal"
+                                 HorizontalOptions="Start">
+                            <Button Text="Delspara"
+                        Command="{Binding PartSaveControlCommand}"
+                        Margin="2"/>
+                            <Button Text="Radera"
+                                IsVisible="{Binding DeleteIsVisible}"
+                        Command="{Binding DelteControlLogCommand}"
+                        Margin="2"/>
+                        </StackLayout>
+
+
+
+                        <StackLayout Orientation="Horizontal"
+                         Grid.Column="1"
+                         HorizontalOptions="End">
+                            <Button Text="Avbryt"
+                                    Command="{Binding CancelControlCommand}"
+                            Margin="2"/>
+                            <Button Text="Spara"
+                            Command="{Binding SaveControlCommand}"
+                            Margin="2"/>
+                        </StackLayout>
+                    </Grid>
+
+                </Grid>
+            </Grid>
+            <ActivityIndicator IsRunning="{Binding IsBusy}"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"
+                           Color="DarkBlue"/>
+        </Grid>
+       
+       
+    </ContentPage.Content>
+</ContentPage>

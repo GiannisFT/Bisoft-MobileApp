@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             BackgroundColor="LightGray"
+             x:Class="BisoftMobileApp.Views.Images.ImagePage">
+    <ContentPage.Content>
+        <Grid RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Image Source="{Binding ImagePath}"
+                   Aspect="Fill"/>
+
+            <Grid Grid.Row="1"
+                  Margin="0,1,0,0">
+                <BoxView BackgroundColor="White"
+                         Opacity="0.8"/>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Text="Radera bild"
+                        Grid.Column="0"
+                        Margin="5"
+                            Command="{Binding DeleteImageCommand}"
+                        HorizontalOptions="Start"/>
+
+                    <Button Text="Stäng"
+                        Grid.Column="1"
+                        Margin="5"
+                        Command="{Binding CloseImageCommand}"
+                        HorizontalOptions="End"/>
+                </Grid>
+            </Grid>
+            
+        </Grid>
+        
+        
+    </ContentPage.Content>
+</ContentPage>

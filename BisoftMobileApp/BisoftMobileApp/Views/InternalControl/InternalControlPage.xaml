@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+              BackgroundColor="LightGray"
+             x:Name="PageInternalControl"
+             Title="Kontrollera"
+             xmlns:data="clr-namespace:BisoftMobileApp.ViewModels.InternalControl"
+             xmlns:uv="clr-namespace:BisoftMobileApp.Views.InternalControl.ContentViews"
+             x:Class="BisoftMobileApp.Views.InternalControl.InternalControlPage">
+
+    <ContentPage.BindingContext>
+        <data:InternalControlVM x:Name="InternalContVM"/>
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid>
+                <Grid RowSpacing="0"
+              ColumnSpacing="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid Margin="0,0,0,0"
+                  ColumnSpacing="0"
+              RowSpacing="0">
+
+                        <Grid ColumnSpacing="0"
+              RowSpacing="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition Width="200"/>
+                                <ColumnDefinition Width="250"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Grid Margin="0,0,1,1">
+                                <BoxView BackgroundColor="White"
+                                     Opacity="0.95"/>
+                                <Label Text="Kontrollera"
+                       FontSize="Large"
+                               Margin="4"
+                       VerticalOptions="Center"
+                       Grid.Column="0"/>
+                            </Grid>
+
+
+                            <Grid Grid.Column="1"  Margin="0,0,1,1">
+                                <BoxView BackgroundColor="White"/>
+                                <Grid Margin="2">
+                                    <BoxView BackgroundColor="#F3F2F2"
+                                     CornerRadius="2"/>
+                                    <StackLayout Orientation="Vertical"
+                                         Spacing="0"
+                                         Margin="10,5">
+                                        <Label Text="Varumärke" HorizontalOptions="Center"/>
+                                        <Label Text="Utförda månad/Månadsmål"
+                                       HorizontalOptions="Center"/>
+                                        <Label Text="Utförda år/Årsmål"
+                                       Margin="0,-4,0,0"
+                                       HorizontalOptions="Center"/>
+                                    </StackLayout>
+                                </Grid>
+                            </Grid>
+
+                            <Grid Grid.Column="2"
+                          Margin="0,0,0,1">
+                                <BoxView BackgroundColor="White"
+                                     Opacity="0.95"/>
+                                <Picker ItemsSource="{Binding AllOffices}"
+                                Margin="5"
+                                SelectedItem="{Binding SelectedOffice}"
+                                ItemDisplayBinding="{Binding Name}"
+                                Title="Välj driftställe"/>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+
+
+                    <Grid Grid.Row="1"
+                  Margin="0,0,0,0">
+                        <BoxView BackgroundColor="#F3F2F2"
+                                     Opacity="0.95"/>
+                        <CollectionView ItemsSource="{Binding AllInternalControls}">
+                            <CollectionView.ItemsLayout>
+                                <LinearItemsLayout Orientation="Vertical" ItemSpacing="1" />
+                            </CollectionView.ItemsLayout>
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid>
+                                        <BoxView BackgroundColor="White"
+                                     Opacity="0.95"/>
+
+                                        <Grid Margin="5">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="300"/>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="130"/>
+                                                <ColumnDefinition Width="110"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <Label Text="{Binding Name}"
+                                           Margin="5,0,10,0"
+                                            VerticalTextAlignment="Center"
+                                            FontSize="Medium"/>
+
+
+                                            <CollectionView ItemsSource="{Binding Goals}"
+                                                        HeightRequest="65"
+                                                        HorizontalOptions="EndAndExpand"
+                                                    Grid.Column="1">
+                                                <CollectionView.ItemsLayout>
+                                                    <LinearItemsLayout Orientation="Horizontal" ItemSpacing="1"/>
+                                                </CollectionView.ItemsLayout>
+                                                <CollectionView.ItemTemplate>
+                                                    <DataTemplate>
+                                                        <Grid>
+                                                            <BoxView BackgroundColor="#F3F2F2"
+                                                             CornerRadius="2"/>
+                                                            <StackLayout Orientation="Vertical"
+                                                                     Spacing="0"
+                                                                 Margin="10,5">
+                                                                <Label Text="{Binding BrandName}"
+                                                                   HorizontalOptions="Center"/>
+                                                                <Label Text="{Binding MonthResult}"
+                                                                   HorizontalOptions="Center"/>
+                                                                <Label Text="{Binding YearResult}"
+                                                                       Margin="0,-4,0,0"
+                                                                   HorizontalOptions="Center"/>
+                                                            </StackLayout>
+                                                        </Grid>
+
+                                                    </DataTemplate>
+                                                </CollectionView.ItemTemplate>
+                                            </CollectionView>
+
+
+
+
+                                            <Button Text="Genomför" 
+                                            Grid.Column="2"
+                                             Margin="0"
+                                            CommandParameter="{Binding Id}"
+                                            Command="{Binding Source={x:Reference PageInternalControl}, Path=BindingContext.PerformControlCarucelCommand}"/>
+
+                                            <Button Text="Logg" 
+                                            Grid.Column="3"
+                                             Margin="0"
+                                            CommandParameter="{Binding Id}"
+                                            Command="{Binding Source={x:Reference PageInternalControl}, Path=BindingContext.OpenLogCommand}"/>
+                                        </Grid>
+
+
+
+
+                                    </Grid>
+
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+                    </Grid>
+                </Grid>
+                <ActivityIndicator IsRunning="{Binding IsBusy}"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"
+                           Color="DarkBlue"/>
+            </Grid>
+
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

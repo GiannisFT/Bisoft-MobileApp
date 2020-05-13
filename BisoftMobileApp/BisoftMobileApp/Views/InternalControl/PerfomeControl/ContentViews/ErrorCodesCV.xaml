@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="BisoftMobileApp.Views.InternalControl.PerfomeControl.ContentViews.ErrorCodesCV">
+  <ContentView.Content>
+      <Grid RowSpacing="0"
+            ColumnSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="200"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Felkoder"
+                       VerticalOptions="Center"
+                       FontAttributes="Bold"
+                       FontSize="Small"/>
+
+                <StackLayout Orientation="Horizontal"
+                             HorizontalOptions="End"
+                             Grid.Column="1">
+                    <Button Text="Lägg till"
+                            HeightRequest="45"
+                            IsVisible="{Binding AddErrorCodesIsVisible}"
+                            Command="{Binding AddCodeCommand}"/>
+                    <Button Text="Ta bort"
+                            Command="{Binding DeleteCodeCommand}"
+                            IsVisible="{Binding DeleteErrorCodesIsVisible}"
+                            HeightRequest="45"/>
+                </StackLayout>
+            </Grid>
+            <CollectionView ItemsSource="{Binding SelectedErrorCodes}"
+                            Grid.Row="1"
+                          SelectedItem="{Binding SelectedErrorCode, Mode=TwoWay}"
+                          SelectionMode="Single">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Margin="2">
+                            <BoxView BackgroundColor="White"
+                                     Opacity="0.8"/>
+                            <StackLayout Orientation="Horizontal"
+                                     Margin="5">
+                            <Label Text="{Binding Group.MainGroup.Name}"
+                                   FontSize="Medium"/>
+                            <Label Text="/"/>
+                            <Label Text="{Binding Group.Name}"
+                                   FontSize="Medium"/>
+                            <Label Text="/"/>
+                            <Label Text="{Binding Code}"
+                                   FontSize="Medium"/>
+                        </StackLayout>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+      </Grid>
+  </ContentView.Content>
+</ContentView>

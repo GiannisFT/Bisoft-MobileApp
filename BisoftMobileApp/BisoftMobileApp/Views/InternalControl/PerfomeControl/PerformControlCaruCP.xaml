@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:cv="clr-namespace:BisoftMobileApp.Views.InternalControl.PerfomeControl.ContentViews"
+             mc:Ignorable="d"
+              Title="{Binding ControlName}"
+              BackgroundColor="LightGray"
+             x:Class="BisoftMobileApp.Views.InternalControl.PerfomeControl.PerformControlCaruCP">
+    <ContentPage.Content>
+        <Grid>
+   
+            <Grid ColumnSpacing="0"
+              RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <cv:ControlHeaderCV/>
+
+                <CarouselView ItemsSource="{Binding AllRows}"
+                          Margin="0,0,0,1"
+                          VerticalOptions="Fill"
+                          IndicatorView="ivSelectedcontrol"
+                          Grid.Row="1">
+                    <CarouselView.ItemTemplate>
+                        <DataTemplate>
+                            <cv:ReportRowCV/>
+                        </DataTemplate>
+                    </CarouselView.ItemTemplate>
+                </CarouselView>
+
+                <Grid Grid.Row="2"
+                  Margin="1,0,1,1">
+                    <BoxView BackgroundColor="White"
+                         CornerRadius="2"/>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <StackLayout Orientation="Horizontal"
+                                 HorizontalOptions="Start">
+                            <Button Text="Delspara"
+                        Command="{Binding PartSaveControlCommand}"
+                        Margin="2"/>
+                            <Button Text="Radera"
+                                IsVisible="{Binding DeleteIsVisible}"
+                        Command="{Binding DelteControlLogCommand}"
+                        Margin="2"/>
+                        </StackLayout>
+
+                        <IndicatorView x:Name="ivSelectedcontrol"
+                               ItemsSource="{Binding AllRows}"
+                               Grid.Column="1"    
+                               Margin="5"
+                               IndicatorSize="12" 
+                               IndicatorsShape="Circle"
+                               IndicatorColor="LightGray"
+                               SelectedIndicatorColor="Green"/>
+
+                        <StackLayout Orientation="Horizontal"
+                             Grid.Column="2">
+                            <Button Text="Avbryt"
+                                Command="{Binding CancelControlCommand}"
+                        Margin="5"/>
+                            <Button Text="Spara"
+                                Command="{Binding SaveControlCommand}"
+                        Margin="5"/>
+                        </StackLayout>
+
+                    </Grid>
+
+
+                </Grid>
+
+            </Grid>
+           
+
+            <ActivityIndicator IsRunning="{Binding IsBusy}"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"
+                           Color="DarkBlue"/>
+        </Grid>
+       
+    </ContentPage.Content>
+</ContentPage>

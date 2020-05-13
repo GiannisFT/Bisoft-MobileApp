@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="BisoftMobileApp.Views.InternalControl.PerfomeControl.ContentViews.QuestionGV">
+  <ContentView.Content>
+        <Grid>
+            <StackLayout Orientation="Vertical"
+                         Spacing="0">
+                <Label Text="Kontrollfråga"
+                       FontSize="Small"
+                       FontAttributes="Bold"/>
+                <Label Text="{Binding Group}"
+                       Margin="0,5,0,0"
+                       FontSize="Small"
+                       FontAttributes="Bold"/>
+                <Label Text="{Binding Question}"
+                       Margin="0,0,0,0"
+                       TextColor="{Binding TextColor}"
+                       FontAttributes="Bold"
+                       FontSize="Medium"/>
+                <Label Text="{Binding Helptext}"
+                       FontSize="Small"/>
+            </StackLayout>
+        </Grid>
+  </ContentView.Content>
+</ContentView>

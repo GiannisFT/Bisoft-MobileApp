@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             Opacity="0.8"
+             BackgroundImageSource="mathback.jpg"
+             xmlns:data="clr-namespace:BisoftMobileApp.ViewModels.LoginVMS"
+             mc:Ignorable="d"
+             x:Class="BisoftMobileApp.Views.Login.LoginPage">
+
+    <ContentPage.BindingContext>
+        <data:LoginVM/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <Grid>
+          
+            <Grid VerticalOptions="Center"
+              WidthRequest="600"
+              RowSpacing="0"
+              ColumnSpacing="0"
+                     HorizontalOptions="Center">
+                <BoxView BackgroundColor="White"
+                     Opacity="0.95"
+                     CornerRadius="5"/>
+                <StackLayout Orientation="Vertical"
+                         Margin="50,30">
+
+
+                    <StackLayout Orientation="Vertical"
+                         Margin="5">
+                        <Label Text="Användanamn"
+                FontSize="Medium" />
+                        <Entry Text="{Binding Username, Mode=TwoWay}"
+                   WidthRequest="150"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical"
+                         Margin="5">
+                        <Label Text="Lösenord"
+                FontSize="Medium" />
+                        <Entry Text="{Binding Password, Mode=TwoWay}"
+                   WidthRequest="150"
+                   IsPassword="True"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical"
+                         Margin="5">
+                        <Label Text="Företagsid"
+                   FontSize="Medium" />
+                        <Entry Text="{Binding Ucid, Mode=TwoWay}"
+                               IsPassword="True"
+                   WidthRequest="150"/>
+                    </StackLayout>
+
+                    <Button Text="Logga in"
+                        HeightRequest="50"
+                        Command="{Binding LoginCommand}"
+                    Margin="5"/>
+
+                    <StackLayout Orientation="Horizontal"
+                             Margin="5"
+                             HorizontalOptions="Center">
+                        <Image Source="LetterB30.png"/>
+                        <Image Source="LetterI30.png"
+                           HeightRequest="50"/>
+                        <Image Source="LetterS30.png"
+                           HeightRequest="50"/>
+                        <Image Source="letterO30.png"
+                           HeightRequest="50"/>
+                        <Image Source="LetterF30.png"
+                           HeightRequest="50"/>
+                        <Image Source="LetterT30.png"
+                           HeightRequest="50"/>
+                    </StackLayout>
+
+
+                </StackLayout>
+            </Grid>
+            <ActivityIndicator IsRunning="{Binding IsBusy}"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"
+                           Color="DarkBlue"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

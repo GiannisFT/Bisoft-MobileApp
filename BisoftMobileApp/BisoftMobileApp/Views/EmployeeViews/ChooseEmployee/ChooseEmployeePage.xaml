@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="BisoftMobileApp.Views.EmployeeViews.ChooseEmployee.ChooseEmployeePage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <StackLayout Orientation="Vertical"
+                         Margin="10">
+                <Label Text="Driftställe"
+                        FontAttributes="Bold"
+                       FontSize="Large"/>
+                <CollectionView ItemsSource="{Binding AllOffices}"
+                                SelectedItem="{Binding SelectedOffice, Mode=TwoWay}"
+                                BackgroundColor="Transparent"
+                                SelectionMode="Single">
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout Orientation="Vertical" ItemSpacing="1" />
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <BoxView BackgroundColor="White"
+                                         Opacity="0.8"
+                             CornerRadius="2"/>
+                                 <Label Text="{Binding Name}"
+                                   Margin="10"
+                                   FontSize="Large"/>
+                            </Grid>
+                        </DataTemplate>
+   
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </StackLayout>
+
+            <StackLayout Orientation="Vertical"
+                         Margin="10"
+                         Grid.Column="1">
+                <Label Text="Användare"
+                       FontAttributes="Bold"
+                       FontSize="Large"/>
+                <CollectionView ItemsSource="{Binding SelectedOfficeEmployees}"
+                                SelectedItem="{Binding SelectedEmployee, Mode=TwoWay}"
+                                SelectionMode="Single">
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout Orientation="Vertical" ItemSpacing="1" />
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <BoxView BackgroundColor="White"
+                                          Opacity="0.8"
+                             CornerRadius="2"/>
+                                <Label Text="{Binding Name}"
+                                    Margin="5"
+                                   FontSize="Large"/>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

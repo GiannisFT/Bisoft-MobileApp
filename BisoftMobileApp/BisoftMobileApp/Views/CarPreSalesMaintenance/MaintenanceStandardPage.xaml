@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:data="clr-namespace:BisoftMobileApp.ViewModels.MaintenanceType"
+             x:Class="BisoftMobileApp.Views.CarPreSalesMaintenance.MaintenanceStandardPage" Title="Underhåll standard" Shell.TabBarIsVisible="False">
+    <ContentPage.BindingContext>
+        <data:MaintenanceStandardVM/>
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Grid">
+                <Setter Property="RowSpacing" Value="1"/>
+                <Setter Property="ColumnSpacing" Value="1"/>
+            </Style>
+            <Style TargetType="Label">
+                <Setter Property="FontSize" Value="Small"/>
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="Padding" Value="5,0,0,0"/>
+            </Style>
+            <Style TargetType="Button">
+                <Setter Property="FontSize" Value="Medium"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout Margin="10">
+            <Grid BackgroundColor="DarkGray">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="0"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <StackLayout BackgroundColor="White">
+                        <Label Text="Utförd(datum)"/>
+                        <DatePicker x:Name="datepicker" Date="{Binding SelectedDate}" Format="yyyy-MM-dd"
+                                    FontSize="Small"
+                                    IsEnabled="{Binding IsEnabled}" HorizontalOptions="StartAndExpand"/>
+                    </StackLayout>
+                </Grid>
+                <Grid Grid.Column="1" RowSpacing="0">
+                    <BoxView BackgroundColor="White"/>
+                    <Grid ColumnSpacing="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0">
+                            <Label Text="Utförd av" VerticalOptions="StartAndExpand"/>
+                            <Label Text="{Binding SelectedEmployee.Name}" Padding="5,30,0,0"
+                                           HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+                        </Grid>
+                        <Grid Grid.Column="1" Padding="40,0,0,0">
+                            <Button x:Name="btn_search_employee" Text="Ändra" Command="{Binding SearchEmployeeCommand}"
+                                    IsEnabled="{Binding IsEnabled}"
+                                    FontSize="Small"
+                                    BackgroundColor="White" TextColor="Green"
+                                    VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" Padding="0,0,0,20"/>
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </Grid>
+            <StackLayout Margin="0,50,0,0">
+                <Label Text="Information om underhållet" TextColor="{Binding InfoCheckedColor}"/>
+                <Frame BorderColor="DarkGray" HorizontalOptions="Fill">
+                    <Editor x:Name="txt_info" Text="{Binding Text_info}" HeightRequest="100" IsEnabled="{Binding IsEnabled}"/>
+                </Frame>
+            </StackLayout>
+            <StackLayout Margin="0,50,0,0">
+                <Label Text="Underhållsdokument"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label x:Name="lbl_filename" Text="{Binding FilePath}" TextColor="Blue" HorizontalOptions="StartAndExpand"/>
+                <Button x:Name="btn_selectpic" Text="Välj" Command="{Binding SelectPic}" HorizontalOptions="EndAndExpand" IsEnabled="{Binding IsEnabled}"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" VerticalOptions="End" HorizontalOptions="End" Margin="0,50,0,0">
+                <Button x:Name="btn_cancel" Text="Avbryt" FontSize="Small" Command="{Binding CancelCommand}" Padding="5" IsEnabled="{Binding IsEnabled}"/>
+                <Button x:Name="btn_save" Text="Spara" FontSize="Small" Command="{Binding InsertStandardCommand}" Padding="5" IsEnabled="{Binding IsEnabled}"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
