@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:data="clr-namespace:BisoftMobileApp.ViewModels.QualityReports"
+             xmlns:behavior="clr-namespace:BisoftMobileApp.HelpClasses"
+             x:Class="BisoftMobileApp.Views.QualityReport.FinalDecisionPage" Title="Slutlig åtgärd">
+    <ContentPage.BindingContext>
+        <data:QRFinalDecisionVM/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid WidthRequest="500" HeightRequest="600" Margin="10" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <StackLayout>
+                        <Label Text="Rubrik" Style="{StaticResource myLabel_QualityReports}" TextColor="{Binding HeaderColor}"/>
+                        <Picker Title="Välj" ItemsSource="{Binding FinalDHeaders}" ItemDisplayBinding="{Binding Text}"
+                                SelectedItem="{Binding SelectedFinalDHeader, Mode=TwoWay}"
+                                Style="{StaticResource myPicker_QualityReports}"/>
+                    </StackLayout>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <StackLayout>
+                        <Label Text="Beskrivning" Style="{StaticResource myLabel_QualityReports}" TextColor="{Binding DescriptionColor}"/>
+                        <Frame BorderColor="#1976D2" HorizontalOptions="FillAndExpand">
+                            <Editor x:Name="txt_description" Text="{Binding Text_Description}" HeightRequest="200"
+                                    Style="{StaticResource myEditor_QualityReports}"/>
+                        </Frame>
+                    </StackLayout>
+                </Grid>
+                <Grid Grid.Row="2" Padding="0,10,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5*"/>
+                        <ColumnDefinition Width="5*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <StackLayout>
+                            <Label Text="Kostnad" Style="{StaticResource myLabel_QualityReports}"/>
+                            <StackLayout Orientation="Horizontal">
+                                <Entry Text="{Binding Cost_Entry}" ClearButtonVisibility="WhileEditing" Style="{StaticResource myEditor_QualityReports}"
+                                       Keyboard="Numeric" WidthRequest="200">
+                                    <Entry.Behaviors>
+                                        <behavior:NumericEntryBehavior/>
+                                    </Entry.Behaviors>
+                                </Entry>
+                                <Label Text="kr" VerticalOptions="Center" Style="{StaticResource myLabel_QualityReports}"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                            <CheckBox x:Name="checkbox_isrepeatrepair" IsChecked="{Binding IsRepeatRepair}" Color="DarkGray" Scale="1.4"/>
+                            <Label Text="Backjobb" Style="{StaticResource myLabel_QualityReports}" VerticalOptions="Center"/>
+                        </StackLayout>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="3" Padding="0,10,0,0">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                        <Button Text="Avbryt" Command="{Binding CancelCommand}"
+                                Style="{StaticResource myButton_QualityReports}"/>
+                        <Button Text="Spara" Command="{Binding SaveFinalDecisionCommand}"
+                                Style="{StaticResource myButton_QualityReports}"/>
+                    </StackLayout>
+                </Grid>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

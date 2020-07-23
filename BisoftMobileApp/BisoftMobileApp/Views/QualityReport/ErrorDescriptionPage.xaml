@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:data="clr-namespace:BisoftMobileApp.ViewModels.QualityReports"
+             x:Class="BisoftMobileApp.Views.QualityReport.ErrorDescriptionPage" Title="Felbeskrivning">
+    <ContentPage.BindingContext>
+        <data:QRErrorDescriptionVM/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid WidthRequest="500" HeightRequest="600" Margin="10" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5*"/>
+                        <ColumnDefinition Width="5*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="RegNr" Style="{StaticResource myLabel_QualityReports}" VerticalOptions="Center"/>
+                            <Entry Text="{Binding Text_RegNr}" Style="{StaticResource myEntry_QualityReports}" WidthRequest="100"/>
+                        </StackLayout>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="AoNr" Style="{StaticResource myLabel_QualityReports}" VerticalOptions="Center"/>
+                            <Entry Text="{Binding Text_AoNr}" Style="{StaticResource myEditor_QualityReports}" WidthRequest="100"/>
+                        </StackLayout>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <StackLayout>
+                        <Label Text="Beskrivning" Style="{StaticResource myLabel_QualityReports}" TextColor="{Binding DescriptionColor}"/>
+                        <Frame BorderColor="#1976D2" HorizontalOptions="FillAndExpand">
+                            <Editor x:Name="txt_description" Text="{Binding Text_Description}" HeightRequest="200"
+                                    Style="{StaticResource myEditor_QualityReports}"/>
+                        </Frame>
+                    </StackLayout>
+                </Grid>
+                <Grid Grid.Row="2">
+                    <StackLayout>
+                        <Label Text="Avdelning" Style="{StaticResource myLabel_QualityReports}" TextColor="{Binding DepartmentColor}"/>
+                        <Picker Title="Välj" ItemsSource="{Binding AllOfficeDepartments}" ItemDisplayBinding="{Binding Name}"
+                                SelectedItem="{Binding SelectedOfficeDept, Mode=TwoWay}"
+                                Style="{StaticResource myPicker_QualityReports}"/>
+                    </StackLayout>
+                </Grid>
+                <Grid Grid.Row="3" Padding="0,10,0,0">
+                    <StackLayout>
+                        <Label Text="Arbetsmoment" Style="{StaticResource myLabel_QualityReports}" TextColor="{Binding TaskColor}"/>
+                        <Picker Title="Välj" ItemsSource="{Binding SelectedOfficeDeptTasks}" ItemDisplayBinding="{Binding Name}"
+                                SelectedItem="{Binding SelectedDeptTask, Mode=TwoWay}"
+                                Style="{StaticResource myPicker_QualityReports}"/>
+                    </StackLayout>
+                </Grid>
+                <Grid Grid.Row="4" Padding="0,10,0,0">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                        <Button Text="Avbryt" Command="{Binding CancelCommand}"
+                                Style="{StaticResource myButton_QualityReports}"/>
+                        <Button Text="Spara" Command="{Binding SaveDescriptionCommand}"
+                                Style="{StaticResource myButton_QualityReports}"/>
+                    </StackLayout>
+                </Grid>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

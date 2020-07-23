@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:data="clr-namespace:BisoftMobileApp.ViewModels.QualityReports"
+             x:Class="BisoftMobileApp.Views.QualityReport.AnalysisHeadersPage" Title="Trolig orsak">
+    <ContentPage.BindingContext>
+        <data:QRAnalysisHeadersVM/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid WidthRequest="500" HeightRequest="600" Margin="10" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <StackLayout>
+                        <Label Text="Orsak" Style="{StaticResource myLabel_QualityReports}" TextColor="{Binding HeaderColor}"/>
+                        <Picker Title="Välj" ItemsSource="{Binding AnalysisHeaders}" ItemDisplayBinding="{Binding Text}"
+                                SelectedItem="{Binding SelectedAnalysisHeader, Mode=TwoWay}"
+                                Style="{StaticResource myPicker_QualityReports}"/>
+                    </StackLayout>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <StackLayout>
+                        <Label Text="Beskrivning" Style="{StaticResource myLabel_QualityReports}" TextColor="{Binding DescriptionColor}"/>
+                        <Frame BorderColor="#1976D2" HorizontalOptions="FillAndExpand">
+                            <Editor x:Name="txt_description" Text="{Binding Text_Description}" HeightRequest="200"
+                                    Style="{StaticResource myEditor_QualityReports}"/>
+                        </Frame>
+                    </StackLayout>
+                </Grid>
+                <Grid Grid.Row="2" Padding="0,10,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <StackLayout>
+                            <Label Text="Orsakad av" Style="{StaticResource myLabel_QualityReports}"/>
+                            <CollectionView ItemsSource="{Binding CausedByEmployees}"
+                                            SelectedItem="{Binding SelectedCausedByEmployee, Mode=TwoWay}" SelectionMode="Single"
+                                            VerticalScrollBarVisibility="Always">
+                                <CollectionView.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackLayout HeightRequest="30">
+                                            <Label Text="{Binding Name}" Style="{StaticResource myLabel_QualityReports}"
+                                                   TextColor="Black" VerticalTextAlignment="Center" Padding="5,0,0,0"/>
+                                        </StackLayout>
+                                    </DataTemplate>
+                                </CollectionView.ItemTemplate>
+                            </CollectionView>
+                        </StackLayout>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <StackLayout>
+                            <Button Text="Välj" Command="{Binding SearchEmployeeCommand}" HorizontalOptions="EndAndExpand"
+                                    HeightRequest="40" WidthRequest="80" Padding="0"
+                                    Style="{StaticResource myButton_QualityReports}"/>
+                            <Button Text="Ta Bort" Command="{Binding RemoveCausedByEmpCommand}" HorizontalOptions="EndAndExpand"
+                                    HeightRequest="40" WidthRequest="80" Padding="0" IsVisible="{Binding RemoveButtonVisible}"
+                                    Style="{StaticResource myButton_QualityReports}"/>
+                        </StackLayout>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="3" Padding="0,10,0,0">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                        <Button Text="Avbryt" Command="{Binding CancelCommand}"
+                                Style="{StaticResource myButton_QualityReports}"/>
+                        <Button Text="Spara" Command="{Binding SaveAnalysisHeaderCommand}"
+                                Style="{StaticResource myButton_QualityReports}"/>
+                    </StackLayout>
+                </Grid>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

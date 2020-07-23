@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:data="clr-namespace:BisoftMobileApp.ViewModels.QualityReports"
+             x:Class="BisoftMobileApp.Views.QualityReport.QualityReportsMainPage" Title="Kvalitetsrapporter">
+    <ContentPage.BindingContext>
+        <data:QualityReportsVM/>
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Grid">
+                <Setter Property="RowSpacing" Value="0" />
+                <Setter Property="ColumnSpacing" Value="0"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid>
+            <Grid Margin="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" Margin="0,5,10,0">
+                    <Button Text="Ny kvalitetsrapport" Command="{Binding OpenNewQRCommand}"
+                            Style="{StaticResource myButton_QualityReports}" HorizontalOptions="EndAndExpand" HeightRequest="40"/>
+                </Grid>
+                <Grid Grid.Row="1" Margin="10,0,10,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0" Margin="0,0,0,10">
+                        <Label>
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="Mina aktiva " FontAttributes="Bold" Style="{StaticResource myLabel_QualityReports}"/>
+                                    <Span Text="{Binding ReportsCounter}" FontAttributes="Bold" Style="{StaticResource myLabel_QualityReports}"/>
+                                    <Span Text=" st." FontAttributes="Bold" Style="{StaticResource myLabel_QualityReports}"/>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <CollectionView x:Name="collection" ItemsSource="{Binding ActiveReports}"
+                                SelectedItem="{Binding SelectedReport, Mode=TwoWay}" SelectionMode="Single">
+                            <CollectionView.ItemsLayout>
+                                <LinearItemsLayout Orientation="Vertical" ItemSpacing="5"/>
+                            </CollectionView.ItemsLayout>
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid BackgroundColor="#EEEEEE">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="1.5*"/>
+                                            <ColumnDefinition Width="3.5*"/>
+                                            <ColumnDefinition Width="2*"/>
+                                            <ColumnDefinition Width="3*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Grid Grid.Column="0" HorizontalOptions="StartAndExpand">
+                                            <Label Text="{Binding ReportNr}" Grid.Row="0" Style="{StaticResource myLabel_QualityReports}"
+                                                   FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                                            <Label Text="{Binding Year}" Grid.Row="1" Style="{StaticResource myLabel_QualityReports}"
+                                                   FontSize="Caption" HorizontalTextAlignment="Center" Padding="0,-4,0,0"/>
+                                        </Grid>
+                                        <Grid Grid.Column="1">
+                                            <Label Text="{Binding Department}" Grid.Row="0" Style="{StaticResource myLabel_QualityReports}"
+                                                   LineBreakMode="TailTruncation"/>
+                                            <Label Text="{Binding DepartmentTask}" Grid.Row="1" Style="{StaticResource myLabel_QualityReports}"
+                                                   FontAttributes="Bold" LineBreakMode="TailTruncation"/>
+                                        </Grid>
+                                        <Grid Grid.Column="2">
+                                            <Label Text="{Binding NextMeasure}" Grid.Row="0" Style="{StaticResource myLabel_QualityReports}"
+                                                   FontAttributes="Bold" LineBreakMode="TailTruncation"/>
+                                            <Label Text="{Binding Interval}" Grid.Row="1" Style="{StaticResource myLabel_QualityReports}"/>
+                                        </Grid>
+                                        <Grid Grid.Column="3">
+                                            <Label Text="{Binding OfficeName}" Grid.Row="0" Style="{StaticResource myLabel_QualityReports}"
+                                                   LineBreakMode="TailTruncation"/>
+                                            <Label Text="{Binding OfficeAddress}" Grid.Row="1" Style="{StaticResource myLabel_QualityReports}"
+                                                   LineBreakMode="TailTruncation"/>
+                                        </Grid>
+                                    </Grid>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+                    </Grid>
+                </Grid>
+            </Grid>
+            <ActivityIndicator IsRunning="{Binding IsBusy}" Color="DarkBlue"
+                                       HorizontalOptions="Center" VerticalOptions="Center"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

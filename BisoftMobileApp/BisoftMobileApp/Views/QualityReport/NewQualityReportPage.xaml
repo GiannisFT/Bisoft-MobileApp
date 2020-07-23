@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:data="clr-namespace:BisoftMobileApp.ViewModels.QualityReports"
+             xmlns:local="clr-namespace:BisoftMobileApp.HelpClasses"
+             x:Class="BisoftMobileApp.Views.QualityReport.NewQualityReportPage" Title="Ny kvalitetsrapport">
+    <ContentPage.BindingContext>
+        <data:NewQualityReportVM/>
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Grid">
+                <Setter Property="RowSpacing" Value="0"/>
+                <Setter Property="ColumnSpacing" Value="0"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid Margin="20" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <StackLayout>
+                            <Label Text="Beskrivning av avvikelsen" TextColor="{Binding InfoColor}"
+                                   Style="{StaticResource myLabel_QualityReports}"/>
+                            <Frame BorderColor="#1976D2">
+                                <Editor x:Name="txt_info" Text="{Binding Text_Info}" HeightRequest="100"
+                                        Style="{StaticResource myEditor_QualityReports}"/>
+                            </Frame>
+                        </StackLayout>
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Row="0">
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Bifogade dokument" HorizontalOptions="StartAndExpand"
+                                       Style="{StaticResource myLabel_QualityReports}"/>
+                                <Button Text="Lägg till" HorizontalOptions="EndAndExpand" Command="{Binding UploadFileCommand}"
+                                        Style="{StaticResource myButton_QualityReports}"
+                                        HeightRequest="30" Padding="0" Margin="0,2,0,0"/>
+                            </StackLayout>
+                        </Grid>
+                        <Grid Grid.Row="1">
+                            <Label Text="{Binding FilePath}" TextColor="Black" LineBreakMode="HeadTruncation" WidthRequest="20"
+                                   Style="{StaticResource myLabel_QualityReports}"/>
+                        </Grid>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="1" Padding="0,25,0,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="5*"/>
+                            <ColumnDefinition Width="5*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0" Padding="0,0,10,0">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid Grid.Row="0">
+                                    <Label Text="RegNr" Style="{StaticResource myLabel_QualityReports}"/>
+                                </Grid>
+                                <Grid Grid.Row="1">
+                                    <Entry x:Name="txt_regnr" Text="{Binding Text_RegNr}"
+                                           Style="{StaticResource myEntry_QualityReports}"/>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                        <Grid Grid.Column="1" Padding="10,0,0,0">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid Grid.Row="0">
+                                    <Label Text="AoNr" Style="{StaticResource myLabel_QualityReports}"/>
+                                </Grid>
+                                <Grid Grid.Row="1">
+                                    <Entry x:Name="txt_aonr" Text="{Binding Text_AoNr}"
+                                           Style="{StaticResource myEntry_QualityReports}"/>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="5*"/>
+                            <ColumnDefinition Width="5*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0" Padding="0,0,10,0">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid Grid.Row="0">
+                                    <Label Text="Driftställe" TextColor="{Binding OfficeColor}"
+                                           Style="{StaticResource myLabel_QualityReports}"/>
+                                </Grid>
+                                <Grid Grid.Row="1">
+                                    <Picker Title="Välj" ItemsSource="{Binding AllOffices}"
+                                            ItemDisplayBinding="{Binding Name}" SelectedItem="{Binding SelectedOffice, Mode=TwoWay}"
+                                            Style="{StaticResource myPicker_QualityReports}"/>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                        <Grid Grid.Column="1" Padding="10,0,0,0">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid Grid.Row="0">
+                                    <Label Text="Ansvarig" TextColor="{Binding ResponsibleEmpColor}"
+                                           Style="{StaticResource myLabel_QualityReports}"/>
+                                </Grid>
+                                <Grid Grid.Row="1">
+                                    <Picker Title="Välj" ItemsSource="{Binding ResponsibleEmployees}"
+                                            ItemDisplayBinding="{Binding Name}" SelectedItem="{Binding SelectedResponsibleEmployee, Mode=TwoWay}"
+                                            Style="{StaticResource myPicker_QualityReports}"/>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                    <Grid Grid.Row="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="5*"/>
+                            <ColumnDefinition Width="5*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0" Padding="0,0,10,0">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid Grid.Row="0">
+                                    <Label Text="Avdelning" TextColor="{Binding DepartmentColor}"
+                                           Style="{StaticResource myLabel_QualityReports}"/>
+                                </Grid>
+                                <Grid Grid.Row="1">
+                                    <Picker Title="Välj" ItemsSource="{Binding AllOfficeDepartments}"
+                                            ItemDisplayBinding="{Binding Name}" SelectedItem="{Binding SelectedOfficeDept, Mode=TwoWay}"
+                                            Style="{StaticResource myPicker_QualityReports}"/>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                        <Grid Grid.Column="1" Padding="10,0,0,0">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid Grid.Row="0">
+                                    <Label Text="Arbetsmoment" TextColor="{Binding TaskColor}"
+                                           Style="{StaticResource myLabel_QualityReports}"/>
+                                </Grid>
+                                <Grid Grid.Row="1">
+                                    <Picker Title="Välj" ItemsSource="{Binding SelectedOfficeDeptTasks}"
+                                            ItemDisplayBinding="{Binding Name}" SelectedItem="{Binding SelectedDeptTask, Mode=TwoWay}"
+                                            Style="{StaticResource myPicker_QualityReports}"/>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                    <Grid Grid.Row="3">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="5*"/>
+                            <ColumnDefinition Width="5*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0" Padding="0,0,10,0">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid Grid.Row="0">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="Orsakad av" Style="{StaticResource myLabel_QualityReports}"
+                                               HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand"/>
+                                        <Button Text="Välj" Command="{Binding SearchEmployeeCommand}" HorizontalOptions="EndAndExpand"
+                                                Style="{StaticResource myButton_QualityReports}"
+                                                BackgroundColor="#EEEEEE" TextColor="#1976D2"
+                                                HeightRequest="25" WidthRequest="40" Padding="0"/>
+                                    </StackLayout>
+                                </Grid>
+                                <Grid Grid.Row="1" Padding="4,5,0,0">
+                                    <Label Text="{Binding SelectedEmployee.Name}" TextColor="Black" LineBreakMode="TailTruncation"
+                                           Style="{StaticResource myLabel_QualityReports}" VerticalTextAlignment="Center"/>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                        <Grid Grid.Column="1" Padding="10,0,0,0">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid Grid.Row="0">
+                                    <Label Text="Skapad" Style="{StaticResource myLabel_QualityReports}"/>
+                                </Grid>
+                                <Grid Grid.Row="1">
+                                    <!--<DatePicker x:Name="datepicker" Format="yyyy-MM-dd" BackgroundColor="White"
+                                            Date="{Binding SelectedDate}"/>-->
+                                    <local:QRCustomDatePicker x:Name="customdatepicker" Date="{Binding SelectedDate}"
+                                                              Format="yyyy-MM-dd" BackgroundColor="White"
+                                                              Style="{StaticResource myDatePicker_QualityReports}"/>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                    <Grid Grid.Row="4" Padding="0,10,0,0">
+                        <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand" HorizontalOptions="EndAndExpand">
+                            <Button x:Name="btn_cancel" Text="Avbryt" Command="{Binding CancelCommand}"
+                                    Style="{StaticResource myButton_QualityReports}"
+                                    HeightRequest="50" WidthRequest="80" Padding="0"/>
+                            <Button x:Name="btn_save" Text="Spara" Command="{Binding SaveQRCommand}"
+                                    Style="{StaticResource myButton_QualityReports}"
+                                    HeightRequest="50" WidthRequest="80" Padding="0"/>
+                        </StackLayout>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
