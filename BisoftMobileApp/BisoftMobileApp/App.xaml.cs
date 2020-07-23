@@ -16,6 +16,21 @@ namespace BisoftMobileApp
 
         protected override void OnStart()
         {
+            //if (Device.Idiom == TargetIdiom.Phone)
+            //{
+            //    Application.Current.Resources.Add(new Style(typeof(Label))
+            //    {
+            //        Setters = {new Setter { Property = Label.FontSizeProperty, Value = 14} }
+            //    });
+            //}
+
+            //if (Device.Idiom == TargetIdiom.Tablet)
+            //{
+            //    Application.Current.Resources.Add(new Style(typeof(Label))
+            //    {
+            //        Setters = { new Setter { Property = Label.FontSizeProperty, Value = 17 } }
+            //    });
+            //}
         }
 
         protected override void OnSleep()

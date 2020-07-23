@@ -20,276 +20,279 @@
                 <Setter Property="VerticalOptions" Value="Center"/>
                 <Setter Property="HorizontalOptions" Value="Center"/>
             </Style>
-            <Style TargetType="Label">
-                <Setter Property="FontSize" Value="Small"/>
-                <Setter Property="TextColor" Value="Black"/>
-                <Setter Property="VerticalOptions" Value="Center"/>
-                <Setter Property="Padding" Value="5,0,0,0"/>
-            </Style>
-            <Style TargetType="Button">
-                <Setter Property="FontSize" Value="Medium"/>
-            </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
-    
     <ContentPage.Content>
         <ScrollView>
             <Grid Margin="5">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
-                <Grid Grid.Row="0" BackgroundColor="DarkGray" Padding="0,0,0,0.5">
+                <Grid Grid.Row="0" BackgroundColor="DarkGray" RowSpacing="1">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="80"/>
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
-                    <Grid Grid.Row="0" Padding="0,0,0,1">
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
-                            <Grid Grid.Column="0" RowSpacing="0" Padding="0,0,0.5,0">
-                                <StackLayout BackgroundColor="White">
-                                    <Label Text="Utförd(datum)"/>
-                                    <DatePicker x:Name="datepicker" Date="{Binding SelectedDate}" Format="yyyy-MM-dd"
+                    <Grid Grid.Row="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="5*"/>
+                            <ColumnDefinition Width="5*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0">
+                            <BoxView BackgroundColor="White"/>
+                            <StackLayout>
+                                <Label Text="Utförd(datum)" Style="{StaticResource myLabel_Maintenance}"/>
+                                <DatePicker x:Name="datepicker" Date="{Binding SelectedDate}" Format="yyyy-MM-dd"
                                             IsEnabled="{Binding IsEnabled}"
-                                            FontSize="Small"
-                                            HorizontalOptions="StartAndExpand"/>
-                                </StackLayout>
-                            </Grid>
-                            <Grid Grid.Column="1" RowSpacing="0">
-                                <BoxView BackgroundColor="White"/>
-                                <Grid ColumnSpacing="0">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="Auto"/>
-                                        <ColumnDefinition Width="Auto"/>
-                                    </Grid.ColumnDefinitions>
-                                    <Grid Grid.Column="0">
-                                        <Label Text="Utförd av" VerticalOptions="StartAndExpand"/>
-                                        <Label Text="{Binding SelectedEmployee.Name}" Padding="5,30,0,0"
-                                           HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
-                                    </Grid>
-                                    <Grid Grid.Column="1" Padding="40,0,0,0">
-                                        <Button x:Name="btn_search_employee" Text="Ändra" Command="{Binding SearchEmployeeCommand}"
+                                            HorizontalOptions="StartAndExpand" Style="{StaticResource myDatePicker_Maintenance}"/>
+                            </StackLayout>
+                        </Grid>
+                        <Grid Grid.Column="1" Padding="0.5,0,0,0">
+                            <BoxView BackgroundColor="White"/>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid Grid.Column="0">
+                                    <Label Text="Utförd av" VerticalOptions="StartAndExpand"
+                                           Style="{StaticResource myLabel_Maintenance}"/>
+                                    <Label Text="{Binding SelectedEmployee.Name}" Padding="5,30,0,0"
+                                           HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"
+                                           Style="{StaticResource myLabel_Maintenance}"/>
+                                </Grid>
+                                <Grid Grid.Column="1" Padding="40,0,0,0">
+                                    <Button x:Name="btn_search_employee" Text="Ändra" Command="{Binding SearchEmployeeCommand}"
                                             IsEnabled="{Binding IsEnabled}"
-                                            FontSize="Small"
                                             BackgroundColor="White" TextColor="Green"
-                                            VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" Padding="0,0,0,20"/>
-                                    </Grid>
+                                            VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" Padding="0,0,0,20"
+                                            Style="{StaticResource myButton_Maintenance}"/>
                                 </Grid>
                             </Grid>
                         </Grid>
                     </Grid>
-                    <Grid Grid.Row="1">
-                        <Grid>
+                    <Grid Grid.Row="1" ColumnSpacing="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="5*"/>
+                            <ColumnDefinition Width="5*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0">
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="7*"/>
+                                <ColumnDefinition Width="2*"/>
                             </Grid.ColumnDefinitions>
-                            <Grid Grid.Column="0">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="30"/>
-                                    <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="80"/>
-                                </Grid.ColumnDefinitions>
-                                <Grid Grid.Column="0" Padding="0,0,1,0">
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="40"/>
-                                        <RowDefinition Height="70"/>
-                                        <RowDefinition Height="70"/>
-                                        <RowDefinition Height="70"/>
-                                        <RowDefinition Height="70"/>
-                                        <RowDefinition Height="70"/>
-                                    </Grid.RowDefinitions>
-                                    <Grid Grid.Row="0" Padding="0,0,0,1">
-                                        <BoxView BackgroundColor="White"/>
-                                        <Label Text="Nr"/>
-                                    </Grid>
-                                    <Grid Grid.Row="1" Padding="0,0,0,1">
-                                        <BoxView BackgroundColor="White"/>
-                                        <Label Text="1."/>
-                                    </Grid>
-                                    <Grid Grid.Row="2" Padding="0,0,0,1">
-                                        <BoxView BackgroundColor="White"/>
-                                        <Label Text="2."/>
-                                    </Grid>
-                                    <Grid Grid.Row="3" Padding="0,0,0,1">
-                                        <BoxView BackgroundColor="White"/>
-                                        <Label Text="3."/>
-                                    </Grid>
-                                    <Grid Grid.Row="4" Padding="0,0,0,1">
-                                        <BoxView BackgroundColor="White"/>
-                                        <Label Text="4."/>
-                                    </Grid>
-                                    <Grid Grid.Row="5">
-                                        <BoxView BackgroundColor="White"/>
-                                        <Label Text="5."/>
-                                    </Grid>
+                            <Grid Grid.Column="0" RowSpacing="1">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="40"/>
+                                    <RowDefinition Height="70"/>
+                                    <RowDefinition Height="70"/>
+                                    <RowDefinition Height="70"/>
+                                    <RowDefinition Height="70"/>
+                                    <RowDefinition Height="70"/>
+                                </Grid.RowDefinitions>
+                                <Grid Grid.Row="0">
+                                    <BoxView BackgroundColor="White"/>
+                                    <Label Text="Nr" Style="{StaticResource myLabel_Maintenance}"/>
                                 </Grid>
-                                <Grid Grid.Column="1" Padding="0,0,0.5,0">
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="40"/>
-                                        <RowDefinition Height="70"/>
-                                        <RowDefinition Height="70"/>
-                                        <RowDefinition Height="70"/>
-                                        <RowDefinition Height="70"/>
-                                        <RowDefinition Height="70"/>
-                                    </Grid.RowDefinitions>
-                                    <Grid Grid.Row="0" Padding="0,0,0,1">
-                                        <BoxView BackgroundColor="White"/>
-                                        <Label Text="Underhållspunkt" TextColor="DarkBlue"/>
-                                    </Grid>
-                                    <Grid Grid.Row="1" Padding="0,0,0,1">
-                                        <BoxView BackgroundColor="White"/>
-                                        <Label Text="Manuell v-låda första växel, automat i park-läge, ej handbroms åtdragen" 
-                                       TextColor="{Binding GearsCheckedColor}"/>
-                                    </Grid>
-                                    <Grid Grid.Row="2" Padding="0,0,0,1">
-                                        <BoxView BackgroundColor="White"/>
-                                        <Label Text="Bil tvättad/avdammad" 
-                                       TextColor="{Binding CleanCheckedColor}"/>
-                                    </Grid>
-                                    <Grid Grid.Row="3" Padding="0,0,0,1">
-                                        <BoxView BackgroundColor="White"/>
-                                        <Label Text="Kontroll av batteristatus, ladda vid under 12,5 volt" 
-                                       TextColor="{Binding BatteryCheckedColor}"/>
-                                    </Grid>
-                                    <Grid Grid.Row="4" Padding="0,0,0,1">
-                                        <BoxView BackgroundColor="White"/>
-                                        <Label Text="Provkörd/provbromsad" 
-                                       TextColor="{Binding BrakesCheckedColor}"/>
-                                    </Grid>
-                                    <Grid Grid.Row="5">
-                                        <BoxView BackgroundColor="White"/>
-                                        <Label Text="Däcktryck kontrollerad enligt rekommenderat" 
-                                       TextColor="{Binding TyresCheckedColor}"/>
-                                    </Grid>
+                                <Grid Grid.Row="1">
+                                    <BoxView BackgroundColor="White"/>
+                                    <Label Text="1." Style="{StaticResource myLabel_Maintenance}"/>
                                 </Grid>
-                                <Grid Grid.Column="2" Padding="0,0,1,0">
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="40"/>
-                                        <RowDefinition Height="70"/>
-                                        <RowDefinition Height="70"/>
-                                        <RowDefinition Height="70"/>
-                                        <RowDefinition Height="70"/>
-                                        <RowDefinition Height="70"/>
-                                    </Grid.RowDefinitions>
-                                    <Grid Grid.Row="0" Padding="0,0,0,1">
-                                        <BoxView BackgroundColor="White"/>
-                                        <Label Text="OK" TextColor="Green" HorizontalOptions="Center"/>
-                                    </Grid>
-                                    <Grid Grid.Row="1" Padding="0,0,0,1">
-                                        <BoxView BackgroundColor="White"/>
-                                        <CheckBox x:Name="box_gearsOK" Color="Green" IsChecked="{Binding IsGearsOKChecked}" IsEnabled="{Binding IsEnabled}"/>
-                                    </Grid>
-                                    <Grid Grid.Row="2" Padding="0,0,0,1">
-                                        <BoxView BackgroundColor="White"/>
-                                        <CheckBox x:Name="box_cleanOK" Color="Green" IsChecked="{Binding IsCleanOKChecked}" IsEnabled="{Binding IsEnabled}"/>
-                                    </Grid>
-                                    <Grid Grid.Row="3" Padding="0,0,0,1">
-                                        <BoxView BackgroundColor="White"/>
-                                        <CheckBox x:Name="box_batteryOK" Color="Green" IsChecked="{Binding IsBatteryOKChecked}" IsEnabled="{Binding IsEnabled}"/>
-                                    </Grid>
-                                    <Grid Grid.Row="4" Padding="0,0,0,1">
-                                        <BoxView BackgroundColor="White"/>
-                                        <CheckBox x:Name="box_brakesOK" Color="Green" IsChecked="{Binding IsBrakesOKChecked}" IsEnabled="{Binding IsEnabled}"/>
-                                    </Grid>
-                                    <Grid Grid.Row="5">
-                                        <BoxView BackgroundColor="White"/>
-                                        <CheckBox x:Name="box_tyresOK" Color="Green" IsChecked="{Binding IsTyresOKChecked}" IsEnabled="{Binding IsEnabled}"/>
-                                    </Grid>
+                                <Grid Grid.Row="2">
+                                    <BoxView BackgroundColor="White"/>
+                                    <Label Text="2." Style="{StaticResource myLabel_Maintenance}"/>
+                                </Grid>
+                                <Grid Grid.Row="3">
+                                    <BoxView BackgroundColor="White"/>
+                                    <Label Text="3." Style="{StaticResource myLabel_Maintenance}"/>
+                                </Grid>
+                                <Grid Grid.Row="4">
+                                    <BoxView BackgroundColor="White"/>
+                                    <Label Text="4." Style="{StaticResource myLabel_Maintenance}"/>
+                                </Grid>
+                                <Grid Grid.Row="5">
+                                    <BoxView BackgroundColor="White"/>
+                                    <Label Text="5." Style="{StaticResource myLabel_Maintenance}"/>
                                 </Grid>
                             </Grid>
-                            <Grid Grid.Column="1">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="80"/>
-                                    <ColumnDefinition Width="*"/>
-                                </Grid.ColumnDefinitions>
-                                <Grid Grid.Column="0" Padding="0,0,1,0">
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="40"/>
-                                        <RowDefinition Height="70"/>
-                                        <RowDefinition Height="70"/>
-                                        <RowDefinition Height="70"/>
-                                        <RowDefinition Height="70"/>
-                                        <RowDefinition Height="70"/>
-                                    </Grid.RowDefinitions>
-                                    <Grid Grid.Row="0" Padding="0,0,0,1">
-                                        <BoxView BackgroundColor="White"/>
-                                        <Label Text="EJ OK" TextColor="Red" HorizontalOptions="Center"/>
-                                    </Grid>
-                                    <Grid Grid.Row="1" Padding="0,0,0,1">
-                                        <BoxView BackgroundColor="White"/>
-                                        <CheckBox x:Name="box_gearsNotOK" Color="Red" IsChecked="{Binding IsGearsNotOKChecked}" IsEnabled="{Binding IsEnabled}"/>
-                                    </Grid>
-                                    <Grid Grid.Row="2" Padding="0,0,0,1">
-                                        <BoxView BackgroundColor="White"/>
-                                        <CheckBox x:Name="box_cleanNotOK" Color="Red" IsChecked="{Binding IsCleanNotOKChecked}" IsEnabled="{Binding IsEnabled}"/>
-                                    </Grid>
-                                    <Grid Grid.Row="3" Padding="0,0,0,1">
-                                        <BoxView BackgroundColor="White"/>
-                                        <CheckBox x:Name="box_batteryNotOK" Color="Red" IsChecked="{Binding IsBatteryNotOKChecked}" IsEnabled="{Binding IsEnabled}"/>
-                                    </Grid>
-                                    <Grid Grid.Row="4" Padding="0,0,0,1">
-                                        <BoxView BackgroundColor="White"/>
-                                        <CheckBox x:Name="box_brakesNotOK" Color="Red" IsChecked="{Binding IsBrakesNotOKChecked}" IsEnabled="{Binding IsEnabled}"/>
-                                    </Grid>
-                                    <Grid Grid.Row="5">
-                                        <BoxView BackgroundColor="White"/>
-                                        <CheckBox x:Name="box_tyresNotOK" Color="Red" IsChecked="{Binding IsTyresNotOKChecked}" IsEnabled="{Binding IsEnabled}"/>
-                                    </Grid>
+                            <Grid Grid.Column="1" RowSpacing="1" Padding="0.5,0,1,0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="40"/>
+                                    <RowDefinition Height="70"/>
+                                    <RowDefinition Height="70"/>
+                                    <RowDefinition Height="70"/>
+                                    <RowDefinition Height="70"/>
+                                    <RowDefinition Height="70"/>
+                                </Grid.RowDefinitions>
+                                <Grid Grid.Row="0">
+                                    <BoxView BackgroundColor="White"/>
+                                    <Label Text="Underhållspunkt" TextColor="DarkBlue"
+                                               Style="{StaticResource myLabel_Maintenance}"/>
                                 </Grid>
-                                <Grid Grid.Column="1">
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="40"/>
-                                        <RowDefinition Height="70"/>
-                                        <RowDefinition Height="70"/>
-                                        <RowDefinition Height="70"/>
-                                        <RowDefinition Height="70"/>
-                                        <RowDefinition Height="70"/>
-                                    </Grid.RowDefinitions>
-                                    <Grid Grid.Row="0" Padding="0,0,0,1">
-                                        <BoxView BackgroundColor="White"/>
-                                        <Label Text="Beskrivning (obligatorisk om ej ok)"/>
-                                    </Grid>
-                                    <Grid Grid.Row="1" Padding="0,0,0,1">
-                                        <BoxView BackgroundColor="White"/>
-                                        <Editor x:Name="txt_gears" Text="{Binding Text_gears}" IsEnabled="{Binding IsEnabled}"/>
-                                    </Grid>
-                                    <Grid Grid.Row="2" Padding="0,0,0,1">
-                                        <BoxView BackgroundColor="White"/>
-                                        <Editor x:Name="txt_clean" Text="{Binding Text_clean}" IsEnabled="{Binding IsEnabled}"/>
-                                    </Grid>
-                                    <Grid Grid.Row="3" Padding="0,0,0,1">
-                                        <BoxView BackgroundColor="White"/>
-                                        <Editor x:Name="txt_battery" Text="{Binding Text_battery}" IsEnabled="{Binding IsEnabled}"/>
-                                    </Grid>
-                                    <Grid Grid.Row="4" Padding="0,0,0,1">
-                                        <BoxView BackgroundColor="White"/>
-                                        <Editor x:Name="txt_brakes" Text="{Binding Text_brakes}" IsEnabled="{Binding IsEnabled}"/>
-                                    </Grid>
-                                    <Grid Grid.Row="5">
-                                        <BoxView BackgroundColor="White"/>
-                                        <Editor x:Name="txt_tyres" Text="{Binding Text_tyres}" IsEnabled="{Binding IsEnabled}"/>
-                                    </Grid>
+                                <Grid Grid.Row="1">
+                                    <BoxView BackgroundColor="White"/>
+                                    <Label Text="Manuell v-låda första växel, automat i park-läge, ej handbroms åtdragen" 
+                                               TextColor="{Binding GearsCheckedColor}"
+                                               Style="{StaticResource myLabel_Maintenance}"/>
+                                </Grid>
+                                <Grid Grid.Row="2">
+                                    <BoxView BackgroundColor="White"/>
+                                    <Label Text="Bil tvättad/avdammad"
+                                               TextColor="{Binding CleanCheckedColor}"
+                                               Style="{StaticResource myLabel_Maintenance}"/>
+                                </Grid>
+                                <Grid Grid.Row="3">
+                                    <BoxView BackgroundColor="White"/>
+                                    <Label Text="Kontroll av batteristatus, ladda vid under 12,5 volt" 
+                                               TextColor="{Binding BatteryCheckedColor}"
+                                               Style="{StaticResource myLabel_Maintenance}"/>
+                                </Grid>
+                                <Grid Grid.Row="4">
+                                    <BoxView BackgroundColor="White"/>
+                                    <Label Text="Provkörd/provbromsad" 
+                                               TextColor="{Binding BrakesCheckedColor}"
+                                               Style="{StaticResource myLabel_Maintenance}"/>
+                                </Grid>
+                                <Grid Grid.Row="5">
+                                    <BoxView BackgroundColor="White"/>
+                                    <Label Text="Däcktryck kontrollerad enligt rekommenderat" 
+                                               TextColor="{Binding TyresCheckedColor}"
+                                               Style="{StaticResource myLabel_Maintenance}"/>
+                                </Grid>
+                            </Grid>
+                            <Grid Grid.Column="2" RowSpacing="1">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="40"/>
+                                    <RowDefinition Height="70"/>
+                                    <RowDefinition Height="70"/>
+                                    <RowDefinition Height="70"/>
+                                    <RowDefinition Height="70"/>
+                                    <RowDefinition Height="70"/>
+                                </Grid.RowDefinitions>
+                                <Grid Grid.Row="0">
+                                    <BoxView BackgroundColor="White"/>
+                                    <Label Text="OK" TextColor="Green" HorizontalOptions="Center"
+                                               Style="{StaticResource myLabel_Maintenance}"/>
+                                </Grid>
+                                <Grid Grid.Row="1">
+                                    <BoxView BackgroundColor="White"/>
+                                    <CheckBox x:Name="box_gearsOK" Color="Green" IsChecked="{Binding IsGearsOKChecked}" IsEnabled="{Binding IsEnabled}"/>
+                                </Grid>
+                                <Grid Grid.Row="2">
+                                    <BoxView BackgroundColor="White"/>
+                                    <CheckBox x:Name="box_cleanOK" Color="Green" IsChecked="{Binding IsCleanOKChecked}" IsEnabled="{Binding IsEnabled}"/>
+                                </Grid>
+                                <Grid Grid.Row="3">
+                                    <BoxView BackgroundColor="White"/>
+                                    <CheckBox x:Name="box_batteryOK" Color="Green" IsChecked="{Binding IsBatteryOKChecked}" IsEnabled="{Binding IsEnabled}"/>
+                                </Grid>
+                                <Grid Grid.Row="4">
+                                    <BoxView BackgroundColor="White"/>
+                                    <CheckBox x:Name="box_brakesOK" Color="Green" IsChecked="{Binding IsBrakesOKChecked}" IsEnabled="{Binding IsEnabled}"/>
+                                </Grid>
+                                <Grid Grid.Row="5">
+                                    <BoxView BackgroundColor="White"/>
+                                    <CheckBox x:Name="box_tyresOK" Color="Green" IsChecked="{Binding IsTyresOKChecked}" IsEnabled="{Binding IsEnabled}"/>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                        <Grid Grid.Column="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="8*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.Column="0" RowSpacing="1" Padding="0,0,0.5,0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="40"/>
+                                    <RowDefinition Height="70"/>
+                                    <RowDefinition Height="70"/>
+                                    <RowDefinition Height="70"/>
+                                    <RowDefinition Height="70"/>
+                                    <RowDefinition Height="70"/>
+                                </Grid.RowDefinitions>
+                                <Grid Grid.Row="0">
+                                    <BoxView BackgroundColor="White"/>
+                                    <Label Text="EJ OK" TextColor="Red" HorizontalOptions="Center"
+                                               Style="{StaticResource myLabel_Maintenance}"/>
+                                </Grid>
+                                <Grid Grid.Row="1">
+                                    <BoxView BackgroundColor="White"/>
+                                    <CheckBox x:Name="box_gearsNotOK" Color="Red" IsChecked="{Binding IsGearsNotOKChecked}" IsEnabled="{Binding IsEnabled}"/>
+                                </Grid>
+                                <Grid Grid.Row="2">
+                                    <BoxView BackgroundColor="White"/>
+                                    <CheckBox x:Name="box_cleanNotOK" Color="Red" IsChecked="{Binding IsCleanNotOKChecked}" IsEnabled="{Binding IsEnabled}"/>
+                                </Grid>
+                                <Grid Grid.Row="3">
+                                    <BoxView BackgroundColor="White"/>
+                                    <CheckBox x:Name="box_batteryNotOK" Color="Red" IsChecked="{Binding IsBatteryNotOKChecked}" IsEnabled="{Binding IsEnabled}"/>
+                                </Grid>
+                                <Grid Grid.Row="4">
+                                    <BoxView BackgroundColor="White"/>
+                                    <CheckBox x:Name="box_brakesNotOK" Color="Red" IsChecked="{Binding IsBrakesNotOKChecked}" IsEnabled="{Binding IsEnabled}"/>
+                                </Grid>
+                                <Grid Grid.Row="5">
+                                    <BoxView BackgroundColor="White"/>
+                                    <CheckBox x:Name="box_tyresNotOK" Color="Red" IsChecked="{Binding IsTyresNotOKChecked}" IsEnabled="{Binding IsEnabled}"/>
+                                </Grid>
+                            </Grid>
+                            <Grid Grid.Column="1" RowSpacing="1">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="40"/>
+                                    <RowDefinition Height="70"/>
+                                    <RowDefinition Height="70"/>
+                                    <RowDefinition Height="70"/>
+                                    <RowDefinition Height="70"/>
+                                    <RowDefinition Height="70"/>
+                                </Grid.RowDefinitions>
+                                <Grid Grid.Row="0">
+                                    <BoxView BackgroundColor="White"/>
+                                    <Label Text="Beskrivning (obligatorisk om ej ok)"
+                                               Style="{StaticResource myLabel_Maintenance}"/>
+                                </Grid>
+                                <Grid Grid.Row="1">
+                                    <BoxView BackgroundColor="White"/>
+                                    <Editor x:Name="txt_gears" Text="{Binding Text_gears}" IsEnabled="{Binding IsEnabled}"
+                                                Style="{StaticResource myEditor_Maintenance}"/>
+                                </Grid>
+                                <Grid Grid.Row="2">
+                                    <BoxView BackgroundColor="White"/>
+                                    <Editor x:Name="txt_clean" Text="{Binding Text_clean}" IsEnabled="{Binding IsEnabled}"
+                                                Style="{StaticResource myEditor_Maintenance}"/>
+                                </Grid>
+                                <Grid Grid.Row="3">
+                                    <BoxView BackgroundColor="White"/>
+                                    <Editor x:Name="txt_battery" Text="{Binding Text_battery}" IsEnabled="{Binding IsEnabled}"
+                                                Style="{StaticResource myEditor_Maintenance}"/>
+                                </Grid>
+                                <Grid Grid.Row="4">
+                                    <BoxView BackgroundColor="White"/>
+                                    <Editor x:Name="txt_brakes" Text="{Binding Text_brakes}" IsEnabled="{Binding IsEnabled}"
+                                                Style="{StaticResource myEditor_Maintenance}"/>
+                                </Grid>
+                                <Grid Grid.Row="5">
+                                    <BoxView BackgroundColor="White"/>
+                                    <Editor x:Name="txt_tyres" Text="{Binding Text_tyres}" IsEnabled="{Binding IsEnabled}"
+                                                Style="{StaticResource myEditor_Maintenance}"/>
                                 </Grid>
                             </Grid>
                         </Grid>
                     </Grid>
-
                 </Grid>
                 <Grid Grid.Row="1">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="70"/>
+                        <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
-                    <Grid Grid.Column="1" Grid.Row="0">
-                        <StackLayout Orientation="Horizontal" HorizontalOptions="End" Margin="0,20,0,0">
-                            <Button x:Name="btn_cancel" Text="Avbryt" FontSize="Small" Command="{Binding CancelCommand}" Padding="5" IsEnabled="{Binding IsEnabled}"/>
-                            <Button x:Name="btn_save" Text="Spara" FontSize="Small" Command="{Binding InsertBegCommand}" Padding="5" IsEnabled="{Binding IsEnabled}"/>
-                        </StackLayout>
-                    </Grid>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="End" Margin="0,20,0,0">
+                        <Button x:Name="btn_cancel" Text="Avbryt" Command="{Binding CancelCommand}"
+                                    Padding="5" IsEnabled="{Binding IsEnabled}"
+                                    Style="{StaticResource myButton_Maintenance}"/>
+                        <Button x:Name="btn_save" Text="Spara" Command="{Binding InsertBegCommand}"
+                                    Padding="5" IsEnabled="{Binding IsEnabled}"
+                                    Style="{StaticResource myButton_Maintenance}"/>
+                    </StackLayout>
                 </Grid>
             </Grid>
         </ScrollView>

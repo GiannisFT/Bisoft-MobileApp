@@ -34,7 +34,6 @@ namespace BisoftMobileApp.ViewModels.CarPreSalesMaintenance
         #endregion
 
         #region Properties
-        public ChooseEmployeesVM searchEmpVM { get; set; }
 
         #region Maintenance
         private ObservableCollection<CarPresalesMaintenance> allMaintenance;
@@ -105,10 +104,7 @@ namespace BisoftMobileApp.ViewModels.CarPreSalesMaintenance
         private Office selectedOffice;
         public Office SelectedOffice
         {
-            get 
-            { 
-                return selectedOffice; 
-            }
+            get { return selectedOffice; }
             set
             {
                 if (selectedOffice == value)
@@ -129,6 +125,7 @@ namespace BisoftMobileApp.ViewModels.CarPreSalesMaintenance
         #endregion
 
         #region Employees
+        public ChooseEmployeesVM searchEmpVM { get; set; }
 
         private Employee _selectedEmployee;
         public Employee SelectedEmployee
@@ -350,7 +347,6 @@ namespace BisoftMobileApp.ViewModels.CarPreSalesMaintenance
         #endregion
 
         #region  Open Search Employee
-
         private void SearchEmployee(object obj)
         {
             ChooseEmployeePage page = new ChooseEmployeePage();
@@ -372,7 +368,6 @@ namespace BisoftMobileApp.ViewModels.CarPreSalesMaintenance
                 SelectedEmployee = searchEmpVM.SelectedEmployee;
             }
         }
-
         #endregion
 
         #region Open Maintenance Type
@@ -386,21 +381,21 @@ namespace BisoftMobileApp.ViewModels.CarPreSalesMaintenance
                         MaintenanceStandardVM contextStandard = new MaintenanceStandardVM(SelectedMaintenance.Id, Convert.ToInt32(Application.Current.Properties["EmpId"]), SelectedOffice.Id);
                         MaintenanceStandardPage pageStandard = new MaintenanceStandardPage();
                         pageStandard.BindingContext = contextStandard;
-                        pageStandard.Disappearing += PageStandard_Disappearing;
+                        pageStandard.Disappearing += Page_Refresh;
                         Application.Current.MainPage.Navigation.PushAsync(pageStandard);
                         break;
                     case 2:
                         MaintenanceBegVM contextBeg = new MaintenanceBegVM(SelectedMaintenance.Id, Convert.ToInt32(Application.Current.Properties["EmpId"]), SelectedOffice.Id);
                         MaintenanceBegPage pageBeg = new MaintenanceBegPage();
                         pageBeg.BindingContext = contextBeg;
-                        pageBeg.Disappearing += PageStandard_Disappearing;
+                        pageBeg.Disappearing += Page_Refresh;
                         Application.Current.MainPage.Navigation.PushAsync(pageBeg);
                         break;
                     case 3:
                         MaintenanceLagerVM contextLager = new MaintenanceLagerVM(SelectedMaintenance.Id, Convert.ToInt32(Application.Current.Properties["EmpId"]), SelectedOffice.Id);
                         MaintenanceLagerPage pageLager = new MaintenanceLagerPage();
                         pageLager.BindingContext = contextLager;
-                        pageLager.Disappearing += PageStandard_Disappearing;
+                        pageLager.Disappearing += Page_Refresh;
                         Application.Current.MainPage.Navigation.PushAsync(pageLager);
                         break;
                     default:
@@ -409,8 +404,7 @@ namespace BisoftMobileApp.ViewModels.CarPreSalesMaintenance
                 }
             }
         }
-
-        private void PageStandard_Disappearing(object sender, EventArgs e)
+        private void Page_Refresh(object sender, EventArgs e)
         {
             GetCarPresalesMaintenance();
         }

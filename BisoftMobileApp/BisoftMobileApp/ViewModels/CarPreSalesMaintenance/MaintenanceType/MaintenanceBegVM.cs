@@ -30,39 +30,35 @@ namespace BisoftMobileApp.ViewModels.MaintenanceType
         #endregion
 
         #region properties
-        public ChooseEmployeesVM searchEmpVM { get; set; }
-
+        
         #region Car Pre Sales Id
         public int IniCarPreSalesId { get; set; }
         #endregion
 
         #region Offices
         public int IniOfficeId { get; set; }
-        private ObservableCollection<Office> allOffices;
+        private ObservableCollection<Office> _allOffices;
         public ObservableCollection<Office> AllOffices
         {
-            get
-            {
-                return allOffices;
-            }
+            get { return _allOffices; }
             set
             {
-                if (allOffices == value)
+                if (_allOffices == value)
                     return;
-                allOffices = value;
+                _allOffices = value;
                 OnPropertyChanged(new PropertyChangedEventArgs("AllOffices"));
             }
         }
 
-        private Office selectedOffice;
+        private Office _selectedOffice;
         public Office SelectedOffice
         {
-            get { return selectedOffice; }
+            get { return _selectedOffice; }
             set
             {
-                if (selectedOffice == value)
+                if (_selectedOffice == value)
                     return;
-                selectedOffice = value;
+                _selectedOffice = value;
                 OnPropertyChanged(new PropertyChangedEventArgs("SelectedOffice"));
                 if (SelectedOffice != null)
                 {
@@ -73,14 +69,13 @@ namespace BisoftMobileApp.ViewModels.MaintenanceType
         #endregion
 
         #region Employees
+        public ChooseEmployeesVM searchEmpVM { get; set; }
         public int IniEmployeeId { get; set; }
+
         private Employee _selectedEmployee;
         public Employee SelectedEmployee
         {
-            get
-            {
-                return _selectedEmployee;
-            }
+            get { return _selectedEmployee; }
             set
             {
                 if (_selectedEmployee == value)
@@ -92,10 +87,7 @@ namespace BisoftMobileApp.ViewModels.MaintenanceType
         private ObservableCollection<Employee> _selectedOfficeEmployees;
         public ObservableCollection<Employee> SelectedOfficeEmployees
         {
-            get
-            {
-                return _selectedOfficeEmployees;
-            }
+            get { return _selectedOfficeEmployees; }
             set
             {
                 if (_selectedOfficeEmployees == value)
@@ -107,29 +99,30 @@ namespace BisoftMobileApp.ViewModels.MaintenanceType
         #endregion
 
         #region Date
-        private DateTime selectedDate = DateTime.Today;
-
+        private DateTime _selectedDate = DateTime.Today;
         public DateTime SelectedDate
         {
-            get { return selectedDate; }
+            get { return _selectedDate; }
             set
             {
-                selectedDate = value;
+                if (_selectedDate == value)
+                    return;
+                _selectedDate = value;
                 OnPropertyChanged(new PropertyChangedEventArgs("SelectedDate"));
             }
         }
         #endregion
 
         #region Gearbox
-        private string txt_gears;
+        private string _txtGears;
         public string Text_gears
         {
-            get { return txt_gears; }
+            get { return _txtGears; }
             set
             {
-                if (txt_gears == value)
+                if (_txtGears == value)
                     return;
-                txt_gears = value;
+                _txtGears = value;
                 OnPropertyChanged(new PropertyChangedEventArgs("Text_gears"));
             }
         }
@@ -183,15 +176,15 @@ namespace BisoftMobileApp.ViewModels.MaintenanceType
         #endregion
 
         #region Clean
-        private string txt_clean;
+        private string _txtClean;
         public string Text_clean
         {
-            get { return txt_clean; }
+            get { return _txtClean; }
             set
             {
-                if (txt_clean == value)
+                if (_txtClean == value)
                     return;
-                txt_clean = value;
+                _txtClean = value;
                 OnPropertyChanged(new PropertyChangedEventArgs("Text_clean"));
             }
         }
@@ -244,15 +237,15 @@ namespace BisoftMobileApp.ViewModels.MaintenanceType
         #endregion
 
         #region Battery
-        private string txt_battery;
+        private string _txtBattery;
         public string Text_battery
         {
-            get { return txt_battery; }
+            get { return _txtBattery; }
             set
             {
-                if (txt_battery == value)
+                if (_txtBattery == value)
                     return;
-                txt_battery = value;
+                _txtBattery = value;
                 OnPropertyChanged(new PropertyChangedEventArgs("Text_battery"));
             }
         }
@@ -305,15 +298,15 @@ namespace BisoftMobileApp.ViewModels.MaintenanceType
         #endregion
 
         #region Brakes
-        private string txt_brakes;
+        private string _txtBrakes;
         public string Text_brakes
         {
-            get { return txt_brakes; }
+            get { return _txtBrakes; }
             set
             {
-                if (txt_brakes == value)
+                if (_txtBrakes == value)
                     return;
-                txt_brakes = value;
+                _txtBrakes = value;
                 OnPropertyChanged(new PropertyChangedEventArgs("Text_brakes"));
             }
         }
@@ -366,15 +359,15 @@ namespace BisoftMobileApp.ViewModels.MaintenanceType
         #endregion
 
         #region Tyres
-        private string txt_tyres;
+        private string _txtTyres;
         public string Text_tyres
         {
-            get { return txt_tyres; }
+            get { return _txtTyres; }
             set
             {
-                if (txt_tyres == value)
+                if (_txtTyres == value)
                     return;
-                txt_tyres = value;
+                _txtTyres = value;
                 OnPropertyChanged(new PropertyChangedEventArgs("Text_tyres"));
             }
         }
@@ -492,7 +485,7 @@ namespace BisoftMobileApp.ViewModels.MaintenanceType
         {
             try
             {
-                if (CheckValues())
+                if (ValuesCheck())
                 {
                     DbContext = new Service1Client(Service1Client.EndpointConfiguration.BasicHttpBinding_IService1);
 
@@ -533,9 +526,7 @@ namespace BisoftMobileApp.ViewModels.MaintenanceType
         {
             try
             {
-                IsBusy = true;
                 DbContext = new Service1Client(Service1Client.EndpointConfiguration.BasicHttpBinding_IService1);
-                // await Dbcontext.OpenAsync();
                 var result = DbContext.GetOfficesAndEmployeesByCompanyId(Application.Current.Properties["UN"].ToString(),
                     Application.Current.Properties["PW"].ToString(), Application.Current.Properties["Ucid"].ToString(),
                     Convert.ToInt32(Application.Current.Properties["CompanyId"].ToString()));
@@ -575,7 +566,6 @@ namespace BisoftMobileApp.ViewModels.MaintenanceType
             }
             catch (Exception e)
             {
-                IsBusy = false;
                 await Application.Current.MainPage.DisplayAlert("Fel", e.Message, "STÄNG");
             }
         }
@@ -586,10 +576,10 @@ namespace BisoftMobileApp.ViewModels.MaintenanceType
         {
             try
             {
-                //IsBusy = true;
                 DbContext = new Service1Client(Service1Client.EndpointConfiguration.BasicHttpBinding_IService1);
                 var result = DbContext.GetCarPreSalesMaintenanceBeg(Application.Current.Properties["UN"].ToString(), Application.Current.Properties["PW"].ToString(),
                     Application.Current.Properties["Ucid"].ToString(), id);
+
                 Employee emp = new Employee();
                 SelectedDate = result.PerformedDate;
                 emp.Id = result.PerformedByEmployee.Id;
@@ -628,18 +618,12 @@ namespace BisoftMobileApp.ViewModels.MaintenanceType
             }
             catch (Exception e)
             {
-                //IsBusy = false;
                 await Application.Current.MainPage.DisplayAlert("Fel", e.Message, "STÄNG");
             }
         }
         #endregion
 
         #region  Open Search Employee
-        private bool CanSearchEmployee(object param)
-        {
-            return true;
-        }
-
         private void SearchEmployee(object obj)
         {
             ChooseEmployeePage page = new ChooseEmployeePage();
@@ -649,7 +633,10 @@ namespace BisoftMobileApp.ViewModels.MaintenanceType
 
             Application.Current.MainPage.Navigation.PushAsync(page);
         }
-
+        private bool CanSearchEmployee(object param)
+        {
+            return true;
+        }
         private void Page_Disappearing(object sender, EventArgs e)
         {
             if (searchEmpVM.ReturnResult)
@@ -658,11 +645,10 @@ namespace BisoftMobileApp.ViewModels.MaintenanceType
                 SelectedEmployee = searchEmpVM.SelectedEmployee;
             }
         }
-
         #endregion
 
         #region Values Check
-        private bool CheckValues()
+        private bool ValuesCheck()
         {
             bool isValid = true;
             if (!CheckGearsValues())

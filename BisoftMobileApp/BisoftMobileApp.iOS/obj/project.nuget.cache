@@ -1,19 +1,19 @@
 {
   "version": 2,
-  "dgSpecHash": "q6WRlbW6HxzzA/k2rO9+1gO7i9wzcWlfHFBo4w7K9FYGszT/lZ947ddCyvYho2w4nfhuqEbRPLO2SlGdv9jTTA==",
+  "dgSpecHash": "PL+MqFrNTb+ZfGzlJs/TThLxfyUeO4DDP3pRz/nm2ofJftTN50oDrQD6Ko85MyigJm4L0idFjYHSaLR1g5v7EQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jonas\\source\\repos\\BisoftMobileApp\\BisoftMobileApp.iOS\\BisoftMobileApp.iOS.csproj",
+  "projectFilePath": "C:\\Users\\Giannis F Tsouri\\Git03\\BisoftMobileApp\\BisoftMobileApp.iOS\\BisoftMobileApp.iOS.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\jonas\\.nuget\\packages\\microsoft.bcl\\1.1.10\\microsoft.bcl.1.1.10.nupkg.sha512",
-    "C:\\Users\\jonas\\.nuget\\packages\\microsoft.bcl.build\\1.0.14\\microsoft.bcl.build.1.0.14.nupkg.sha512",
-    "C:\\Users\\jonas\\.nuget\\packages\\microsoft.net.http\\2.2.29\\microsoft.net.http.2.2.29.nupkg.sha512",
-    "C:\\Users\\jonas\\.nuget\\packages\\system.servicemodel.duplex\\4.7.0\\system.servicemodel.duplex.4.7.0.nupkg.sha512",
-    "C:\\Users\\jonas\\.nuget\\packages\\system.servicemodel.http\\4.7.0\\system.servicemodel.http.4.7.0.nupkg.sha512",
-    "C:\\Users\\jonas\\.nuget\\packages\\system.servicemodel.nettcp\\4.7.0\\system.servicemodel.nettcp.4.7.0.nupkg.sha512",
-    "C:\\Users\\jonas\\.nuget\\packages\\system.servicemodel.security\\4.7.0\\system.servicemodel.security.4.7.0.nupkg.sha512",
-    "C:\\Users\\jonas\\.nuget\\packages\\xam.plugin.media\\5.0.1\\xam.plugin.media.5.0.1.nupkg.sha512",
-    "C:\\Users\\jonas\\.nuget\\packages\\xamarin.essentials\\1.5.2\\xamarin.essentials.1.5.2.nupkg.sha512",
-    "C:\\Users\\jonas\\.nuget\\packages\\xamarin.forms\\4.5.0.530\\xamarin.forms.4.5.0.530.nupkg.sha512"
+    "C:\\Users\\Giannis F Tsouri\\.nuget\\packages\\microsoft.bcl\\1.1.10\\microsoft.bcl.1.1.10.nupkg.sha512",
+    "C:\\Users\\Giannis F Tsouri\\.nuget\\packages\\microsoft.bcl.build\\1.0.14\\microsoft.bcl.build.1.0.14.nupkg.sha512",
+    "C:\\Users\\Giannis F Tsouri\\.nuget\\packages\\microsoft.net.http\\2.2.29\\microsoft.net.http.2.2.29.nupkg.sha512",
+    "C:\\Users\\Giannis F Tsouri\\.nuget\\packages\\system.servicemodel.duplex\\4.7.0\\system.servicemodel.duplex.4.7.0.nupkg.sha512",
+    "C:\\Users\\Giannis F Tsouri\\.nuget\\packages\\system.servicemodel.http\\4.7.0\\system.servicemodel.http.4.7.0.nupkg.sha512",
+    "C:\\Users\\Giannis F Tsouri\\.nuget\\packages\\system.servicemodel.nettcp\\4.7.0\\system.servicemodel.nettcp.4.7.0.nupkg.sha512",
+    "C:\\Users\\Giannis F Tsouri\\.nuget\\packages\\system.servicemodel.security\\4.7.0\\system.servicemodel.security.4.7.0.nupkg.sha512",
+    "C:\\Users\\Giannis F Tsouri\\.nuget\\packages\\xam.plugin.media\\5.0.1\\xam.plugin.media.5.0.1.nupkg.sha512",
+    "C:\\Users\\Giannis F Tsouri\\.nuget\\packages\\xamarin.essentials\\1.5.2\\xamarin.essentials.1.5.2.nupkg.sha512",
+    "C:\\Users\\Giannis F Tsouri\\.nuget\\packages\\xamarin.forms\\4.5.0.530\\xamarin.forms.4.5.0.530.nupkg.sha512"
   ],
   "logs": []
 }

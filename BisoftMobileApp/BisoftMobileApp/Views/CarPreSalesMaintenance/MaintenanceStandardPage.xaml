@@ -15,15 +15,6 @@
                 <Setter Property="RowSpacing" Value="1"/>
                 <Setter Property="ColumnSpacing" Value="1"/>
             </Style>
-            <Style TargetType="Label">
-                <Setter Property="FontSize" Value="Small"/>
-                <Setter Property="TextColor" Value="Black"/>
-                <Setter Property="VerticalOptions" Value="Center"/>
-                <Setter Property="Padding" Value="5,0,0,0"/>
-            </Style>
-            <Style TargetType="Button">
-                <Setter Property="FontSize" Value="Medium"/>
-            </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>
@@ -34,15 +25,16 @@
                     <RowDefinition Height="0"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="5*"/>
                 </Grid.ColumnDefinitions>
                 <Grid Grid.Column="0">
-                    <StackLayout BackgroundColor="White">
-                        <Label Text="Utförd(datum)"/>
+                    <BoxView BackgroundColor="White"/>
+                    <StackLayout>
+                        <Label Text="Utförd(datum)" Style="{StaticResource myLabel_Maintenance}"/>
                         <DatePicker x:Name="datepicker" Date="{Binding SelectedDate}" Format="yyyy-MM-dd"
-                                    FontSize="Small"
-                                    IsEnabled="{Binding IsEnabled}" HorizontalOptions="StartAndExpand"/>
+                                    IsEnabled="{Binding IsEnabled}" HorizontalOptions="StartAndExpand"
+                                    Style="{StaticResource myDatePicker_Maintenance}"/>
                     </StackLayout>
                 </Grid>
                 <Grid Grid.Column="1" RowSpacing="0">
@@ -53,36 +45,46 @@
                             <ColumnDefinition Width="Auto"/>
                         </Grid.ColumnDefinitions>
                         <Grid Grid.Column="0">
-                            <Label Text="Utförd av" VerticalOptions="StartAndExpand"/>
+                            <Label Text="Utförd av" VerticalOptions="StartAndExpand" Style="{StaticResource myLabel_Maintenance}"/>
                             <Label Text="{Binding SelectedEmployee.Name}" Padding="5,30,0,0"
-                                           HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+                                   HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"
+                                   Style="{StaticResource myLabel_Maintenance}"/>
                         </Grid>
                         <Grid Grid.Column="1" Padding="40,0,0,0">
                             <Button x:Name="btn_search_employee" Text="Ändra" Command="{Binding SearchEmployeeCommand}"
                                     IsEnabled="{Binding IsEnabled}"
-                                    FontSize="Small"
                                     BackgroundColor="White" TextColor="Green"
-                                    VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" Padding="0,0,0,20"/>
+                                    VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" Padding="0,0,0,20"
+                                    Style="{StaticResource myButton_Maintenance}"/>
                         </Grid>
                     </Grid>
                 </Grid>
             </Grid>
             <StackLayout Margin="0,50,0,0">
-                <Label Text="Information om underhållet" TextColor="{Binding InfoCheckedColor}"/>
+                <Label Text="Information om underhållet" TextColor="{Binding InfoCheckedColor}"
+                       Style="{StaticResource myLabel_Maintenance}"/>
                 <Frame BorderColor="DarkGray" HorizontalOptions="Fill">
-                    <Editor x:Name="txt_info" Text="{Binding Text_info}" HeightRequest="100" IsEnabled="{Binding IsEnabled}"/>
+                    <Editor x:Name="txt_info" Text="{Binding Text_info}" HeightRequest="100" IsEnabled="{Binding IsEnabled}"
+                            Style="{StaticResource myEditor_Maintenance}"/>
                 </Frame>
             </StackLayout>
             <StackLayout Margin="0,50,0,0">
-                <Label Text="Underhållsdokument"/>
+                <Label Text="Underhållsdokument" Style="{StaticResource myLabel_Maintenance}"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal">
-                <Label x:Name="lbl_filename" Text="{Binding FilePath}" TextColor="Blue" HorizontalOptions="StartAndExpand"/>
-                <Button x:Name="btn_selectpic" Text="Välj" Command="{Binding SelectPic}" HorizontalOptions="EndAndExpand" IsEnabled="{Binding IsEnabled}"/>
+                <Label x:Name="lbl_filename" Text="{Binding FilePath}" TextColor="Blue" HorizontalOptions="StartAndExpand"
+                       Style="{StaticResource myLabel_Maintenance}"/>
+                <Button x:Name="btn_selectpic" Text="Välj" Command="{Binding SelectPic}"
+                        HorizontalOptions="EndAndExpand" IsEnabled="{Binding IsEnabled}"
+                        Style="{StaticResource myButton_Maintenance}"/>
             </StackLayout>
             <StackLayout Orientation="Horizontal" VerticalOptions="End" HorizontalOptions="End" Margin="0,50,0,0">
-                <Button x:Name="btn_cancel" Text="Avbryt" FontSize="Small" Command="{Binding CancelCommand}" Padding="5" IsEnabled="{Binding IsEnabled}"/>
-                <Button x:Name="btn_save" Text="Spara" FontSize="Small" Command="{Binding InsertStandardCommand}" Padding="5" IsEnabled="{Binding IsEnabled}"/>
+                <Button x:Name="btn_cancel" Text="Avbryt" Command="{Binding CancelCommand}"
+                        Padding="5" IsEnabled="{Binding IsEnabled}"
+                        Style="{StaticResource myButton_Maintenance}"/>
+                <Button x:Name="btn_save" Text="Spara" Command="{Binding InsertStandardCommand}"
+                        Padding="5" IsEnabled="{Binding IsEnabled}"
+                        Style="{StaticResource myButton_Maintenance}"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

@@ -7,6 +7,7 @@
        xmlns:data="clr-namespace:BisoftMobileApp.ViewModels.AppShellVMS"
        xmlns:uccontrol="clr-namespace:BisoftMobileApp.Views.InternalControl"
        xmlns:uccarmaintenance="clr-namespace:BisoftMobileApp.Views.CarPreSalesMaintenance"
+       xmlns:ucqualityreports="clr-namespace:BisoftMobileApp.Views.QualityReport"
        xmlns:ucbisoftstart="clr-namespace:BisoftMobileApp.Views.BisoftStart"
              x:Class="BisoftMobileApp.AppShell">
 
@@ -30,6 +31,9 @@
             <uccarmaintenance:CarPreSalesMaintenancePage/>
         </ShellContent>
 
+        <ShellContent Title="Kvalitetsrapport">
+            <ucqualityreports:QualityReportsMainPage/>
+        </ShellContent>
 
     </FlyoutItem>
 </Shell>

@@ -35,36 +35,32 @@ namespace BisoftMobileApp.ViewModels.MaintenanceType
         #endregion
 
         #region Properties
-        public ChooseEmployeesVM searchEmpVM { get; set; }
+        
         public int IniCarPreSalesId { get; set; }
 
         #region Offices
         public int IniOfficeId { get; set; }
-        private ObservableCollection<Office> allOffices;
+        private ObservableCollection<Office> _allOffices;
         public ObservableCollection<Office> AllOffices
         {
-            get
-            {
-                return allOffices;
-            }
+            get { return _allOffices; }
             set
             {
-                if (allOffices == value)
+                if (_allOffices == value)
                     return;
-                allOffices = value;
+                _allOffices = value;
                 OnPropertyChanged(new PropertyChangedEventArgs("AllOffices"));
             }
         }
-
-        private Office selectedOffice;
+        private Office _selectedOffice;
         public Office SelectedOffice
         {
-            get { return selectedOffice; }
+            get { return _selectedOffice; }
             set
             {
-                if (selectedOffice == value)
+                if (_selectedOffice == value)
                     return;
-                selectedOffice = value;
+                _selectedOffice = value;
                 OnPropertyChanged(new PropertyChangedEventArgs("SelectedOffice"));
                 if (SelectedOffice != null)
                 {
@@ -75,14 +71,12 @@ namespace BisoftMobileApp.ViewModels.MaintenanceType
         #endregion
 
         #region Employees
+        public ChooseEmployeesVM searchEmpVM { get; set; }
         public int IniEmployeeId { get; set; }
         private Employee _selectedEmployee;
         public Employee SelectedEmployee
         {
-            get
-            {
-                return _selectedEmployee;
-            }
+            get { return _selectedEmployee; }
             set
             {
                 if (_selectedEmployee == value)
@@ -94,10 +88,7 @@ namespace BisoftMobileApp.ViewModels.MaintenanceType
         private ObservableCollection<Employee> _selectedOfficeEmployees;
         public ObservableCollection<Employee> SelectedOfficeEmployees
         {
-            get
-            {
-                return _selectedOfficeEmployees;
-            }
+            get { return _selectedOfficeEmployees; }
             set
             {
                 if (_selectedOfficeEmployees == value)
@@ -109,28 +100,30 @@ namespace BisoftMobileApp.ViewModels.MaintenanceType
         #endregion
 
         #region Date
-        private DateTime selectedDate = DateTime.Today;
+        private DateTime _selectedDate = DateTime.Today;
         public DateTime SelectedDate
         {
-            get { return selectedDate; }
+            get { return _selectedDate; }
             set
             {
-                selectedDate = value;
+                if (_selectedDate == value)
+                    return;
+                _selectedDate = value;
                 OnPropertyChanged(new PropertyChangedEventArgs("SelectedDate"));
             }
         }
         #endregion
 
         #region Information
-        private string txt_info;
+        private string _txtInfo;
         public string Text_info
         {
-            get { return txt_info; }
+            get { return _txtInfo; }
             set
             {
-                if (txt_info == value)
+                if (_txtInfo == value)
                     return;
-                txt_info = value;
+                _txtInfo = value;
                 OnPropertyChanged(new PropertyChangedEventArgs("Text_info"));
             }
         }
@@ -149,7 +142,7 @@ namespace BisoftMobileApp.ViewModels.MaintenanceType
         #endregion
 
         #region File Path
-        private string _filepath { get; set; }
+        private string _filepath;
         public string FilePath
         {
             get { return _filepath; }
@@ -164,7 +157,6 @@ namespace BisoftMobileApp.ViewModels.MaintenanceType
         #endregion
 
         #region IsEnabled
-
         private bool _isEnabled;
         public bool IsEnabled
         {
@@ -177,7 +169,6 @@ namespace BisoftMobileApp.ViewModels.MaintenanceType
                 OnPropertyChanged(new PropertyChangedEventArgs("IsEnabled"));
             }
         }
-
         #endregion
 
         #endregion
@@ -223,7 +214,7 @@ namespace BisoftMobileApp.ViewModels.MaintenanceType
                     DbContext = new Service1Client(Service1Client.EndpointConfiguration.BasicHttpBinding_IService1);
 
                     CarPreSalesMaintenaceStandardData standardData = new CarPreSalesMaintenaceStandardData();
-                    standardData.PerformedDate = selectedDate;
+                    standardData.PerformedDate = SelectedDate;
                     standardData.PerformedById = SelectedEmployee.Id;
                     standardData.DocPath = FilePath;
                     standardData.CarPreSalesId = IniCarPreSalesId;
@@ -250,12 +241,11 @@ namespace BisoftMobileApp.ViewModels.MaintenanceType
         {
             try
             {
-                IsBusy = true;
                 DbContext = new Service1Client(Service1Client.EndpointConfiguration.BasicHttpBinding_IService1);
-                // await Dbcontext.OpenAsync();
                 var result = DbContext.GetOfficesAndEmployeesByCompanyId(Application.Current.Properties["UN"].ToString(),
                     Application.Current.Properties["PW"].ToString(), Application.Current.Properties["Ucid"].ToString(),
                     Convert.ToInt32(Application.Current.Properties["CompanyId"].ToString()));
+
                 AllOffices = new ObservableCollection<Office>();
                 Office off;
                 Employee emp;
@@ -292,18 +282,12 @@ namespace BisoftMobileApp.ViewModels.MaintenanceType
             }
             catch (Exception e)
             {
-                IsBusy = false;
                 await Application.Current.MainPage.DisplayAlert("Fel", e.Message, "STÄNG");
             }
         }
         #endregion
 
         #region  Open Search Employee
-        private bool CanSearchEmployee(object param)
-        {
-            return true;
-        }
-
         private void SearchEmployee(object obj)
         {
             ChooseEmployeePage page = new ChooseEmployeePage();
@@ -313,7 +297,10 @@ namespace BisoftMobileApp.ViewModels.MaintenanceType
 
             Application.Current.MainPage.Navigation.PushAsync(page);
         }
-
+        private bool CanSearchEmployee(object param)
+        {
+            return true;
+        }
         private void Page_Disappearing(object sender, EventArgs e)
         {
             if (searchEmpVM.ReturnResult)
@@ -322,7 +309,6 @@ namespace BisoftMobileApp.ViewModels.MaintenanceType
                 SelectedEmployee = searchEmpVM.SelectedEmployee;
             }
         }
-
         #endregion
 
         #region Upload File
@@ -339,29 +325,34 @@ namespace BisoftMobileApp.ViewModels.MaintenanceType
                 PhotoSize = PhotoSize.Large
             });
 
-            string[] temp = file.Path.Split('/');
-            string[] tempName = temp[temp.Length - 1].Split('.');
-            string filename = tempName[0];
-            string foldername = DateTime.Now.ToString("yyyy-MM-dd") + "/" + DateTime.Now.ToString("H-mm-ss");
-            FilePath = "Files/CarPreSales/" + Application.Current.Properties["CompanyId"].ToString() + "/" + Application.Current.Properties["OfficeId"].ToString() + "/" + foldername + "/" + temp[temp.Length - 1];
-
-            var content = new MultipartFormDataContent();
-            Uri host = new Uri("http://www.bisoft.se/Bisoft/receiver.ashx");
-            UriBuilder ub = new UriBuilder(host)
+            if (file != null)
             {
-                Query = string.Format("filename={0}", FilePath)
-            };
+                string[] temp = file.Path.Split('/');
+                string[] tempName = temp[temp.Length - 1].Split('.');
+                string filename = tempName[0];
+                string foldername = DateTime.Now.ToString("yyyy-MM-dd") + "/" + DateTime.Now.ToString("H-mm-ss");
+                FilePath = "Files/CarPreSales/" + Application.Current.Properties["CompanyId"].ToString() + "/" + Application.Current.Properties["OfficeId"].ToString() + "/" + foldername + "/" + temp[temp.Length - 1];
 
-            Stream data = file.GetStream();
+                var content = new MultipartFormDataContent();
+                Uri host = new Uri("http://www.bisoft.se/Bisoft/receiver.ashx");
+                UriBuilder ub = new UriBuilder(host)
+                {
+                    Query = string.Format("filename={0}", FilePath)
+                };
 
-            WebClient c = new WebClient();
-            c.OpenWriteCompleted += (sender, e) =>
-            {
-                PushData(data, e.Result);
-                e.Result.Close();
-                data.Close();
-            };
-            c.OpenWriteAsync(ub.Uri);
+                Stream data = file.GetStream();
+
+                WebClient c = new WebClient();
+                c.OpenWriteCompleted += (sender, e) =>
+                {
+                    PushData(data, e.Result);
+                    e.Result.Close();
+                    data.Close();
+                };
+                c.OpenWriteAsync(ub.Uri);
+            }
+            else
+                await Application.Current.MainPage.DisplayAlert("File not supported.", "Ingen fil vald.", "STÄNG");
         }
         private void PushData(Stream input, Stream output)
         {

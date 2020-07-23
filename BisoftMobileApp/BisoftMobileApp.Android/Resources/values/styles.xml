@@ -27,4 +27,18 @@
   <style name="AppCompatDialogStyle" parent="Theme.AppCompat.Light.Dialog">
     <item name="colorAccent">#FF4081</item>
   </style>
+  
+  <!--The following defines the Quality Report custom datepicker attributes-->
+  <style name="QRDatePickerCustomStyle" parent="Theme.AppCompat.Light.Dialog">
+    <item name="android:datePickerStyle">@style/DatePickerDialogStyle</item>
+    <item name="android:textColor">#1976D2</item>
+    <item name="colorControlHighlight">#1976D2</item>
+    <item name="colorControlActivated">#1976D2</item>
+    <item name="colorPrimary">#1976D2</item>
+    <item name="colorPrimaryDark">#1976D2</item>
+    <item name="android:yearListSelectorColor">#1976D2</item>
+  </style>
+  <style name="DatePickerDialogStyle" parent="@android:style/Widget.Material.Light.DatePicker">
+    <item name="android:headerBackground">#1976D2</item>
+  </style>
 </resources>

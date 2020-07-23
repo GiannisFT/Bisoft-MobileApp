@@ -6,6 +6,92 @@
              mc:Ignorable="d"
              x:Class="BisoftMobileApp.App">
     <Application.Resources>
-
+        
+        <ResourceDictionary>
+            
+            <!--Quality Reports region start-->
+            <Style x:Key="myLabel_QualityReports" TargetType="Label">
+                <Setter Property="FontSize">
+                    <OnIdiom x:TypeArguments="x:Double" Phone="13" Tablet="17" Desktop="22"/>
+                </Setter>
+                <Setter Property="TextColor" Value="#1976D2"/>
+            </Style>
+            <Style x:Key="myButton_QualityReports" TargetType="Button">
+                <Setter Property="FontSize">
+                    <OnIdiom x:TypeArguments="x:Double" Phone="13" Tablet="17" Desktop="22"/>
+                </Setter>
+                <Setter Property="BackgroundColor" Value="#1976D2"/>
+                <Setter Property="TextColor" Value="White"/>
+            </Style>
+            <Style x:Key="myEditor_QualityReports" TargetType="Editor">
+                <Setter Property="FontSize">
+                    <OnIdiom x:TypeArguments="x:Double" Phone="13" Tablet="17" Desktop="22"/>
+                </Setter>
+            </Style>
+            <Style x:Key="myEntry_QualityReports" TargetType="Entry">
+                <Setter Property="FontSize">
+                    <OnIdiom x:TypeArguments="x:Double" Phone="13" Tablet="17" Desktop="22"/>
+                </Setter>
+            </Style>
+            <Style x:Key="myPicker_QualityReports" TargetType="Picker">
+                <Setter Property="FontSize">
+                    <OnIdiom x:TypeArguments="x:Double" Phone="13" Tablet="17" Desktop="22"/>
+                </Setter>
+            </Style>
+            <Style x:Key="myDatePicker_QualityReports" TargetType="DatePicker">
+                <Setter Property="FontSize">
+                    <OnIdiom x:TypeArguments="x:Double" Phone="13" Tablet="17" Desktop="22"/>
+                </Setter>
+            </Style>
+            <!--End-->
+            
+            <!--Maintenace region start-->
+            <Style x:Key="myLabel_Maintenance" TargetType="Label">
+                <Setter Property="FontSize">
+                    <OnIdiom x:TypeArguments="x:Double" Phone="13" Tablet="17" Desktop="22"/>
+                </Setter>
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="VerticalTextAlignment" Value="Center"/>
+                <Setter Property="Padding" Value="5,0,0,0"/>
+            </Style>
+            <Style x:Key="myLabel_FlowColor_Maintenance" TargetType="Label">
+                <Setter Property="FontSize">
+                    <OnIdiom x:TypeArguments="x:Double" Phone="13" Tablet="17" Desktop="22"/>
+                </Setter>
+                <Setter Property="BackgroundColor" Value="{Binding PreSalesFlowGroup.Color}"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="VerticalTextAlignment" Value="Center"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+            </Style>
+            <Style x:Key="myPicker_Maintenance" TargetType="Picker">
+                <Setter Property="FontSize">
+                    <OnIdiom x:TypeArguments="x:Double" Phone="13" Tablet="17" Desktop="22"/>
+                </Setter>
+            </Style>
+            <Style x:Key="myButton_Maintenance" TargetType="Button">
+                <Setter Property="FontSize">
+                    <OnIdiom x:TypeArguments="x:Double" Phone="13" Tablet="17" Desktop="22"/>
+                </Setter>
+                <Setter Property="BackgroundColor" Value="LightGray"/>
+            </Style>
+            <Style x:Key="mySearchBar_Maintenance" TargetType="SearchBar">
+                <Setter Property="FontSize">
+                    <OnIdiom x:TypeArguments="x:Double" Phone="13" Tablet="17" Desktop="22"/>
+                </Setter>
+            </Style>
+            <Style x:Key="myDatePicker_Maintenance" TargetType="DatePicker">
+                <Setter Property="FontSize">
+                    <OnIdiom x:TypeArguments="x:Double" Phone="13" Tablet="17" Desktop="22"/>
+                </Setter>
+            </Style>
+            <Style x:Key="myEditor_Maintenance" TargetType="Editor">
+                <Setter Property="FontSize">
+                    <OnIdiom x:TypeArguments="x:Double" Phone="13" Tablet="17" Desktop="22"/>
+                </Setter>
+            </Style>
+            <!--End-->
+            
+        </ResourceDictionary>
+        
     </Application.Resources>
 </Application>

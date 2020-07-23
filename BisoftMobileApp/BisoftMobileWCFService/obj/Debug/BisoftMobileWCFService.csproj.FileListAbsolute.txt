@@ -9,3 +9,15 @@ C:\Users\jonas\source\repos\BisoftMobileApp\BisoftMobileWCFService\obj\Debug\Bis
 C:\Users\jonas\source\repos\BisoftMobileApp\BisoftMobileWCFService\obj\Debug\BisoftMobileWCFService.csproj.CopyComplete
 C:\Users\jonas\source\repos\BisoftMobileApp\BisoftMobileWCFService\obj\Debug\BisoftMobileWCFService.dll
 C:\Users\jonas\source\repos\BisoftMobileApp\BisoftMobileWCFService\obj\Debug\BisoftMobileWCFService.pdb
+C:\Users\Giannis F Tsouri\Git03\BisoftMobileApp\BisoftMobileWCFService\bin\BisoftMobileWCFService.dll.config
+C:\Users\Giannis F Tsouri\Git03\BisoftMobileApp\BisoftMobileWCFService\bin\BisoftMobileWCFService.dll
+C:\Users\Giannis F Tsouri\Git03\BisoftMobileApp\BisoftMobileWCFService\bin\BisoftMobileWCFService.pdb
+C:\Users\Giannis F Tsouri\Git03\BisoftMobileApp\BisoftMobileWCFService\bin\EntityFramework.dll
+C:\Users\Giannis F Tsouri\Git03\BisoftMobileApp\BisoftMobileWCFService\bin\EntityFramework.SqlServer.dll
+C:\Users\Giannis F Tsouri\Git03\BisoftMobileApp\BisoftMobileWCFService\bin\EntityFramework.xml
+C:\Users\Giannis F Tsouri\Git03\BisoftMobileApp\BisoftMobileWCFService\bin\EntityFramework.SqlServer.xml
+C:\Users\Giannis F Tsouri\Git03\BisoftMobileApp\BisoftMobileWCFService\obj\Debug\BisoftMobileWCFService.csprojAssemblyReference.cache
+C:\Users\Giannis F Tsouri\Git03\BisoftMobileApp\BisoftMobileWCFService\obj\Debug\BisoftMobileWCFService.csproj.CoreCompileInputs.cache
+C:\Users\Giannis F Tsouri\Git03\BisoftMobileApp\BisoftMobileWCFService\obj\Debug\BisoftMobileWCFService.csproj.CopyComplete
+C:\Users\Giannis F Tsouri\Git03\BisoftMobileApp\BisoftMobileWCFService\obj\Debug\BisoftMobileWCFService.dll
+C:\Users\Giannis F Tsouri\Git03\BisoftMobileApp\BisoftMobileWCFService\obj\Debug\BisoftMobileWCFService.pdb
