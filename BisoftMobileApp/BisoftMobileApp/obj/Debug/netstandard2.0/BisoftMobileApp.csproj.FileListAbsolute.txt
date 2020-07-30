@@ -100,3 +100,5 @@ C:\Users\Giannis F Tsouri\Git03\BisoftMobileApp\BisoftMobileApp\obj\Debug\netsta
 C:\Users\Giannis F Tsouri\Git03\BisoftMobileApp\BisoftMobileApp\obj\Debug\netstandard2.0\Views\QualityReport\AnalysisHeadersPage.xaml.g.cs
 C:\Users\Giannis F Tsouri\Git03\BisoftMobileApp\BisoftMobileApp\obj\Debug\netstandard2.0\Views\QualityReport\FinalDecisionPage.xaml.g.cs
 C:\Users\Giannis F Tsouri\Git03\BisoftMobileApp\BisoftMobileApp\obj\Debug\netstandard2.0\Views\QualityReport\ErrorDescriptionPage.xaml.g.cs
+C:\Users\Giannis F Tsouri\Git03\BisoftMobileApp\BisoftMobileApp\obj\Debug\netstandard2.0\Resources\MaintenanceStyles.xaml.g.cs
+C:\Users\Giannis F Tsouri\Git03\BisoftMobileApp\BisoftMobileApp\obj\Debug\netstandard2.0\Resources\QualityReportStyles.xaml.g.cs

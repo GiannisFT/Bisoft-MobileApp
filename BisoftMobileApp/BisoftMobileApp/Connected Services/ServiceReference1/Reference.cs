@@ -4701,6 +4701,12 @@ namespace ServiceReference1
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetOfficeDepartmentsByOfficeId", ReplyAction="http://tempuri.org/IService1/GetOfficeDepartmentsByOfficeIdResponse")]
         System.Threading.Tasks.Task<ServiceReference1.OfficeDepartmentData[]> GetOfficeDepartmentsByOfficeIdAsync(string username, string password, string ucid, int officeId);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetMyPropertyVarnings", ReplyAction="http://tempuri.org/IService1/GetMyPropertyVarningsResponse")]
+        ServiceReference1.PropertyData[] GetMyPropertyVarnings(string username, string password, string ucid, int empid);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetMyPropertyVarnings", ReplyAction="http://tempuri.org/IService1/GetMyPropertyVarningsResponse")]
+        System.Threading.Tasks.Task<ServiceReference1.PropertyData[]> GetMyPropertyVarningsAsync(string username, string password, string ucid, int empid);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetPropertyById", ReplyAction="http://tempuri.org/IService1/GetPropertyByIdResponse")]
         ServiceReference1.PropertyData GetPropertyById(string username, string password, string ucid, int companyId, int propertyId);
         
@@ -4718,6 +4724,30 @@ namespace ServiceReference1
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/InsertPropertyTaskFormInspection", ReplyAction="http://tempuri.org/IService1/InsertPropertyTaskFormInspectionResponse")]
         System.Threading.Tasks.Task<ServiceReference1.WCFReturnResultCls> InsertPropertyTaskFormInspectionAsync(string username, string password, string ucid, int propertyId, System.DateTime perfomedDate, int performedById, int createdbyId, string description, string taskformname, ServiceReference1.CompanyTaskFormRowData[] rows, System.Nullable<System.DateTime> next);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/InsertPropertyDefaultMaintenance", ReplyAction="http://tempuri.org/IService1/InsertPropertyDefaultMaintenanceResponse")]
+        ServiceReference1.WCFReturnResultCls InsertPropertyDefaultMaintenance(string username, string password, string ucid, int propertyId, System.DateTime perfomedDate, int performedById, int createdbyId, ServiceReference1.DocumentsListData docs, string description, bool isOK, System.Nullable<System.DateTime> next);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/InsertPropertyDefaultMaintenance", ReplyAction="http://tempuri.org/IService1/InsertPropertyDefaultMaintenanceResponse")]
+        System.Threading.Tasks.Task<ServiceReference1.WCFReturnResultCls> InsertPropertyDefaultMaintenanceAsync(string username, string password, string ucid, int propertyId, System.DateTime perfomedDate, int performedById, int createdbyId, ServiceReference1.DocumentsListData docs, string description, bool isOK, System.Nullable<System.DateTime> next);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/InsertPropertyTaskFormMaintenance", ReplyAction="http://tempuri.org/IService1/InsertPropertyTaskFormMaintenanceResponse")]
+        ServiceReference1.WCFReturnResultCls InsertPropertyTaskFormMaintenance(string username, string password, string ucid, int propertyId, System.DateTime perfomedDate, int performedById, int createdbyId, string description, string taskformname, ServiceReference1.CompanyTaskFormRowData[] rows, System.Nullable<System.DateTime> next);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/InsertPropertyTaskFormMaintenance", ReplyAction="http://tempuri.org/IService1/InsertPropertyTaskFormMaintenanceResponse")]
+        System.Threading.Tasks.Task<ServiceReference1.WCFReturnResultCls> InsertPropertyTaskFormMaintenanceAsync(string username, string password, string ucid, int propertyId, System.DateTime perfomedDate, int performedById, int createdbyId, string description, string taskformname, ServiceReference1.CompanyTaskFormRowData[] rows, System.Nullable<System.DateTime> next);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/InsertPropertyDefaultControl", ReplyAction="http://tempuri.org/IService1/InsertPropertyDefaultControlResponse")]
+        ServiceReference1.WCFReturnResultCls InsertPropertyDefaultControl(string username, string password, string ucid, int propertyId, System.DateTime perfomedDate, int performedById, int createdbyId, ServiceReference1.DocumentsListData docs, string description, bool isOK, System.Nullable<System.DateTime> next);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/InsertPropertyDefaultControl", ReplyAction="http://tempuri.org/IService1/InsertPropertyDefaultControlResponse")]
+        System.Threading.Tasks.Task<ServiceReference1.WCFReturnResultCls> InsertPropertyDefaultControlAsync(string username, string password, string ucid, int propertyId, System.DateTime perfomedDate, int performedById, int createdbyId, ServiceReference1.DocumentsListData docs, string description, bool isOK, System.Nullable<System.DateTime> next);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/InsertPropertyTaskFormControl", ReplyAction="http://tempuri.org/IService1/InsertPropertyTaskFormControlResponse")]
+        ServiceReference1.WCFReturnResultCls InsertPropertyTaskFormControl(string username, string password, string ucid, int propertyId, System.DateTime perfomedDate, int performedById, int createdbyId, string description, string taskformname, ServiceReference1.CompanyTaskFormRowData[] rows, System.Nullable<System.DateTime> next);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/InsertPropertyTaskFormControl", ReplyAction="http://tempuri.org/IService1/InsertPropertyTaskFormControlResponse")]
+        System.Threading.Tasks.Task<ServiceReference1.WCFReturnResultCls> InsertPropertyTaskFormControlAsync(string username, string password, string ucid, int propertyId, System.DateTime perfomedDate, int performedById, int createdbyId, string description, string taskformname, ServiceReference1.CompanyTaskFormRowData[] rows, System.Nullable<System.DateTime> next);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/InsertQualityReport", ReplyAction="http://tempuri.org/IService1/InsertQualityReportResponse")]
         ServiceReference1.WCFReturnResultCls InsertQualityReport(string username, string password, string ucid, ServiceReference1.QualityReportData data);
@@ -4760,6 +4790,12 @@ namespace ServiceReference1
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdateQRResponsible", ReplyAction="http://tempuri.org/IService1/UpdateQRResponsibleResponse")]
         System.Threading.Tasks.Task<ServiceReference1.WCFReturnResultCls> UpdateQRResponsibleAsync(string username, string password, string ucid, int qreportId, int officeId, int respempId, int performedbyempid);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdateQRAttatchedFiles", ReplyAction="http://tempuri.org/IService1/UpdateQRAttatchedFilesResponse")]
+        ServiceReference1.WCFReturnResultCls UpdateQRAttatchedFiles(string username, string password, string ucid, int qreportId, ServiceReference1.QRAttachedFileData[] files);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdateQRAttatchedFiles", ReplyAction="http://tempuri.org/IService1/UpdateQRAttatchedFilesResponse")]
+        System.Threading.Tasks.Task<ServiceReference1.WCFReturnResultCls> UpdateQRAttatchedFilesAsync(string username, string password, string ucid, int qreportId, ServiceReference1.QRAttachedFileData[] files);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdateQRDescription", ReplyAction="http://tempuri.org/IService1/UpdateQRDescriptionResponse")]
         ServiceReference1.WCFReturnResultCls UpdateQRDescription(string username, string password, string ucid, int qreportId, int taskid, string description, string regnr, string aonr, int perfomredbyEmpId);
@@ -5052,6 +5088,16 @@ namespace ServiceReference1
             return base.Channel.GetOfficeDepartmentsByOfficeIdAsync(username, password, ucid, officeId);
         }
         
+        public ServiceReference1.PropertyData[] GetMyPropertyVarnings(string username, string password, string ucid, int empid)
+        {
+            return base.Channel.GetMyPropertyVarnings(username, password, ucid, empid);
+        }
+        
+        public System.Threading.Tasks.Task<ServiceReference1.PropertyData[]> GetMyPropertyVarningsAsync(string username, string password, string ucid, int empid)
+        {
+            return base.Channel.GetMyPropertyVarningsAsync(username, password, ucid, empid);
+        }
+        
         public ServiceReference1.PropertyData GetPropertyById(string username, string password, string ucid, int companyId, int propertyId)
         {
             return base.Channel.GetPropertyById(username, password, ucid, companyId, propertyId);
@@ -5080,6 +5126,46 @@ namespace ServiceReference1
         public System.Threading.Tasks.Task<ServiceReference1.WCFReturnResultCls> InsertPropertyTaskFormInspectionAsync(string username, string password, string ucid, int propertyId, System.DateTime perfomedDate, int performedById, int createdbyId, string description, string taskformname, ServiceReference1.CompanyTaskFormRowData[] rows, System.Nullable<System.DateTime> next)
         {
             return base.Channel.InsertPropertyTaskFormInspectionAsync(username, password, ucid, propertyId, perfomedDate, performedById, createdbyId, description, taskformname, rows, next);
+        }
+        
+        public ServiceReference1.WCFReturnResultCls InsertPropertyDefaultMaintenance(string username, string password, string ucid, int propertyId, System.DateTime perfomedDate, int performedById, int createdbyId, ServiceReference1.DocumentsListData docs, string description, bool isOK, System.Nullable<System.DateTime> next)
+        {
+            return base.Channel.InsertPropertyDefaultMaintenance(username, password, ucid, propertyId, perfomedDate, performedById, createdbyId, docs, description, isOK, next);
+        }
+        
+        public System.Threading.Tasks.Task<ServiceReference1.WCFReturnResultCls> InsertPropertyDefaultMaintenanceAsync(string username, string password, string ucid, int propertyId, System.DateTime perfomedDate, int performedById, int createdbyId, ServiceReference1.DocumentsListData docs, string description, bool isOK, System.Nullable<System.DateTime> next)
+        {
+            return base.Channel.InsertPropertyDefaultMaintenanceAsync(username, password, ucid, propertyId, perfomedDate, performedById, createdbyId, docs, description, isOK, next);
+        }
+        
+        public ServiceReference1.WCFReturnResultCls InsertPropertyTaskFormMaintenance(string username, string password, string ucid, int propertyId, System.DateTime perfomedDate, int performedById, int createdbyId, string description, string taskformname, ServiceReference1.CompanyTaskFormRowData[] rows, System.Nullable<System.DateTime> next)
+        {
+            return base.Channel.InsertPropertyTaskFormMaintenance(username, password, ucid, propertyId, perfomedDate, performedById, createdbyId, description, taskformname, rows, next);
+        }
+        
+        public System.Threading.Tasks.Task<ServiceReference1.WCFReturnResultCls> InsertPropertyTaskFormMaintenanceAsync(string username, string password, string ucid, int propertyId, System.DateTime perfomedDate, int performedById, int createdbyId, string description, string taskformname, ServiceReference1.CompanyTaskFormRowData[] rows, System.Nullable<System.DateTime> next)
+        {
+            return base.Channel.InsertPropertyTaskFormMaintenanceAsync(username, password, ucid, propertyId, perfomedDate, performedById, createdbyId, description, taskformname, rows, next);
+        }
+        
+        public ServiceReference1.WCFReturnResultCls InsertPropertyDefaultControl(string username, string password, string ucid, int propertyId, System.DateTime perfomedDate, int performedById, int createdbyId, ServiceReference1.DocumentsListData docs, string description, bool isOK, System.Nullable<System.DateTime> next)
+        {
+            return base.Channel.InsertPropertyDefaultControl(username, password, ucid, propertyId, perfomedDate, performedById, createdbyId, docs, description, isOK, next);
+        }
+        
+        public System.Threading.Tasks.Task<ServiceReference1.WCFReturnResultCls> InsertPropertyDefaultControlAsync(string username, string password, string ucid, int propertyId, System.DateTime perfomedDate, int performedById, int createdbyId, ServiceReference1.DocumentsListData docs, string description, bool isOK, System.Nullable<System.DateTime> next)
+        {
+            return base.Channel.InsertPropertyDefaultControlAsync(username, password, ucid, propertyId, perfomedDate, performedById, createdbyId, docs, description, isOK, next);
+        }
+        
+        public ServiceReference1.WCFReturnResultCls InsertPropertyTaskFormControl(string username, string password, string ucid, int propertyId, System.DateTime perfomedDate, int performedById, int createdbyId, string description, string taskformname, ServiceReference1.CompanyTaskFormRowData[] rows, System.Nullable<System.DateTime> next)
+        {
+            return base.Channel.InsertPropertyTaskFormControl(username, password, ucid, propertyId, perfomedDate, performedById, createdbyId, description, taskformname, rows, next);
+        }
+        
+        public System.Threading.Tasks.Task<ServiceReference1.WCFReturnResultCls> InsertPropertyTaskFormControlAsync(string username, string password, string ucid, int propertyId, System.DateTime perfomedDate, int performedById, int createdbyId, string description, string taskformname, ServiceReference1.CompanyTaskFormRowData[] rows, System.Nullable<System.DateTime> next)
+        {
+            return base.Channel.InsertPropertyTaskFormControlAsync(username, password, ucid, propertyId, perfomedDate, performedById, createdbyId, description, taskformname, rows, next);
         }
         
         public ServiceReference1.WCFReturnResultCls InsertQualityReport(string username, string password, string ucid, ServiceReference1.QualityReportData data)
@@ -5150,6 +5236,16 @@ namespace ServiceReference1
         public System.Threading.Tasks.Task<ServiceReference1.WCFReturnResultCls> UpdateQRResponsibleAsync(string username, string password, string ucid, int qreportId, int officeId, int respempId, int performedbyempid)
         {
             return base.Channel.UpdateQRResponsibleAsync(username, password, ucid, qreportId, officeId, respempId, performedbyempid);
+        }
+        
+        public ServiceReference1.WCFReturnResultCls UpdateQRAttatchedFiles(string username, string password, string ucid, int qreportId, ServiceReference1.QRAttachedFileData[] files)
+        {
+            return base.Channel.UpdateQRAttatchedFiles(username, password, ucid, qreportId, files);
+        }
+        
+        public System.Threading.Tasks.Task<ServiceReference1.WCFReturnResultCls> UpdateQRAttatchedFilesAsync(string username, string password, string ucid, int qreportId, ServiceReference1.QRAttachedFileData[] files)
+        {
+            return base.Channel.UpdateQRAttatchedFilesAsync(username, password, ucid, qreportId, files);
         }
         
         public ServiceReference1.WCFReturnResultCls UpdateQRDescription(string username, string password, string ucid, int qreportId, int taskid, string description, string regnr, string aonr, int perfomredbyEmpId)
@@ -5230,7 +5326,7 @@ namespace ServiceReference1
         {
             if ((endpointConfiguration == EndpointConfiguration.BasicHttpBinding_IService1))
             {
-                return new System.ServiceModel.EndpointAddress("http://www.bisoftextsystems.se:8080/6Bisoft20200527/Service1.svc");
+                return new System.ServiceModel.EndpointAddress("http://www.bisoftextsystems.se:8080/8Bisoft20200728/Service1.svc");
             }
             throw new System.InvalidOperationException(string.Format("Could not find endpoint with name \'{0}\'.", endpointConfiguration));
         }

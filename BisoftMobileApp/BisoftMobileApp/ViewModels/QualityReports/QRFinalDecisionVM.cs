@@ -160,7 +160,7 @@ namespace BisoftMobileApp.ViewModels.QualityReports
                     DbContext = new Service1Client(Service1Client.EndpointConfiguration.BasicHttpBinding_IService1);
                     var result = DbContext.UpdateQRFinalDecision(Application.Current.Properties["UN"].ToString(),
                                             Application.Current.Properties["PW"].ToString(), Application.Current.Properties["Ucid"].ToString(),
-                                            IniQRId, SelectedFinalDHeader.Id, Text_Description, (int)Cost_Entry, IniCreatedById, IsRepeatRepair);
+                                            IniQRId, SelectedFinalDHeader.Id, Text_Description, Cost_Entry ?? 0, IniCreatedById, IsRepeatRepair);
 
                     Application.Current.MainPage.DisplayAlert("Meddelande", result.Message, "STÄNG");
                     Application.Current.MainPage.Navigation.PopAsync();

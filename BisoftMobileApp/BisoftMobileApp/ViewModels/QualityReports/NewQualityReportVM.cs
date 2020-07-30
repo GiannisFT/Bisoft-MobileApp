@@ -17,6 +17,7 @@ using Plugin.Media.Abstractions;
 using System.Net.Http;
 using System.IO;
 using System.Net;
+using BisoftMobileApp.Classes.Photo;
 
 namespace BisoftMobileApp.ViewModels.QualityReports
 {
@@ -303,17 +304,17 @@ namespace BisoftMobileApp.ViewModels.QualityReports
         }
         #endregion
 
-        #region File Path
-        private string _filepath { get; set; }
-        public string FilePath
+        #region Photo Files
+        private ObservableCollection<PhotoCls> _allPhotoFiles;
+        public ObservableCollection<PhotoCls> AllPhotoFiles
         {
-            get { return _filepath; }
+            get { return _allPhotoFiles; }
             set
             {
-                if (_filepath == value)
+                if (_allPhotoFiles == value)
                     return;
-                _filepath = value;
-                OnPropertyChanged(new PropertyChangedEventArgs("FilePath"));
+                _allPhotoFiles = value;
+                OnPropertyChanged(new PropertyChangedEventArgs("AllPhotoFiles"));
             }
         }
         #endregion
@@ -351,8 +352,24 @@ namespace BisoftMobileApp.ViewModels.QualityReports
                     qrData.Description = Text_Info;
                     qrData.RegNr = Text_RegNr;
                     qrData.AoNr = Text_AoNr;
+                    
+                    if(AllPhotoFiles != null && AllPhotoFiles.Count > 0)
+                    {
+                        qrData.QRAttachedFileData = new QRAttachedFileData[AllPhotoFiles.Count];
+                        QRAttachedFileData file;
+                        int i = 0;
+                        foreach(PhotoCls phfile in AllPhotoFiles)
+                        {
+                            file = new QRAttachedFileData
+                            {
+                                FileName = phfile.Name,
+                                FilePath = phfile.Path
+                            };
 
-                    //qrData.QRAttachedFileData=;
+                            qrData.QRAttachedFileData[i] = file;
+                            i++;
+                        }
+                    }
 
                     qrData.OfficeId = SelectedOffice.Id;
                     qrData.QRReportResponsibleId = SelectedResponsibleEmployee.Id;
@@ -535,13 +552,13 @@ namespace BisoftMobileApp.ViewModels.QualityReports
                 string[] tempName = temp[temp.Length - 1].Split('.');
                 string filename = tempName[0];
                 string foldername = DateTime.Now.ToString("yyyy-MM-dd") + "/" + DateTime.Now.ToString("H-mm-ss");
-                FilePath = "Files/NyKvalitetsRapport/" + Application.Current.Properties["CompanyId"].ToString() + "/" + Application.Current.Properties["OfficeId"].ToString() + "/" + foldername + "/" + temp[temp.Length - 1];
+                string filePath = "Files/NyKvalitetsRapport/" + Application.Current.Properties["CompanyId"].ToString() + "/" + Application.Current.Properties["OfficeId"].ToString() + "/" + foldername + "/" + temp[temp.Length - 1];
 
                 var content = new MultipartFormDataContent();
                 Uri host = new Uri("http://www.bisoft.se/Bisoft/receiver.ashx");
                 UriBuilder ub = new UriBuilder(host)
                 {
-                    Query = string.Format("filename={0}", FilePath)
+                    Query = string.Format("filename={0}", filePath)
                 };
 
                 Stream data = file.GetStream();
@@ -552,6 +569,15 @@ namespace BisoftMobileApp.ViewModels.QualityReports
                     PushData(data, e.Result);
                     e.Result.Close();
                     data.Close();
+
+                    if (AllPhotoFiles == null)
+                        AllPhotoFiles = new ObservableCollection<PhotoCls>();
+
+                    PhotoCls phfile = new PhotoCls();
+                    phfile.Name = filename;
+                    phfile.Path = filePath;
+                    
+                    AllPhotoFiles.Add(phfile);
                 };
                 c.OpenWriteAsync(ub.Uri);
             }

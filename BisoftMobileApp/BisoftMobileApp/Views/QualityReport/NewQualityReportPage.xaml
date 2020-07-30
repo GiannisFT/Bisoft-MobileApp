@@ -55,8 +55,14 @@
                             </StackLayout>
                         </Grid>
                         <Grid Grid.Row="1">
-                            <Label Text="{Binding FilePath}" TextColor="Black" LineBreakMode="HeadTruncation" WidthRequest="20"
-                                   Style="{StaticResource myLabel_QualityReports}"/>
+                            <StackLayout BindableLayout.ItemsSource="{Binding AllPhotoFiles}" Spacing="0" Margin="0,5,0,0">
+                                <BindableLayout.ItemTemplate>
+                                    <DataTemplate>
+                                        <Label Text="{Binding Name}" TextColor="Black" LineBreakMode="TailTruncation" WidthRequest="20"
+                                               Style="{StaticResource myLabel_QualityReports}"/>
+                                    </DataTemplate>
+                                </BindableLayout.ItemTemplate>
+                            </StackLayout>
                         </Grid>
                     </Grid>
                 </Grid>

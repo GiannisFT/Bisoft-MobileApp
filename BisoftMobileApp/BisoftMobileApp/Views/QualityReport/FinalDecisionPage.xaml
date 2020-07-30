@@ -46,7 +46,7 @@
                             <Label Text="Kostnad" Style="{StaticResource myLabel_QualityReports}"/>
                             <StackLayout Orientation="Horizontal">
                                 <Entry Text="{Binding Cost_Entry}" ClearButtonVisibility="WhileEditing" Style="{StaticResource myEditor_QualityReports}"
-                                       Keyboard="Numeric" WidthRequest="200">
+                                       Keyboard="Numeric" WidthRequest="125">
                                     <Entry.Behaviors>
                                         <behavior:NumericEntryBehavior/>
                                     </Entry.Behaviors>

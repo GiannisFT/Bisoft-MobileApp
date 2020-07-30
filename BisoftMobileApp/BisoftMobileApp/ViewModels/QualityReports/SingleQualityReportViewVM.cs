@@ -15,6 +15,12 @@ using System.Linq;
 using System.Text;
 using System.Windows.Input;
 using Xamarin.Forms;
+using Plugin.Media;
+using Plugin.Media.Abstractions;
+using System.Net.Http;
+using System.IO;
+using System.Net;
+using BisoftMobileApp.Classes.Photo;
 
 namespace BisoftMobileApp.ViewModels.QualityReports
 {
@@ -30,6 +36,7 @@ namespace BisoftMobileApp.ViewModels.QualityReports
         public ICommand EditAnalysisHeaderCommand { get; set; }
         public ICommand EditFinalDecisionCommand { get; set; }
         public ICommand EditErrorDescriptionCommand { get; set; }
+        public ICommand AddNewFileCommand { get; set; }
         #endregion
 
         #region Properties
@@ -53,6 +60,8 @@ namespace BisoftMobileApp.ViewModels.QualityReports
         #endregion
 
         #region Selected File View
+        private ImagePageVM ImagePageVM { get; set; }
+
         private ObservableCollection<QRAttachedFile> _allImages;
         public ObservableCollection<QRAttachedFile> AllImages
         {
@@ -81,8 +90,8 @@ namespace BisoftMobileApp.ViewModels.QualityReports
                 if (SelectedImage != null)
                 {
                     ImagePage imgpage = new ImagePage();
-                    ImagePageVM imgviewer = new ImagePageVM(SelectedImage.FilePath);
-                    imgpage.BindingContext = imgviewer;
+                    ImagePageVM = new ImagePageVM(SelectedImage.FilePath);
+                    imgpage.BindingContext = ImagePageVM;
                     imgpage.Disappearing += Imagepage_Disappearing;
                     Application.Current.MainPage.Navigation.PushModalAsync(imgpage);
                 }
@@ -90,8 +99,18 @@ namespace BisoftMobileApp.ViewModels.QualityReports
         }
         private void Imagepage_Disappearing(object sender, EventArgs e)
         {
-            ImagePage page = (ImagePage)sender;
-            SelectedImage = null;
+            if (SelectedImage != null)
+            {
+                if (ImagePageVM.DeletePhoto == true)
+                {
+                    if (AllImages != null && AllImages.Count > 0 && AllImages.Contains(SelectedImage))
+                    {
+                        AllImages.Remove(SelectedImage);
+                        UpdateUploadedFiles();
+                        SelectedImage = null;
+                    }
+                }
+            }
         }
         #endregion
 
@@ -167,6 +186,7 @@ namespace BisoftMobileApp.ViewModels.QualityReports
             EditAnalysisHeaderCommand = new DelegateCommand(OpenEditAnalysisHeader, CanEditAnalysisHeader);
             EditFinalDecisionCommand = new DelegateCommand(OpenEditFinalDecision, CanEditFinalDecision);
             EditErrorDescriptionCommand = new DelegateCommand(OpenEditErrorDescription, CanEditErrorDescription);
+            AddNewFileCommand = new DelegateCommand(UploadFile, CanUploadFile);
         }
         public SingleQualityReportViewVM()
         {
@@ -250,10 +270,11 @@ namespace BisoftMobileApp.ViewModels.QualityReports
 
             if (data.QRAttachedFileData != null)
             {
-                QRAttachedFile attachedFile = new QRAttachedFile();
+                QRAttachedFile attachedFile;
                 AllImages = new ObservableCollection<QRAttachedFile>();
                 foreach (var img in data.QRAttachedFileData)
                 {
+                    attachedFile = new QRAttachedFile();
                     attachedFile.Id = img.Id;
                     attachedFile.FileName = img.FileName;
                     attachedFile.FilePath = img.FilePath;
@@ -382,8 +403,8 @@ namespace BisoftMobileApp.ViewModels.QualityReports
                 DbContext = new Service1Client(Service1Client.EndpointConfiguration.BasicHttpBinding_IService1);
 
                 var result = DbContext.UpdateQRResponsible(Application.Current.Properties["UN"].ToString(),
-                                            Application.Current.Properties["PW"].ToString(), Application.Current.Properties["Ucid"].ToString(),
-                                            ReportData.Id, SelectedOffice.Id, SelectedEmployee.Id, ReportData.CreatedByEmployee.Id);
+                    Application.Current.Properties["PW"].ToString(), Application.Current.Properties["Ucid"].ToString(),
+                    ReportData.Id, SelectedOffice.Id, SelectedEmployee.Id, ReportData.CreatedByEmployee.Id);
             }
             catch (Exception e)
             {
@@ -435,6 +456,110 @@ namespace BisoftMobileApp.ViewModels.QualityReports
             Application.Current.MainPage.Navigation.PushAsync(finalDPage);
         }
         private bool CanEditFinalDecision(object param)
+        {
+            return true;
+        }
+        #endregion
+
+        #region Upload File
+        private void UpdateUploadedFiles()
+        {
+            try
+            {
+                DbContext = new Service1Client(Service1Client.EndpointConfiguration.BasicHttpBinding_IService1);
+
+                QRAttachedFileData[] data = new QRAttachedFileData[0];
+                if (AllImages != null && AllImages.Count > 0)
+                {
+                    data = new QRAttachedFileData[AllImages.Count];
+                    QRAttachedFileData filedata;
+                    int i = 0;
+                    foreach (QRAttachedFile photo in AllImages)
+                    {
+                        filedata = new QRAttachedFileData
+                        {
+                            FileName = photo.FileName,
+                            FilePath = photo.FilePath,
+                            Id = photo.Id
+                        };
+                        data[i] = filedata;
+                        i++;
+                    }
+                }
+                var result = DbContext.UpdateQRAttatchedFiles(Application.Current.Properties["UN"].ToString(),
+                    Application.Current.Properties["PW"].ToString(), Application.Current.Properties["Ucid"].ToString(), IniQRId, data);
+
+                Application.Current.MainPage.DisplayAlert("Meddelande", result.Message, "STÄNG");
+            }
+            catch (Exception e)
+            {
+                Application.Current.MainPage.DisplayAlert("Fel", e.Message, "STÄNG");
+            }
+        }
+        public async void UploadFile(object param)
+        {
+            if (!CrossMedia.Current.IsPickPhotoSupported)
+            {
+                await Application.Current.MainPage.DisplayAlert("File Not Supported.", "Permission not granted to files.", "STÄNG");
+                return;
+            }
+
+            var file = await CrossMedia.Current.PickPhotoAsync(new PickMediaOptions
+            {
+                PhotoSize = PhotoSize.Large,
+            });
+
+            if (file != null)
+            {
+                string[] temp = file.Path.Split('/');
+                string[] tempName = temp[temp.Length - 1].Split('.');
+                string filename = tempName[0];
+                string foldername = DateTime.Now.ToString("yyyy-MM-dd") + "/" + DateTime.Now.ToString("H-mm-ss");
+                string filePath = "Files/NyKvalitetsRapport/" + Application.Current.Properties["CompanyId"].ToString() + "/" + Application.Current.Properties["OfficeId"].ToString() + "/" + foldername + "/" + temp[temp.Length - 1];
+
+                var content = new MultipartFormDataContent();
+                Uri host = new Uri("http://www.bisoft.se/Bisoft/receiver.ashx");
+                UriBuilder ub = new UriBuilder(host)
+                {
+                    Query = string.Format("filename={0}", filePath)
+                };
+
+                Stream data = file.GetStream();
+
+                WebClient c = new WebClient();
+                c.OpenWriteCompleted += (sender, e) =>
+                {
+                    PushData(data, e.Result);
+                    e.Result.Close();
+                    data.Close();
+
+                    if (AllImages == null)
+                        AllImages = new ObservableCollection<QRAttachedFile>();
+
+                    QRAttachedFile phfile = new QRAttachedFile();
+                    phfile.FileName = filename;
+                    phfile.FilePath = filePath;
+                    phfile.Id = 0;
+
+                    AllImages.Add(phfile);
+                    UpdateUploadedFiles();
+                };
+                c.OpenWriteAsync(ub.Uri);
+                
+            }
+            else
+                await Application.Current.MainPage.DisplayAlert("File not supported.", "Ingen fil vald.", "STÄNG");
+        }
+        private void PushData(Stream input, Stream output)
+        {
+            byte[] buffer = new byte[4096];
+            int bytesRead;
+            while ((bytesRead = input.Read(buffer, 0, buffer.Length)) != 0)
+            {
+                output.Write(buffer, 0, bytesRead);
+            }
+        }
+        private bool CanUploadFile(object param)
         {
             return true;
         }

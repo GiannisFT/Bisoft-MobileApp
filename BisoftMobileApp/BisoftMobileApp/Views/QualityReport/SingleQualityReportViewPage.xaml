@@ -35,7 +35,7 @@
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="135"/>
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
                     <Frame Grid.Row="0">
@@ -62,11 +62,11 @@
                                     </Grid.RowDefinitions>
                                     <Label Grid.Row="0" Text="RapportNr"
                                            Style="{StaticResource myLabel_QualityReports}"/>
-                                    <Label Grid.Row="1" Text="{Binding ReportData.ReportNr}"
+                                    <Label Grid.Row="1" Text="{Binding ReportData.ReportNr}" TextColor="Black"
                                            Style="{StaticResource myLabel_QualityReports}"/>
                                     <Label Grid.Row="2" Margin="0,10,0,0" Text="Skapad"
                                            Style="{StaticResource myLabel_QualityReports}"/>
-                                    <Label Grid.Row="3" Text="{Binding ReportData.DateCreated, StringFormat='{0:yyyy-MM-dd}'}"
+                                    <Label Grid.Row="3" Text="{Binding ReportData.DateCreated, StringFormat='{0:yyyy-MM-dd}'}" TextColor="Black"
                                            Style="{StaticResource myLabel_QualityReports}"/>
                                 </Grid>
                                 <Grid Grid.Column="1">
@@ -78,11 +78,11 @@
                                     </Grid.RowDefinitions>
                                     <Label Grid.Row="0" Text="Status"
                                            Style="{StaticResource myLabel_QualityReports}"/>
-                                    <Label Grid.Row="1" Text="{Binding ReportData.Status}"
+                                    <Label Grid.Row="1" Text="{Binding ReportData.Status}" TextColor="Black"
                                            Style="{StaticResource myLabel_QualityReports}"/>
                                     <Label Grid.Row="2" Margin="0,10,0,0" Text="Tid"
                                            Style="{StaticResource myLabel_QualityReports}"/>
-                                    <Label Grid.Row="3" Text="{Binding ReportData.Interval}"
+                                    <Label Grid.Row="3" Text="{Binding ReportData.Interval}" TextColor="Black"
                                            Style="{StaticResource myLabel_QualityReports}"/>
                                 </Grid>
                                 <Grid Grid.Column="2">
@@ -95,11 +95,11 @@
                                     <Label Grid.Row="0" Text="Skapad av"
                                            Style="{StaticResource myLabel_QualityReports}"/>
                                     <Label Grid.Row="1" Text="{Binding ReportData.CreatedByEmployee.Name}" LineBreakMode="TailTruncation"
-                                           Style="{StaticResource myLabel_QualityReports}"/>
+                                           TextColor="Black" Style="{StaticResource myLabel_QualityReports}"/>
                                     <Label Grid.Row="2" Margin="0,10,0,0" Text="Driftställe"
                                            Style="{StaticResource myLabel_QualityReports}"/>
                                     <Label Grid.Row="3" Text="{Binding ReportData.Office.Name}" LineBreakMode="TailTruncation"
-                                           Style="{StaticResource myLabel_QualityReports}"/>
+                                           TextColor="Black" Style="{StaticResource myLabel_QualityReports}"/>
                                 </Grid>
                             </Grid>
                         </Grid>
@@ -251,8 +251,14 @@
                                         </Label>
                                     </Grid>
                                     <Grid Grid.Column="1">
-                                        <Label Text="{Binding ReportData.FinalDecisionCost}" BackgroundColor="White" Padding="5"
-                                               Style="{StaticResource myLabel_QualityReports}"/>
+                                        <Label BackgroundColor="White" Padding="0,5,0,0" Style="{StaticResource myLabel_QualityReports}">
+                                            <Label.FormattedText>
+                                                <FormattedString>
+                                                    <Span Text="{Binding ReportData.FinalDecisionCost}"/>
+                                                    <Span Text=" kr"/>
+                                                </FormattedString>
+                                            </Label.FormattedText>
+                                        </Label>
                                     </Grid>
                                 </Grid>
                             </Grid>
@@ -275,19 +281,26 @@
                     <Grid Grid.Row="5">
                         <Frame>
                             <StackLayout>
-                                <Label Text="Bifogade dokument" Style="{StaticResource myLabel_QualityReports}"/>
-                                <ListView ItemsSource="{Binding AllImages}"
-                                          SelectedItem="{Binding SelectedImage, Mode=TwoWay}" SelectionMode="Single"
-                                          VerticalScrollBarVisibility="Always">
-                                    <ListView.ItemTemplate>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Bifogade dokument" Style="{StaticResource myLabel_QualityReports}"/>
+                                    <Button Text="Lägg till" Command="{Binding AddNewFileCommand}" HorizontalOptions="EndAndExpand"
+                                            Style="{StaticResource myButton_QualityReports}"
+                                            HeightRequest="30" WidthRequest="80" Padding="0"/>
+                                </StackLayout>
+                                <CollectionView ItemsSource="{Binding AllImages}"
+                                                SelectedItem="{Binding SelectedImage, Mode=TwoWay}" SelectionMode="Single">
+                                    <CollectionView.ItemsLayout>
+                                        <GridItemsLayout Orientation="Horizontal" Span="2" />
+                                    </CollectionView.ItemsLayout>
+                                    <CollectionView.ItemTemplate>
                                         <DataTemplate>
-                                            <ViewCell>
+                                            <Grid Padding="5">
                                                 <Label Text="{Binding FileName}" Style="{StaticResource myLabel_QualityReports}"
                                                        TextColor="Black"/>
-                                            </ViewCell>
+                                            </Grid>
                                         </DataTemplate>
-                                    </ListView.ItemTemplate>
-                                </ListView>
+                                    </CollectionView.ItemTemplate>
+                                </CollectionView>
                             </StackLayout>
                         </Frame>
                     </Grid>

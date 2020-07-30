@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="BisoftMobileApp.Resources.QualityReportStyles">
+
+    <Style x:Key="myLabel_QualityReports" TargetType="Label">
+        <Setter Property="FontSize">
+            <OnIdiom x:TypeArguments="x:Double" Phone="13" Tablet="17" Desktop="22"/>
+        </Setter>
+        <Setter Property="TextColor" Value="#1976D2"/>
+    </Style>
+    <Style x:Key="myButton_QualityReports" TargetType="Button">
+        <Setter Property="FontSize">
+            <OnIdiom x:TypeArguments="x:Double" Phone="13" Tablet="17" Desktop="22"/>
+        </Setter>
+        <Setter Property="BackgroundColor" Value="#1976D2"/>
+        <Setter Property="TextColor" Value="White"/>
+    </Style>
+    <Style x:Key="myEditor_QualityReports" TargetType="Editor">
+        <Setter Property="FontSize">
+            <OnIdiom x:TypeArguments="x:Double" Phone="13" Tablet="17" Desktop="22"/>
+        </Setter>
+    </Style>
+    <Style x:Key="myEntry_QualityReports" TargetType="Entry">
+        <Setter Property="FontSize">
+            <OnIdiom x:TypeArguments="x:Double" Phone="13" Tablet="17" Desktop="22"/>
+        </Setter>
+    </Style>
+    <Style x:Key="myPicker_QualityReports" TargetType="Picker">
+        <Setter Property="FontSize">
+            <OnIdiom x:TypeArguments="x:Double" Phone="13" Tablet="17" Desktop="22"/>
+        </Setter>
+    </Style>
+    <Style x:Key="myDatePicker_QualityReports" TargetType="DatePicker">
+        <Setter Property="FontSize">
+            <OnIdiom x:TypeArguments="x:Double" Phone="13" Tablet="17" Desktop="22"/>
+        </Setter>
+    </Style>
+</ResourceDictionary>
